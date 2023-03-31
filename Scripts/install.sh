@@ -1,6 +1,6 @@
 echo -e ""
-echo -e " \x1b[33m [[Iniciando instalação automática, aguarde...]] && sleepy 1"
-pkg install x11-repo -y &>/dev/null
+echo -e " \x1b[33m [[Iniciando instalação automática, aguarde...]]"
+pkg install x11-repo -y && sleep 1 &>/dev/null
 echo -e ""
 echo -e "[[Repositório x11-repo instalado]]"
 echo -e ""
