@@ -1,6 +1,6 @@
-echo -e " \x1b[33m [[Iniciando instalação automática, aguarde...]]" & sleep 1
+echo -e " \x1b[33m [[Iniciando instalação automática, aguarde...]]" & sleep 1 &>/dev/null
 pkg install x11-repo -y &>/dev/null
-echo -e "[[Repositório x11-repo instalado]]" & sleep 0.5
+echo -e "[[Repositório x11-repo instalado]]" & sleep 0.5 & sleep 1 &>/dev/null
 echo -e "[[Baixando e instalando Script de inicialização do servidor x11]]"
 wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/x11 &>/dev/null
 chmod +x x11
