@@ -2,7 +2,7 @@ echo -e " \x1b[33m [[Iniciando instalação automática, aguarde...]]" & sleep 1
 : $(pkg install x11-repo -y)
 echo -e " \x1b[33m [[Repositório x11-repo instalado]]" & sleep 0.5
 echo -e " \x1b[33m [[Baixando e instalando Script de inicialização do servidor x11]]"
-: $wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/x11)
+: $(wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/x11)
 chmod +x x11
 mv x11 $PREFIX/bin
 echo -e " \x1b[33m [[Script instalado]]"
