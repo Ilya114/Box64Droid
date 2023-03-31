@@ -12,8 +12,8 @@ echo -e "[[Baixando e instalando o pacote do Termux-x11]]"
 wget https://github.com/Herick75/Box4Droid/raw/main/Apps/termux-x11-1.02.07-0-all.deb &>/dev/null
 dpkg -i termux-x11-1.02.07-0-all.deb &>/dev/null
 rm -rf install.sh &>/dev/null
-echo -e "[[Instalação concluida, para iniciar o servidor x11,basta digitar "x11" no terminal!!]]"
+echo -e " \x1b[32m\033[[Instalação concluida, para iniciar o servidor x11,basta digitar "x11" no terminal!!]]"
 echo -e ""
 echo -e ""
-echo -e " \x1b[33m\32m [[Quando for para de usar o servidor x11, é recomendado forçar a parada do Termux pelas configurações Você tambem pode usar o comando 'kill' + o pid do Termux-X11(para saber o pid,basta escrever termux-x11,e no final vai aparecer o id)]]"
+echo -e " \x1b[32m\033 [[Quando for para de usar o servidor x11, é recomendado forçar a parada do Termux pelas configurações Você tambem pode usar o comando 'kill' + o pid do Termux-X11(para saber o pid,basta escrever termux-x11,e no final vai aparecer o id)]]"
 
