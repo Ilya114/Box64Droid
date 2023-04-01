@@ -1,4 +1,3 @@
 #!/bin/bash
-export GG=10
 
 DISPLAY=:1 termux-x11 & env DISPLAY=:1 Xvfb -listen tcp :1 -ac -screen 0 1100x600x24 & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
