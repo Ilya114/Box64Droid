@@ -24,31 +24,44 @@ echo -e " Script instalado."
 echo ""
 echo -e " Script installed."
 echo -e ""
-echo -e " Instalando pacotes adicionais"
+echo -e " Instalando pacotes adicionais..."
 echo -e ""
-echo -e " Installing aditional
+echo -e " Installing additional packages..."
+echo ""
 pkg install xorg-server-xvfb pulseaudio xwayland -y &>/dev/null
-echo -e " Baixando e instalando o pacote do Termux-x11"
+echo -e " Baixando e instalando o pacote do Termux-x11..."
 echo -e ""
+echo ""
+echo -e " Downloading and installing the Termux-x11 package..."
 wget https://github.com/Herick75/Box4Droid/raw/main/Apps/termux-x11-1.02.07-0-all.deb &>/dev/null
 dpkg -i termux-x11-1.02.07-0-all.deb &>/dev/null
 echo -e " Termux-x11 instalado."
 echo ""
 echo -e " Baixando Rootfs Pré-configurado... "
+echo ""
+echo -e " Downloading Preconfigured Rootfs..."
 wget https://github.com/Herick75/Box4Droid/releases/download/0.0.1-alpha/box86-v3-rootfs-0.0.1.tar.gz
 echo ""
-tar -xvf box86-v3-rootfs-0.0.1.tar.gz &>/dev/null
 echo -e " Descompactando Rootfs, por favor aguarde..."
 echo ""
+echo -e " Unzipping Rootfs, please wait..."
+tar -xvf box86-v3-rootfs-0.0.1.tar.gz &>/dev/null
+echo ""
 echo -e " Baixando script de inicialização do Rootfs..."
-wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/start-ubuntu.sh &>/dev/null
+echo ""
+echo -e "Downloading Rootfs init script..."
+wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/start-ubuntu.sh
 mv start-ubuntu.sh start-box86
 chmod +x start-box86
 mv start-box86 $PREFIX/Bin
 echo ""
 echo " Script instalado !"
 echo ""
+echo "Script installed !"
+echo ""
 echo " Removendo resíduos de instalação ...!
+echo ""
+echo -e " Removing installation waste ...!
 rm -rf box86-v3-rootfs-0.0.1.tar.gz &>/dev/null
 rm -rf install.sh &>/dev/null
 rm -rf termux-x11-1.02.07-0-all.deb &>/dev/null
