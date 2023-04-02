@@ -1,22 +1,32 @@
 echo -e ""
 echo -e "\x1b[33m Iniciando instalação automática, aguarde..."
-clear
+echo ""
+echo -e " Starting automatic installation, please wait..."
 pkg update -y
 echo -e ""
-echo -e " Instalando x11-repo..."
+echo -e " \x1b[33mInstalando x11-repo..."
+echo ""
+echo -e " Installing x11-repo..."
 pkg install x11-repo -y &>/dev/null
 echo -e ""
-echo -e " Repositório x11-repo instalado"
+echo -e " X11-repo instalado."
+echo ""
+echo -e " X11-repo installed."
 echo -e ""
-echo -e " Baixando e instalando Script de inicialização do servidor x11"
+echo -e " Baixando e instalando Script de inicialização do servidor x11."
+echo ""
+echo -e " Downloading and Installing x11 Server Script."
 curl -o x11 https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/x11 &>/dev/null
 chmod +x x11
 mv x11 $PREFIX/bin
 echo -e ""
-echo -e " Script instalado"
+echo -e " Script instalado."
+echo ""
+echo -e " Script installed."
 echo -e ""
 echo -e " Instalando pacotes adicionais"
 echo -e ""
+echo -e " Installing aditional
 pkg install xorg-server-xvfb pulseaudio xwayland -y &>/dev/null
 echo -e " Baixando e instalando o pacote do Termux-x11"
 echo -e ""
