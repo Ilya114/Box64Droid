@@ -29,9 +29,40 @@ echo -e " Descompactando Rootfs, por favor aguarde..."
 echo ""
 echo -e " Baixando script de inicialização do Rootfs..."
 wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/start-ubuntu.sh &>/dev/null
+mv start-ubuntu.sh start-box86
+chmod +x start-box86
+mv start-box86 $PREFIX/Bin
+echo ""
+echo " Script instalado !"
+echo ""
+echo " Removendo resíduos de instalação ...!
+rm -rf box86-v3-rootfs-0.0.1.tar.gz &>/dev/null
 rm -rf install.sh &>/dev/null
-echo -e " \x1b[32m\033 Instalação concluida, para iniciar o servidor x11,basta digitar "x11" no terminal!!"
+clear
+echo ""
+echo -e " \x1b[32m\033 Instalação concluida, aqui vão algumas dicas de uso :"
 echo -e ""
+echo -e " Você precisa seguir está ordem para que tudo funcione corretamente : "
+echo ""
+echo -e " Inicie o Termux-x11 digitando 'x11' no terminal."
 echo -e ""
-echo -e " \x1b[32m\033 Quando for parar de usar o servidor x11, é recomendado forçar a parada do Termux pelas configurações Você tambem pode usar o comando 'kill' + o pid do Termux-X11(para saber o pid,basta escrever termux-x11,e no final vai aparecer o id)"
-
+echo -e " Depois digite 'start-box86' no terminal e em seguida entre no aplicativo do Termux-x11 "
+echo -e ""
+echo -e " E se tudo for como o planejado, o ambiente da Wine vai se iniciar e logo em seguida o TFM irá abrir,pronto.
+echo ""
+echo -e " Quando for parar de usar o servidor x11, é recomendado forçar a parada do Termux pelas configurações.Você tambem pode usar o comando 'kill' + o pid do Termux-X11(para saber o pid,basta escrever termux-x11,e no final vai aparecer o id)"
+echo ""
+echo -e "Isso é tudo."
+echo ""
+echo ""
+echo -e " You need to follow this order for everything to work correctly : "
+echo ""
+echo -e " Start Termux-x11 by typing 'x11' in the terminal."
+echo -e ""
+echo -e " Then type 'start-box86' in the terminal and then enter the Termux-x11 application "
+echo -e ""
+echo -e " And if everything goes as planned, the Wine environment will start and soon after TFM will open, that's it.
+echo ""
+echo -e " When stopping using the x11 server, it is recommended to force stop Termux through the settings. You can also use the 'kill' command + the Termux-X11 pid(type termux-x11, and at the end the id will appear)"
+echo ""
+echo -e "That's all."
