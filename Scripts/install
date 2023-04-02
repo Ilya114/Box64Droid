@@ -29,7 +29,7 @@ echo -e " Instalando pacotes adicionais..."
 echo -e ""
 echo -e " Installing additional packages..."
 echo ""
-pkg install xorg-server-xvfb pulseaudio xwayland -y &>/dev/null
+pkg install xorg-server-xvfb pulseaudio xwayland -y
 echo -e " Baixando e instalando o pacote do Termux-x11..."
 echo -e ""
 echo ""
