@@ -1,3 +1,4 @@
+clear
 echo -e ""
 echo -e "\x1b[33m Iniciando instalação automática, aguarde..."
 pkg update -y
