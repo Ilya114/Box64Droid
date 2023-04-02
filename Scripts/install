@@ -2,6 +2,7 @@ echo -e ""
 echo -e "\x1b[33m Iniciando instalação automática, aguarde..."
 echo ""
 echo -e " Starting automatic installation, please wait..."
+echo ""
 pkg update -y
 echo -e ""
 echo -e " \x1b[33mInstalando x11-repo..."
