@@ -42,6 +42,7 @@ echo ""
 echo -e " Baixando Rootfs Pré-configurado... "
 echo ""
 echo -e " Downloading Preconfigured Rootfs..."
+echo ""
 wget https://github.com/Herick75/Box4Droid/releases/download/0.0.1-alpha/box86-v3-rootfs-0.0.1.tar.gz
 echo ""
 echo -e " Descompactando Rootfs, por favor aguarde..."
