@@ -29,7 +29,7 @@ echo -e " Instalando pacotes adicionais..."
 echo ""
 echo -e " Installing additional packages..."
 echo ""
-pkg install xorg-server-xvfb pulseaudio xwayland wget -y
+pkg install xorg-server-xvfb pulseaudio xwayland wget proot -y
 echo ""
 echo -e " Baixando e instalando o pacote do Termux-x11..."
 echo ""
@@ -53,17 +53,17 @@ tar -xvf box86-v3-rootfs-0.0.1.tar.gz &>/dev/null
 echo ""
 echo -e " Baixando script de inicialização do Rootfs..."
 echo ""
-echo -e "Downloading Rootfs init script..."
-wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/start-ubuntu.sh &>/dev/null
+echo -e " Downloading Rootfs init script..."
+wget https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/start-ubuntu.sh
 mv start-ubuntu.sh start-box86
 chmod +x start-box86
-mv start-box86 $PREFIX/Bin
+mv start-box86 $PREFIX/bin
 echo ""
 echo " Script instalado !"
 echo ""
-echo "Script installed !"
+echo " Script installed !"
 echo ""
-echo " Removendo resíduos de instalação ...!"
+echo -e" Removendo resíduos de instalação ...!"
 echo ""
 echo -e " Removing installation waste ...!"
 rm -rf box86-v3-rootfs-0.0.1.tar.gz &>/dev/null
