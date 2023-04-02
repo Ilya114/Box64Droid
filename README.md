@@ -1,4 +1,4 @@
-## Para a versão em PT-BR,clique aqui.
+## Para a versão em PT-BR,clique aqui.[a relative link](Box4Droid/READMEPT-BR.md)
 # What is Box4Droid?
 
 Box4Droid is a script that automates the installation of a preconfigured Rootfs with Box86 and Wine 7.1 installed.
