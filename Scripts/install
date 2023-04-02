@@ -30,6 +30,7 @@ echo ""
 echo -e " Installing additional packages..."
 echo ""
 pkg install xorg-server-xvfb pulseaudio xwayland wget -y
+echo ""
 echo -e " Baixando e instalando o pacote do Termux-x11..."
 echo ""
 echo ""
