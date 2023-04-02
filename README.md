@@ -15,3 +15,7 @@ For now,only Adreno GPU's that is compatible with
 Turnip driver Will work with 3D acceleration.
 
 This Wine 7.1 already comes with DXVK 2.1 installed. You can also change versions through Wine's Start menu.
+
+OpenGL also Works,but you cant use OpenGL>DirectX
+Layer for now(only if you want manually installs
+wined3d dlls.
