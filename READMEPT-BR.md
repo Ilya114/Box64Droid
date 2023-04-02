@@ -10,7 +10,7 @@ e cole no terminal do Termux e aguarde até que a instalação seja concluída.
 # Compatibilidade
 
 Por enquanto, apenas GPUs Adreno compatíveis com
-Motorista Turnip Funcionará com aceleração 3D.
+o driver Turnip Funcionaram com aceleração 3D.
 
 Esta Wine 7.1 já vem com o DXVK 2.1 instalado.  Você também pode alterar as versões através do menu Iniciar da Wine.
 
@@ -25,6 +25,6 @@ interno dentro da pasta Box4Droid logo após a primeira execução do Box86.
 
 O arquivo `Box86.conf` serve para você usar as variáveis de ambiente do Box86, você pode adicionar quantas variáveis quiser.
 
-O arquivo `DXVK_env.conf serve para você usar as variáveis de ambiente referentes ao DXVK_HUD, além de outras configurações.
+O arquivo `DXVK_env.conf` serve para você usar as variáveis de ambiente referentes ao DXVK_HUD, além de outras configurações.
 
-O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes ao dxvk.
+O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes ao dxvk(Para usá-lo, é nescessário descomentar a linha que exporta o seu diretorio, está variavel se encontra em `Box86.conf`).
