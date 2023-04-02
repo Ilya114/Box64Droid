@@ -1,1 +1,17 @@
-# Box4Droid
+# What is Box4Droid?
+
+Box4Droid is a simple shell script that allows you to run
+Box86 on your Android using Termux and Termux-x11
+as x11 display.
+
+# How to install?
+
+It's simple,just copy curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install
+and past it on Termux terminal and wait until the installation finish.
+
+# Compatibility
+
+For now,only Adreno GPU's that is compatible with
+Turnip driver Will work with 3D acceleration.
+
+This Wine 7.1 already comes with DXVK 2.1 installed. You can also change versions through Wine's Start menu.
