@@ -16,4 +16,4 @@ This Wine 7.1 already comes with DXVK 2.1 installed. You can also change version
 
 OpenGL also Works,but you cant use OpenGL>DirectX
 Layer for now(only if you want manually installs
-wined3d dlls.
+wined3d dlls).
