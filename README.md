@@ -4,7 +4,7 @@ Box4Droid is a script that automates the installation of a preconfigured Rootfs 
 
 # How to install?
 
-It's simple,just copy curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install
+It's simple,just copy `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install`
 and past it on Termux terminal and wait until the installation finish.
 
 # Compatibility
