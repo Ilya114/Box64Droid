@@ -1,8 +1,6 @@
 # What is Box4Droid?
 
-Box4Droid is a simple shell script that allows you to run
-Box86 on your Android using Termux and Termux-x11
-as x11 display.
+Box4Droid is a script that automates the installation of a preconfigured Rootfs with Box86 and Wine 7.1 installed.
 
 # How to install?
 
