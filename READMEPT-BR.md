@@ -46,12 +46,13 @@ O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes
 Por algum motivo, quando você vai instalar o Termux e usar o comando `pkg update -y` pela primeira vez,pode acontecer de dar algum erro e não ser possível de continuar a instalação, se isso acontecer, apenas apague os dados do Termux e tente novamente.
 ![Screenshot](Docs/InShot_20230402_231621771.jpg)
 
-Outro problema que acontece é quando você vai iniciar o Box86 pela primeira vez, qualquer coisa que você for executar vai rodar extremamente lento,neste caso, é super recomendado reiniciar o Box86 (na maioria dos casos, os jogos já iram rodar perfeitamente após isso).
+Outro problema que acontece é quando você vai iniciar o Box86 pela primeira vez, quando você for executar qualquer coisa, vai rodar extremamente lento,neste caso, é super recomendado reiniciar o Box86 (na maioria dos casos, os jogos já iram rodar perfeitamente após isso).
 
 Antes
-![Screenshot](Docs/Box4Droid/Docs/Screenshot_2023-04-03-12-27-57-973_com.termux.x11.jpg)
+![Screenshot](Docs/Screenshot_2023-04-03-12-27-57-973_com.termux.x11.jpg)
 
 Depois
+![Screenshot](Docs/Screenshot_2023-04-03-12-29-12-605_com.termux.x11.jpg)
 # TO-DO list
 
 Instalar a VirGL para GPUs Mali.
