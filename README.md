@@ -26,7 +26,7 @@ OpenGL also works, but you can't use the wined3d(OpenGL>DirectX) layer for now (
 
 # How to configure?  
 
-You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box86.conf` and `DXVK_env.conf`. the first run of Box86.  
+You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box86.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box4Droid folder right after the first run of Box86.
 
 The `Box86.conf` file is for you to use the Box86 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#box86_dynarec_fastround-) .  You can add as many variables as you like.  
 
@@ -60,6 +60,6 @@ Box86 and Box64 included.
 
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
-[Termux-x11](https://github.com/termux/termux-x
+[Termux-x11](https://github.com/termux/termux-x11)
 
-[Wine](https://wiki.winehq.org/Licensing
+[Wine](https://wiki.winehq.org/Licensing)
