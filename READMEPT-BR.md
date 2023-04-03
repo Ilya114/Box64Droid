@@ -59,6 +59,8 @@ Alguns problemas/instabilidades podem acontecer ao usar o Box86 em ambiente proo
 # Aplicativos de terceiros
 [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 
+[Proot under Termux](https://github.com/termux/proot)
+
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
