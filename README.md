@@ -52,6 +52,8 @@ In Wine, processor cores are not available to be selected via `taskmgr`.  GTA IV
 
 ![Screenshot](Docs/Screenshot_2023-04-03-12-40-22-746_com.termux.x11.jpg)
 
+And there are probably other issues, so feel free to open an issue.
+
 # TO-DO list
 
 Install VirGL for Mali GPUs.
