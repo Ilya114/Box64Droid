@@ -40,6 +40,14 @@ For some reason, when you go to install Termux and use the `pkg update -y` comma
 
 ![Screenshot](Docs/InShot_20230402_231621771.jpg)
 
+# TO-DO list
+
+Install VirGL for Mali GPUs.
+
+Create a launcher.
+
+Box86 and Box64 included.
+
 # Third Party Applications 
 
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License 
