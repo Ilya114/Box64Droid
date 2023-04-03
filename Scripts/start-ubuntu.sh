@@ -7,7 +7,7 @@ unset LD_PRELOAD
 command="proot"
 command+=" --link2symlink"
 command+=" -0"
-command+=" -r ubuntu-fs"
+command+=" -r $PREFIX/ubuntu-fs"
 command+=" -b /dev"
 command+=" -b /proc"
 command+=" -b ubuntu-fs/root:/dev/shm"
