@@ -10,7 +10,7 @@ No, Box4Droid uses proot to run Rootfs, so no, root is not required.
 
 # How to install?  
 
-First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.  
+First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.
 
 # How to start Box86 + Wine?
 
@@ -26,15 +26,13 @@ OpenGL also works, but you can't use the wined3d(OpenGL>DirectX) layer for now (
 
 # How to configure?  
 
-You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box86.conf` and `DXVK_env.conf`. 
+You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box86.conf` and `DXVK_env.conf`. the first run of Box86.  
 
-These files are created and found in the internal storage inside the Box4Droid folder right after the first run of Box86
+The `Box86.conf` file is for you to use the Box86 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#box86_dynarec_fastround-) .  You can add as many variables as you like.  
 
-The `Box86.conf` file is for you to use the Box86 environment variables, you can add as many variables as you want.  
+The `DXVK_env.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), in addition to other settings.  
 
-The `DXVK_env.conf` file is for you to use the environment variables referring to the DXVK_HUD, in addition to other settings.  
-
-The `dxvk.conf` file is for you to use the environment variables related to dxvk (To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `Box86.conf`).  
+The `dxvk.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
 
 # Third Party Applications 
 
