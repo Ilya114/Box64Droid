@@ -1,10 +1,12 @@
 ## Para a versão em PT-BR,[clique aqui.](Box4Droid/READMEPT-BR.md)
 
-# What is Box4Droid?  Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with Box86, Wine 7.1 and DXVK installed, made by me.[YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229 ).  
+# What is Box4Droid?  
+
+Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with Box86, Wine 7.1 and DXVK installed, made by me.[YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229 ).  
 
 # How to install?  
 
-First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions /runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.  
+First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.  
 
 # Compatibility 
 
@@ -18,7 +20,7 @@ OpenGL also works, but you can't use the wined3d(OpenGL>DirectX) layer for now (
 
 You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box86.conf` and `DXVK_env.conf`. 
 
-The first run of Box86.  
+These files are created and found in the internal storage inside the Box4Droid folder right after the first run of Box86
 
 The `Box86.conf` file is for you to use the Box86 environment variables, you can add as many variables as you want.  
 
