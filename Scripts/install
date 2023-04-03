@@ -6,9 +6,9 @@ echo ""
 pkg update -y
 clear
 echo -e ""
-echo -e "\x1b[33m O Box4Droid cria uma pasta chamada "Box4Droid" na sua memória interna para guardar arquivos de configurações.Para que o Termux crie essa pasta, é nescessário ter permissão de armazenamento.Após 6 segundos,vai aparecer a solicitação de permissão, clique em permitir para prosseguir(ou aperte CTRL + c para cancelar a instalação)."
+echo -e "\x1b[33m O Box4Droid cria uma pasta chamada "Box4Droid" na sua memória interna para guardar arquivos de configurações.Para que o Termux crie essa pasta, é nescessário ter permissão de armazenamento.Após 6 segundos,vai aparecer a solicitação de permissão, clique em permitir para prosseguir(ou negue e aperte CTRL + c para cancelar a instalação)."
 echo ""
-echo -e " Box4Droid creates a folder called "Box4Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions.After 6 seconds, the permission request will appear, click on allow to proceed (or press CTRL + c to cancel the installation) ." & sleep 6 &>/dev/null
+echo -e " Box4Droid creates a folder called "Box4Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions.After 6 seconds, the permission request will appear, click on allow to proceed (or deny and press CTRL + c to cancel the installation) ." & sleep 6 &>/dev/null
 echo ""
 termux-setup-storage
 echo -e " \x1b[33mInstalando x11-repo..."
