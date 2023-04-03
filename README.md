@@ -48,11 +48,16 @@ Create a launcher.
 
 Box86 and Box64 included.
 
-# Third Party Applications 
+# Third party applications
 
-[Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License 
+[Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 
-[Termux-app](https://github.com/termux/termux-app) GPLv3 license 
+[Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
 
-[Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
+[Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
+[DXVK](https://github.com/doitsujin/dxvk) Zlib license
+
+[Termux-app](https://github.com/termux/termux-app) GPLv3 license
+
+[Termux-x11](https://github.com/termux/termux-x
