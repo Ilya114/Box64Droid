@@ -53,6 +53,11 @@ Antes
 
 Depois
 ![Screenshot](Docs/Screenshot_2023-04-03-12-29-12-605_com.termux.x11.jpg)
+
+Na Wine,os núcleo do processador não estão disponíveis para serem selecionados através do `taskmgr`. GTA IV fica com o carregamento infinito. Estou procurando alguma forma de contornar isso.
+
+![Screenshot](Docs/Screenshot_2023-04-03-12-40-22-746_com.termux.x11.jpg)
+
 # TO-DO list
 
 Instalar a VirGL para GPUs Mali.
