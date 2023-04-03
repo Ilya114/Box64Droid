@@ -28,3 +28,6 @@ O arquivo `Box86.conf` serve para você usar as variáveis de ambiente do Box86,
 O arquivo `DXVK_env.conf` serve para você usar as variáveis de ambiente referentes ao DXVK_HUD, além de outras configurações.
 
 O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes ao dxvk(Para usá-lo, é nescessário descomentar a linha que exporta o seu diretorio, está variavel se encontra em `Box86.conf`).
+
+# Aplicativos de terceiros
+[Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
