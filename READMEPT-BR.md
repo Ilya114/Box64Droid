@@ -57,7 +57,7 @@ Criar um launcher.
 Alguns problemas/instabilidades podem acontecer ao usar o Box86 em ambiente proot, então não é recomendado usar o Box86 no proot como ambiente de debug/testes, existem opções melhores para isso.
 
 # Aplicativos de terceiros
-[Box86](https://github.com/ptitSeb/box86) MIT license
+[Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
@@ -65,3 +65,4 @@ Alguns problemas/instabilidades podem acontecer ao usar o Box86 em ambiente proo
 
 [Termux-x11](https://github.com/termux/termux-x11)  GPL-3.0 license
 
+[Wine](https://wiki.winehq.org/Licensing)
