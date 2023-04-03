@@ -35,7 +35,7 @@ dlls wined3d).
 Você pode optar por usar variáveis de ambiente,existem 3 arquivos,o `dxvk.conf`, o `Box86.conf` e o `DXVK_env.conf`.Estes arquivos são criados e se encontram no armazenamento
 interno dentro da pasta Box4Droid logo após a primeira execução do Box86. 
 
-O arquivo `Box86.conf` serve para você usar as variáveis de ambiente do Box86,veja todas elas [aqui](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#box86_dynarec_fastround-). Você pode adicionar quantas variáveis quiser.
+O arquivo `Box86.conf` serve para você usar as variáveis de ambiente do Box86,veja todas elas [aqui](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#usage). Você pode adicionar quantas variáveis quiser.
 
 O arquivo `DXVK_env.conf` serve para você usar as variáveis de ambiente referentes ao [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), além de outras configurações.
 
