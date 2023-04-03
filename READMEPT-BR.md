@@ -58,6 +58,8 @@ Na Wine,os núcleo do processador não estão disponíveis para serem selecionad
 
 ![Screenshot](Docs/Screenshot_2023-04-03-12-40-22-746_com.termux.x11.jpg)
 
+E provavelmente deve ter outros problemas, então sinta-se livre para emitir algum problema.
+
 # TO-DO list
 
 Instalar a VirGL para GPUs Mali.
