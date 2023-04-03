@@ -31,5 +31,7 @@ O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes
 
 # Aplicativos de terceiros
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
+
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
+
 [Termux-x11](https://github.com/termux/termux-x11)  GPL-3.0 license
