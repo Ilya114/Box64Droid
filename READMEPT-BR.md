@@ -41,6 +41,11 @@ O arquivo `DXVK_env.conf` serve para você usar as variáveis de ambiente refere
 
 O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes ao dxvk(Para usá-lo, é nescessário descomentar a linha que exporta o seu diretorio, está variavel se encontra em `Box86.conf`).
 
+# Problemas conhecidos
+
+Por algum motivo, quando você vai instalar o usar o comando `pkg update -y` no Termux,pode acontecer de dar algum erro e não ser possível de continuar a instalação,se isso acontecer,apenas apague os dados do Termux e tente novamente.
+![Screenshot](Docs/)
+
 # Aplicativos de terceiros
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
