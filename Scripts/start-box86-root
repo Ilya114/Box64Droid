@@ -6,30 +6,54 @@ export USER=root
 export HOME=/root
 dir=/data/data/com.termux/files/home/Ubuntu-fs
 
-echo -e "Montando pastas do sistema ...
+echo -e "Montando pastas do sistema ..."
+
+echo -e "/dev"
 
 busybox mount --bind /dev $folder/dev
-echo "   [ Mounting /sys ... ]"
-busybox mount --bind /sys $folder/sys
-echo "   [ Mounting /proc ... ]"
-busybox mount --bind /proc $folder/proc
-echo "   [ Mounting /dev/pts ... ]"
-busybox mount --bind /dev/pts $folder/dev/pts
-echo "   [ Mounting /sdcard ... ]"
-busybox mount --bind /sdcard $folder/sdcard
-echo -e "\x1b[32m [ Mounting Done ! ]"
 
-echo -e "\x1b[32m [ Chrooting ... ]\e[0m"
+echo " /sys"
+
+busybox mount --bind /sys $folder/sys
+
+echo " /proc"
+
+busybox mount --bind /proc $folder/proc
+
+echo " /dev/pts"
+
+busybox mount --bind /dev/pts $folder/dev/pts
+
+echo " Memória interna"
+
+busybox mount --bind /storage/ $folder/sdcard
+
+echo -e " Concluído."
+
+echo -e " Iniciando ..."
+
 busybox chroot $folder /bin/su - root
 
-echo -e "\033[1m\x1b[33m [ Unmounting dev/pts ... ]"
+echo -e " Desmontando partições do sistema ..."
+
+echo -e " Desmontando /dev/pra
+
 busybox umount $folder/dev/pts
-echo -e " [ Unmounting /dev ... ]"
+
+echo -e " Desmontando /dev"
+
 busybox umount $folder/dev
-echo -e " [ Unmounting /proc ... ]"
+
+echo -e " Desmontando /proc"
+
 busybox umount $folder/proc
-echo -e " [ Unmounting sdcard ... ]"
+
+echo -e " Desmontando memória interna"
+
 busybox umount $folder/sdcard
-echo -e " [ Unmounting /sys ... ]"
+
+echo -e " Desmontando /sys"
+
 busybox umount $folder/sys
-echo -e " \x1b[32m[ Unmounted ]\e[0m
+
+echo -e " \x1b[32mSistema desmontado com sucesso.\e[0m"
