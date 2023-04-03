@@ -35,11 +35,11 @@ dlls wined3d).
 Você pode optar por usar variáveis de ambiente,existem 3 arquivos,o `dxvk.conf`, o `Box86.conf` e o `DXVK_env.conf`.Estes arquivos são criados e se encontram no armazenamento
 interno dentro da pasta Box4Droid logo após a primeira execução do Box86. 
 
-O arquivo `Box86.conf` serve para você usar as variáveis de ambiente do Box86, você pode adicionar quantas variáveis quiser.
+O arquivo `Box86.conf` serve para você usar as variáveis de ambiente do Box86,veja todas elas [aqui](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#box86_dynarec_fastround-). Você pode adicionar quantas variáveis quiser.
 
-O arquivo `DXVK_env.conf` serve para você usar as variáveis de ambiente referentes ao DXVK_HUD, além de outras configurações.
+O arquivo `DXVK_env.conf` serve para você usar as variáveis de ambiente referentes ao [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), além de outras configurações.
 
-O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes ao dxvk(Para usá-lo, é nescessário descomentar a linha que exporta o seu diretorio, está variavel se encontra em `Box86.conf`).
+O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes ao [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(Para usá-lo, é nescessário descomentar a linha que exporta o seu diretorio, está variavel se encontra em `Box86.conf`).
 
 # Problemas conhecidos
 
@@ -62,6 +62,8 @@ Alguns problemas/instabilidades podem acontecer ao usar o Box86 em ambiente proo
 [Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
 
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
+
+[DXVK](https://github.com/doitsujin/dxvk) Zlib license
 
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
