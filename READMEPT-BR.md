@@ -1,6 +1,6 @@
 # O que é Box4Droid?
 
-Box4Droid é um script simples que automatiza a instalação de um Rootfs pré-configurado com o Box86, com a Wine 7.1 e com a DXVK instalado,feito por mim.[YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
+Box4Droid é um script simples que automatiza a instalação de um Rootfs pré-configurado com o [Box86](https://github.com/ptitSeb/box86), com a Wine 7.1 e com a DXVK instalado,feito por mim.[YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
 
 # É preciso ter root?
 
