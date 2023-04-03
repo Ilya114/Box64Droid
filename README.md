@@ -12,6 +12,8 @@ No, Box4Droid uses proot to run Rootfs, so no, root is not required.
 
 First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.  
 
+After the installation is completed, you just need to start Termux-x11 by typing `x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, in seconds Wine will start together with the TFM.
+
 # Compatibility 
 
 For now, only Adreno GPUs compatible with the Turnip driver will work with 3D acceleration.  
