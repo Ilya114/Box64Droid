@@ -52,6 +52,10 @@ Instalar a VirGL para GPUs Mali.
 
 Criar um launcher.
 
+# Coisas a serem observadas 
+
+Alguns problemas/instabilidades podem acontecer ao usar o Box86 em ambiente proot, então não é recomendado usar o Box86 no proot como ambiente de debug,existem opções melhores para isso.
+
 # Aplicativos de terceiros
 [Box86](https://github.com/ptitSeb/box86) MIT license
 
