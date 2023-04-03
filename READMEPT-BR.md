@@ -46,6 +46,12 @@ O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes
 Por algum motivo, quando você vai instalar o Termux e usar o comando `pkg update -y` pela primeira vez,pode acontecer de dar algum erro e não ser possível de continuar a instalação, se isso acontecer, apenas apague os dados do Termux e tente novamente.
 ![Screenshot](Docs/InShot_20230402_231621771.jpg)
 
+# TO-DO list
+
+Instalar a VirGL para GPUs Mali.
+
+Criar um launcher.
+
 # Aplicativos de terceiros
 [Box86](https://github.com/ptitSeb/box86) MIT license
 
@@ -54,3 +60,4 @@ Por algum motivo, quando você vai instalar o Termux e usar o comando `pkg updat
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
 [Termux-x11](https://github.com/termux/termux-x11)  GPL-3.0 license
+
