@@ -61,3 +61,5 @@ Box86 and Box64 included.
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
 [Termux-x11](https://github.com/termux/termux-x
+
+[Wine](https://wiki.winehq.org/Licensing
