@@ -43,8 +43,8 @@ O arquivo `dxvk.conf` serve para você usar as variáveis de ambiente referentes
 
 # Problemas conhecidos
 
-Por algum motivo, quando você vai instalar o usar o comando `pkg update -y` no Termux,pode acontecer de dar algum erro e não ser possível de continuar a instalação,se isso acontecer,apenas apague os dados do Termux e tente novamente.
-![Screenshot](Docs/)
+Por algum motivo, quando você vai instalar o Termux e usar o comando `pkg update -y` pela primeira vez,pode acontecer de dar algum erro e não ser possível de continuar a instalação, se isso acontecer, apenas apague os dados do Termux e tente novamente.
+![Screenshot](Docs/InShot_20230402_231621771.jpg)
 
 # Aplicativos de terceiros
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
