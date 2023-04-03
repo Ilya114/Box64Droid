@@ -34,6 +34,12 @@ The `DXVK_env.conf` file is for you to use the environment variables referring t
 
 The `dxvk.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
 
+# known issues
+
+For some reason, when you go to install Termux and use the `pkg update -y` command for the first time, it may happen that you get some error and it is not possible to continue the installation, if that happens, just delete the Termux data and try again.
+
+![Screenshot](Docs/InShot_20230402_231621771.jpg)
+
 # Third Party Applications 
 
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License 
