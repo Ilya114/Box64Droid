@@ -15,7 +15,7 @@ e cole no terminal do Termux e aguarde até que a instalação seja concluída.
 
 # Como iniciar o Box86 + Wine?
 
-Depois da instalação ser concluída, você só precisa iniciar o Termux-x11 digitando `x11` no terminal,entrar no app Termux-x11,e em seguida digitar `start-box86`,em segundos a Wine já vai iniciar junto com o TFM.
+Depois da instalação ser concluída, você só precisa iniciar o Termux-x11 digitando `x11` no terminal,entrar no app Termux-x11,e em seguida voltar no app do Termux e digitar `start-box86`,em segundos a Wine já vai iniciar junto com o TFM.
 
 Você também pode usar o Input Bridge, basta inciar o aplicativo e tudo já estará funcionando (caso a engrenagem não apareça,basta executar o `installer.bat`)
 
