@@ -47,6 +47,8 @@ Por algum motivo, quando você vai instalar o Termux e usar o comando `pkg updat
 ![Screenshot](Docs/InShot_20230402_231621771.jpg)
 
 # Aplicativos de terceiros
+[Box86](https://github.com/ptitSeb/box86) MIT license
+
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
 [Termux-app](https://github.com/termux/termux-app) GPLv3 license
