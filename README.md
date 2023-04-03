@@ -4,6 +4,8 @@
 
 Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with Box86, Wine 7.1 and DXVK installed, made by me.[YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229 ).  
 
+# Do you need root?
+
 # How to install?  
 
 First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Herick75/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.  
