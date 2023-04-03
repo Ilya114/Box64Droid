@@ -1,4 +1,4 @@
-## Para a versão em PT-BR,[clique aqui.](https://github.com/Herick75/Box4Droid/blob/main/README.md)
+## Para a versão em PT-BR,[clique aqui.](https://github.com/Herick75/Box4Droid/blob/main/READMEPT-BR.md)
 
 # What is Box4Droid?  
 
