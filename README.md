@@ -40,6 +40,18 @@ For some reason, when you go to install Termux and use the `pkg update -y` comma
 
 ![Screenshot](Docs/InShot_20230402_231621771.jpg)
 
+Another problem that happens is when you start Box86 for the first time, when you run anything, it will run extremely slow, in this case, it is highly recommended to restart Box86 (in most cases, games will run perfectly after that) ).
+
+Before
+![Screenshot](Docs/Screenshot_2023-04-03-12-27-57-973_com.termux.x11.jpg)
+
+After
+![Screenshot](Docs/Screenshot_2023-04-03-12-29-12-605_com.termux.x11.jpg)
+
+In Wine, processor cores are not available to be selected via `taskmgr`.  GTA IV has infinite loading.  I'm looking for a way around this.
+
+![Screenshot](Docs/Screenshot_2023-04-03-12-40-22-746_com.termux.x11.jpg)
+
 # TO-DO list
 
 Install VirGL for Mali GPUs.
