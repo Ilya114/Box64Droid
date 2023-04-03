@@ -32,7 +32,7 @@ The `dxvk.conf` file is for you to use the environment variables related to dxvk
 
 [Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License 
 
-[Termux-app](https://github. com/termux/termux-app) GPLv3 license 
+[Termux-app](https://github.com/termux/termux-app) GPLv3 license 
 
 [Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
 
