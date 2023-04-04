@@ -27,7 +27,7 @@ Você também pode usar o Input Bridge, basta executar o `installer.bat` e o Inp
 
 *64-bit Android
 
-Você também precisa de no mínimo 4GB livres para a instalação ocorrer sem problemas.
+*Você também precisa de no mínimo 4GB livres para a instalação ocorrer sem problemas.
 
 # Como configurar?
 
