@@ -26,7 +26,7 @@ You can also use Input Bridge, just run `installer.bat` and Input Bridge will st
 
 *64-bit Android 
 
-You also need at least 4GB free for the installation to go without problems.
+*You also need at least 4GB free for the installation to go without problems.
 
 # How to configure?  
 
