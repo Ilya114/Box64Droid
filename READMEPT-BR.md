@@ -17,7 +17,7 @@ e cole no terminal do Termux e aguarde até que a instalação seja concluída.
 
 Depois da instalação ser concluída, você só precisa iniciar o Termux-x11 digitando `x11` no terminal,entrar no app Termux-x11,e em seguida voltar no app do Termux e digitar `start-box86`,em segundos a Wine já vai iniciar junto com o TFM.
 
-Você também pode usar o Input Bridge, basta executar o `installer.bat` e o Input Bridge já irá funcionar automaticamente.
+Você também pode usar o Input Bridge, basta executar o `installer.bat` e o Input Bridge já irá iniciar automaticamente.
 
 # Compatibilidade
 
