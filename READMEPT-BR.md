@@ -19,16 +19,15 @@ Depois da instalação ser concluída, você só precisa iniciar o Termux-x11 di
 
 Você também pode usar o Input Bridge, basta executar o `installer.bat` e o Input Bridge já irá iniciar automaticamente.
 
-# Compatibilidade
+# Requisitos do sistema
 
-Por enquanto, apenas GPUs Adreno compatíveis com
-o driver Turnip vão funcionar com aceleração 3D.
+*Adreno 618+
 
-Esta Wine 7.1 já vem com o DXVK 2.1 instalado.  Você também pode alterar as versões através do menu Iniciar da Wine.
+*Android 10+??
 
-OpenGL também funciona, mas você não pode usar a camada wined3d(OpenGL>DirectX)
-por enquanto (somente se você quiser instalar manualmente as
-dlls wined3d).
+*64-bit Android
+
+Você também precisa de no mínimo 4GB livres para a instalação ocorrer sem problemas.
 
 # Como configurar?
 
