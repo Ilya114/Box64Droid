@@ -66,6 +66,10 @@ Create a launcher.
 
 Box86 and Box64 included.
 
+# Things to note
+
+Some issues/instabilities can happen when using Box86 in proot environment, so it's not recommended to use Box86 in proot as debug/testing environment, there are better options for that.
+
 # Third party applications
 
 [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
