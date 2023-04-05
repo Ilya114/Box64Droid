@@ -1,0 +1,37 @@
+#!/bin/bash
+
+while true; do
+clear
+echo " Por favor, selecione uma resolucão para o Xvfb :"
+echo ""
+echo " Please select a resolution for Xvfb :"
+echo ""
+echo ""
+echo "1)640x480 (4:3)"
+echo "2)800x600 (4:3)"
+echo "3)1024x768 (4:3)"
+echo "4)1280x720 (16:9)"
+echo "5)1920x1080 (16:9)"
+echo "6)1400x600 (16:10)"
+
+
+echo ""
+echo ""
+echo " A resolução 1400x600 consegue se adequar a proporção da tela do celular,para usar ela corretamente entre nas configurações do Termux-x11, e em "Display resolution mode" coloque em "scaled" e coloque em 160%. "
+    read -p " ..." option
+
+    case $option in
+        [1]* ) export res=640x480x24;break;;
+        [2]* ) export res=800x600x24;break;;
+	[3]* ) export res=1024x768x24;break;;
+	[4]* ) export res=1280x720x24;break;;
+	[5]* ) export res=1920x1080x24;break;;
+	[6]* ) export res=1400x600x24;break;;
+    esac
+done
+echo $res
+DISPLAY=:1 termux-x11 & env DISPLAY=:1 Xvfb -listen tcp :1 -ac -screen 0 $res & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+
+echo -e "Termux-x11 iniciado."
+echo ""
+echo -e "Termux-x11 started."
