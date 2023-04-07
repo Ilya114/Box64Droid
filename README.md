@@ -20,7 +20,7 @@ You can also use Input Bridge, just run `installer.bat` and Input Bridge will st
 
 # System requirements 
 
-*Adreno 618+ 
+*Adreno 618+ (Except on adreno 7xx GPUS)
 
 *Android 10+??  
 
