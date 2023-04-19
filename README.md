@@ -6,7 +6,7 @@ Box4Droid is a simple script that automates the installation of a preconfigured 
 
 # Do you need root?
 
-No, Box4Droid uses proot to run Rootfs, so no, root is not required.
+No, Box4Droid uses proot to run Rootfs, so no, root is not required, but we can use chroot also which requiment root
 
 # How to install?  
 
