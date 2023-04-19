@@ -12,47 +12,49 @@ echo -e "/dev"
 
 busybox mount --bind /dev $folder/dev
 
-echo " /sys"
+echo "/sys"
 
 busybox mount --bind /sys $folder/sys
 
-echo " /proc"
+echo "/proc"
 
 busybox mount --bind /proc $folder/proc
 
-echo " /dev/pts"
+echo "/dev/pts"
 
 busybox mount --bind /dev/pts $folder/dev/pts
 
-echo " Memória interna"
+echo "Memória interna"
 
 busybox mount --bind /storage/ $folder/sdcard
 
-echo -e " Concluído."
+busybox mount --bind /data/data/com.termux/files/usr/tmp $folder/tmp
 
-echo -e " Iniciando ..."
+echo -e "Concluído."
+
+echo -e "Iniciando ..."
 
 busybox chroot $folder /bin/su - root
 
-echo -e " Desmontando partições do sistema ..."
+echo -e "Desmontando partições do sistema ..."
 
-echo -e " Desmontando /dev/pra
+echo -e "Desmontando /dev/pra
 
 busybox umount $folder/dev/pts
 
-echo -e " Desmontando /dev"
+echo -e "Desmontando /dev"
 
 busybox umount $folder/dev
 
-echo -e " Desmontando /proc"
+echo -e "Desmontando /proc"
 
 busybox umount $folder/proc
 
-echo -e " Desmontando memória interna"
+echo -e "Desmontando memória interna"
 
 busybox umount $folder/sdcard
 
-echo -e " Desmontando /sys"
+echo -e "Desmontando /sys"
 
 busybox umount $folder/sys
 
