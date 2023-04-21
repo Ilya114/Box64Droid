@@ -55,7 +55,8 @@ echo ""
 echo -e " Descompactando Rootfs, por favor aguarde..."
 echo ""
 echo -e " Unzipping Rootfs, please wait..."
-tar -xvf box86-64-rootfs-alpha.tar.xz &>/dev/null
+mkdir ~/ubuntu-fs 
+tar -xvf box86-64-rootfs-alpha.tar.xz -C ~/ubuntu-fs &>/dev/null
 echo ""
 echo -e " Baixando script de inicialização do Rootfs..."
 echo ""
