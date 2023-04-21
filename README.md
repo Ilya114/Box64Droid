@@ -28,13 +28,13 @@ You can also use Input Bridge, just run `installer.bat` and Input Bridge will st
 
 - 64-bit Android 
 
-- You also need at 7,5 GB free for the installation to go without problems.
+- You also need at 4,7 GB free for the installation to go without problems.
 
 ## How to configure?  
 
-You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box86.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box4Droid folder right after the first run of Box86.
+You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box8664.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box4Droid folder right after the first run of Box86.
 
-The `Box8664.conf` file is for you to use the Box86 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) .  You can add as many variables as you like. In this file, there is the `res` variable, in it you put the same resolution that you chose in Termux-x11, otherwise the screen content may be cut off or there may be borders on the screen.
+The `Box8664.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like. In this file, there is the `res` variable, in it you put the same resolution that you chose in Termux-x11, otherwise the screen content may be cut off or there may be borders on the screen.
 
 The `DXVK_env.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), in addition to other settings.  
 
@@ -87,8 +87,6 @@ Some issues/instabilities can happen when using Box86 in proot environment, so i
 [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 
 [Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
-
-[Anlinux Ubuntu Rootfs](https://github.com/EXALAB/Anlinux-Resources/tree/master/Rootfs/Ubuntu/arm64) GPL-2.0 License
 
 [DXVK](https://github.com/doitsujin/dxvk) Zlib license
 
