@@ -72,6 +72,8 @@ In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV 
 
 And there are probably other issues, so feel free to open an issue.
 
+- Box64 has problem with access to drives when using standard file manager in Wine
+
 ## TO-DO list
 
 Install VirGL for Mali GPUs.
