@@ -14,7 +14,8 @@ command+=" -b $HOME/ubuntu-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
-command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
+command+=" -b /data/data/com.termux/files/usr/tmp/termux-x11:/tmp/termux-x11"
+command+=" -b /data/data/com.termux/files/usr/tmp/.X11-unix:/tmp/.X11-unix"
 command+=" -b /sdcard"
 command+=" -b $PREFIX/tmp"
 command+=" -w /root"
