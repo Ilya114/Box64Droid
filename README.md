@@ -1,6 +1,6 @@
 ## What is Box4Droid?
 ## Note: currently repo WIP, so it can not work now
-Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.15 (box86) and 6.0 (box64)](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
+Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 6.0](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
 
 My fork contains new rootfs with box64 and some useful tools. Mesa version rolled to 22.3.0 because 23.x not worked for me. I`m not sure that DXVK and audio works. If you checked and have problems let me know in issues.
 
@@ -71,8 +71,6 @@ In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV 
 </details>
 
 And there are probably other issues, so feel free to open an issue.
-
-- When you trying press to start button, Wine will stuck, you should close PointerStick after start box86 to close start menu. Box64 don't have this problem
 
 ## TO-DO list
 
