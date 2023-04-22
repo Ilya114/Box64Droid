@@ -1,6 +1,6 @@
 ## What is Box4Droid?
 
-Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.0 and 6.0](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me.[YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
+Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.0 and 6.0](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
 
 My fork contains new rootfs with box64 and some useful tools. Mesa version rolled to 22.3.0 because 23.x not worked for me. I`m not sure that DXVK and audio works. If you checked and have problems let me know in issues.
 
@@ -42,14 +42,14 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 
 ## Known issues
 
-For some reason, when you go to install Termux and use the `pkg update -y` command for the first time, it may happen that you get some error and it is not possible to continue the installation, if that happens, just delete the Termux data and try again.
+- For some reason, when you go to install Termux and use the `pkg update -y` command for the first time, it may happen that you get some error and it is not possible to continue the installation, if that happens, just delete the Termux data and try again.
 
 <details>
 
 ![Screenshot](Docs/InShot_20230402_231621771.jpg)
 </details>
 
-Another problem that happens is when you start Box86 for the first time, when you run anything, it will run extremely slow, in this case, it is highly recommended to restart Box86 (in most cases, games will run perfectly after that).
+- Another problem that happens is when you start Box86 for the first time, when you run anything, it will run extremely slow, in this case, it is highly recommended to restart Box86 (in most cases, games will run perfectly after that).
 
 <details>
 <summary>Before</summary>
@@ -71,6 +71,8 @@ In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV 
 </details>
 
 And there are probably other issues, so feel free to open an issue.
+
+- When you trying press to start button, Wine will stuck, you should close PointerStick after start box86 to close start menu
 
 ## TO-DO list
 
