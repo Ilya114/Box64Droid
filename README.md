@@ -16,7 +16,7 @@ First you need to install [Termux](https://f-droid.org/en/packages/com.termux) a
 
 After the installation is completed, you just need to start Termux-x11 by typing `x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, in seconds Wine will start together with the TFM. 
 
-Note: default starting box86, to start box64 press Ctrl+c then type `WINEPREFIX=~/.wine-amd64 taskset -c 4-7 box64 wine explorer /desktop=nam,(need resolution) /opt/TFM.exe`
+Note: default starting box86, to start box64 press Ctrl+c then type `WINEPREFIX=~/.wine-amd64 taskset -c 4-7 box64 wine explorer /desktop=shell,(need resolution)`
 
 You can also use Input Bridge, just run `installer.bat` and Input Bridge will start automatically.
 
@@ -72,7 +72,7 @@ In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV 
 
 And there are probably other issues, so feel free to open an issue.
 
-- When you trying press to start button, Wine will stuck, you should close PointerStick after start box86 to close start menu
+- When you trying press to start button, Wine will stuck, you should close PointerStick after start box86 to close start menu. Box64 don't have this problem
 
 ## TO-DO list
 
