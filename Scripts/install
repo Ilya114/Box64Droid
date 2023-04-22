@@ -23,9 +23,9 @@ echo -e ""
 echo -e " Baixando e instalando Script de inicialização do servidor x11."
 echo ""
 echo -e " Downloading and Installing x11 Server Script."
-curl -o x11 https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/x11 &>/dev/null
-chmod +x x11
-mv x11 $PREFIX/bin
+curl -o start-x11 https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-x11 &>/dev/null
+chmod +x start-x11
+mv start-x11 $PREFIX/bin
 echo -e ""
 echo -e " Script instalado."
 echo ""
