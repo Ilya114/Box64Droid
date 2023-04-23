@@ -74,6 +74,8 @@ And there are probably other issues, so feel free to open an issue.
 
 - Box64 has problem with access to drives, I`m dont know why. Temporary solution is copy files from /sdcard to ~/ (My Documents)
 
+- When type `exit` you can have stucked logout. To resolve kill session
+
 ## TO-DO list
 
 Install VirGL for Mali GPUs.
