@@ -2,7 +2,7 @@
 ## Note: currently repo WIP, so it can work not stable
 Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
 
-My fork contains new rootfs with box64 and some useful tools. Mesa version rolled back to 22.3.0 because I can`t compile 23.x now.
+My fork contains new rootfs with box64 and some useful tools.
 
 ## Do you need root?
 
@@ -70,7 +70,7 @@ In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV 
 
 And there are probably other issues, so feel free to open an issue.
 
-- DXVK not working due a Mesa Turnip 22.x, I`m need to compile 23.x
+- Zink not work, only DXVK
 
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
 
