@@ -90,14 +90,16 @@ Some issues/instabilities can happen when using Box86 in proot environment, so i
 
 ## Third party applications
 
-[Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
+- [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 
-[Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
+- [Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
 
-[DXVK](https://github.com/doitsujin/dxvk) Zlib license
+- [DXVK](https://github.com/doitsujin/dxvk) Zlib license
 
-[Termux-app](https://github.com/termux/termux-app) GPLv3 license
+- [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 
-[Termux-x11](https://github.com/termux/termux-x11)
+- [Termux-x11](https://github.com/termux/termux-x11)
 
-[Wine](https://wiki.winehq.org/Licensing)
+- [Wine](https://wiki.winehq.org/Licensing)
+
+- [Winetricks](https://wiki.winehq.org/Winetricks)
