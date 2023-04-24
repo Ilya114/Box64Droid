@@ -5,14 +5,8 @@
 # This has to be right after the shebang, see: https://github.com/koalaman/shellcheck/issues/779
 
 # Name of this version of winetricks (YYYYMMDD)
-# (This doesn't change often, use the sha256sum of the file when reporting problems)
-echo -e "Which Wine should be use? (x86 or amd64)"
-read $arch
-if $arch == "x86"
-then
-    export PATH="$PATH:/root/wine-$arch/bin"
-else
-    export PATH="$PATH:/root/wine-amd64/bin"
+# (This doesn't change often, use the sha256sum of the file when reporting problems
+export PATH="$PATH:/root/wine-x86/bin"
 WINETRICKS_VERSION=20230212-next
 
 # This is a UTF-8 file
