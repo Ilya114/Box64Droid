@@ -14,9 +14,7 @@ First you need to install [Termux](https://f-droid.org/en/packages/com.termux) a
 
 ## How to start Box86 + Wine?
 
-After the installation is completed, you just need to start Termux-x11 by typing `start-x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, in seconds Wine will start together with the TFM. 
-
-Note: default starting box86, to start box64 press Ctrl+c then type `./startbox64`
+After the installation is completed, you just need to start Termux-x11 by typing `start-x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, starting script will ask what`s need start: Box86 or Box64
 
 You can also use Input Bridge, just run `installer.bat` and Input Bridge will start automatically.
 
