@@ -35,6 +35,8 @@ echo ""
     esac
 done
 echo $res
+pkill Xvfb
+pkill Xwayland
 DISPLAY=:0 termux-x11 &>/dev/null & env DISPLAY=:0 Xvfb -listen tcp :1 -ac -screen 0 $res &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
 clear
 echo ""
