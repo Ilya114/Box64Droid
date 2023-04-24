@@ -1,6 +1,6 @@
 ## What is Box4Droid?
 ## Note: currently repo WIP, so it can work not stable
-Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.1 (box86) and 7.20 (box64)](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
+Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
 
 My fork contains new rootfs with box64 and some useful tools. Mesa version rolled back to 22.3.0 because I can`t compile 23.x now.
 
