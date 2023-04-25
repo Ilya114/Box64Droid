@@ -1,12 +1,15 @@
-echo -e " Starting installation, please wait..." & sleep 3
+echo -e "\x1b[33m Starting installation, please wait..." & sleep 3
 echo -e " Box4Droid creates a folder called "Box4Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press CTRL + c to cancel the installation)." & sleep 9 &>/dev/null
 termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
+echo -e ""
 echo -e " Installing x11-repo..."
+echo -e ""
 pkg install x11-repo -y &>/dev/null
 echo -e " X11-repo installed."
 echo -e ""
 echo -e " Downloading and installing termux-x11 starting script"
+echo -e ""
 curl -o start-x11 https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-x11 &>/dev/null
 chmod +x start-x11
 mv start-x11 $PREFIX/bin
@@ -27,7 +30,7 @@ echo -e " Downloading preconfigured rootfs..."
 wget https://github.com/Ilya114/Box4Droid/releases/download/alpha/box86-64-rootfs-alpha.tar.xz
 echo -e ""
 echo -e " Installing rootfs, please wait..."
-proot-distro restore box86-64-rootfs-alpha.tar.xz &>/dev/null
+proot-distro restore box86-64-rootfs-alpha.tar.xz
 echo -e ""
 echo -e " Downloading starting box86-64 script..."
 wget https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-box86
