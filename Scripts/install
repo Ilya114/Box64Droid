@@ -27,7 +27,7 @@ echo -e " Downloading preconfigured rootfs..."
 wget https://github.com/Ilya114/Box4Droid/releases/download/alpha/box86-64-rootfs-alpha.tar.xz
 echo -e ""
 echo -e " Installing rootfs, please wait..."
-proot-distro restore ./box86-64-rootfs-alpha.tar.xz &>/dev/null
+proot-distro restore ./box86-64-rootfs-alpha.tar.xz
 echo -e ""
 echo -e " Downloading starting box86-64 script..."
 wget https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-box86
