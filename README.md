@@ -72,7 +72,7 @@ And there are probably other issues, so feel free to open an issue.
 
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
 
-- When type `exit` you can have stucked logout. To resolve kill session.
+- TFM crashing when try go to z: disk. So, using 7zFM as file manager
 
 ## TO-DO list
 
