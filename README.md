@@ -70,8 +70,6 @@ In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV 
 
 And there are probably other issues, so feel free to open an issue.
 
-- Zink not work, only DXVK
-
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
 
 - When type `exit` you can have stucked logout. To resolve kill session.
