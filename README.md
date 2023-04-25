@@ -88,7 +88,9 @@ Some issues/instabilities can happen when using Box86 in proot environment, so i
 
 - [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 
-- [Proot under Termux](https://github.com/termux/proot) GPL-2.0 license
+- [Box64 by ptitseb](https://github.com/ptitSeb/box64) MIT license
+
+- [Proot-distro](https://github.com/termux/proot-distro) GPL-3.0 license
 
 - [DXVK](https://github.com/doitsujin/dxvk) Zlib license
 
