@@ -1,4 +1,4 @@
-echo -e "\x1b[33m Starting installation, please wait..." & sleep 3
+echo -e " Starting installation, please wait..." & sleep 3
 echo -e " Box4Droid creates a folder called "Box4Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press CTRL + c to cancel the installation)." & sleep 9 &>/dev/null
 termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
