@@ -33,7 +33,7 @@ echo -e " Installing rootfs, please wait..."
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-proot-distro restore box86-64-rootfs-alpha.tar.xz
+proot-distro restore box86-64-rootfs-alpha.tar.xz &>/dev/null
 echo -e ""
 echo -e " Downloading starting box86-64 script..."
 wget https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-box86
