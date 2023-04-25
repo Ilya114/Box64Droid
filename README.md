@@ -6,7 +6,7 @@ My fork contains new rootfs with box64 and some useful tools.
 
 ## Do you need root?
 
-No, Box4Droid uses proot to run Rootfs, so no, root is not required, but we can use chroot also which requiment root
+No, Box4Droid uses proot to run Rootfs, so no, root is not required.
 
 ## How to install?  
 
