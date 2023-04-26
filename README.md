@@ -72,8 +72,6 @@ And there are probably other issues, so feel free to open an issue.
 
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
 
-- TFM crashing when try go to z: disk. So, using 7zFM as file manager
-
 ## TO-DO list
 
 Install VirGL for Mali GPUs.
