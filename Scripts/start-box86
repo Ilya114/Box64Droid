@@ -1,1 +1,1 @@
-proot-distro login ubuntu --shared-tmp
+proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --shared-tmp
