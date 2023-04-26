@@ -16,7 +16,6 @@ mv start-x11 $PREFIX/bin
 echo -e " Script installed."
 echo ""
 echo -e " Installing need packages..."
-echo ""
 pkg install xorg-server-xvfb pulseaudio xwayland wget proot-distro -y &>/dev/null
 echo ""
 echo -e " Downloading and installing the Termux-x11 package..."
@@ -29,6 +28,7 @@ echo -e " Checking for other rootfs and removing them if any"
 echo -e ""
 proot-distro remove ubuntu &>/dev/null
 echo -e " Downloading preconfigured rootfs..."
+echo -e ""
 wget https://github.com/Ilya114/Box4Droid/releases/download/alpha/box86-64-rootfs-alpha.tar.xz &>/dev/null
 echo -e " Installing rootfs, please wait..."
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
