@@ -2,10 +2,8 @@
 
 while true; do
 clear
-echo " Por favor, selecione uma resolucão para o Xvfb :"
-echo ""
-echo " Please select a resolution for Xvfb :"
-echo ""
+
+echo " Please select a resolution for Xvfb: "
 echo ""
 echo "1) 640x480 (4:3)"
 echo "2) 800x600 (4:3)"
@@ -19,9 +17,7 @@ echo "8) Custom resoultion"
 
 echo ""
 echo ""
-echo " A resolução 1400x600 consegue se adequar a proporção da tela do celular,para usar ela corretamente entre nas configurações do Termux-x11, e em "Display resolution mode" coloque em "scaled" e coloque em 160%.Não se esqueça de colocar a mesma resolução no arquivo Box86.conf "
-echo ""
-echo " The 1400x600 resolution manages to adapt to the proportion of the cell phone screen, to use it correctly enter the Termux-x11 settings, and in "Display resolution mode" set it to "scaled" and set it to 160%.Don't forget to set the same resolution in the Box86.conf file "
+echo " The 1400x600 resolution manages to adapt to the proportion of the cell phone screen, to use it correctly enter the Termux-x11 settings, and in "Display resolution mode" set it to "scaled" and set it to 160%."
 echo ""
     read -p " ..." option
 
