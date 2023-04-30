@@ -1,18 +1,19 @@
-## What is Box4Droid?
-## Note: before upgrade from old version (which not using proot-distro), run this commands: `rm -r ~/ubuntu-fs && rm $PREFIX/bin/start-box86 ~/install`
-Box4Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. [YouTube: Smartphone Desktop](https://youtube.com/@smartphonedesktop4229).
+## What is Box64Droid?
+Box64Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. 
+
+- Based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
 
 My fork contains new rootfs with box64 and some useful tools.
 
 ## Do you need root?
 
-No, Box4Droid uses proot to run Rootfs, so no, root is not required.
+No, Box64Droid uses proot to run rootfs, so no, root is not required.
 
 ## How to install?  
 
 First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.
 
-## How to start Box86 + Wine?
+## How to start Box + Wine?
 
 After the installation is completed, you just need to start Termux-x11 by typing `start-x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, starting script will ask what`s need start: Box86 or Box64
 
@@ -20,7 +21,7 @@ You can also use Input Bridge, just run `installer.bat` and Input Bridge will st
 
 ## System requirements 
 
-- Adreno 618+ (Another GPU`s and Adreno 7xx not working now)
+- Adreno 616+ (Another GPU`s and Adreno 7xx not working now)
 
 - Android 10+??  
 
@@ -30,7 +31,7 @@ You can also use Input Bridge, just run `installer.bat` and Input Bridge will st
 
 ## How to configure?  
 
-You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box8664.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box4Droid folder right after the first run of Box86.
+You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box8664.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box64Droid folder right after the first run of Box86 or Box64.
 
 The `Box8664.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like. In this file, there is the `res` variable, in it you put the same resolution that you chose in Termux-x11, otherwise the screen content may be cut off or there may be borders on the screen.
 
@@ -40,37 +41,9 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 
 ## Known issues
 
-- For some reason, when you go to install Termux and use the `pkg update -y` command for the first time, it may happen that you get some error and it is not possible to continue the installation, if that happens, just delete the Termux data and try again.
-
-<details>
-
-![Screenshot](Docs/InShot_20230402_231621771.jpg)
-</details>
-
-- Another problem that happens is when you start Box86 for the first time, when you run anything, it will run extremely slow, in this case, it is highly recommended to restart Box86 (in most cases, games will run perfectly after that).
-
-<details>
-<summary>Before</summary>
-
-![Screenshot](Docs/Screenshot_2023-04-03-12-27-57-973_com.termux.x11.jpg)
-</details>
-
-<details>
-<summary>After</summary>
-
-![Screenshot](Docs/Screenshot_2023-04-03-12-29-12-605_com.termux.x11.jpg)
-</details>
-
-In Wine, processor cores are not available to be selected via `taskmgr`. GTA IV has infinite loading. I'm looking for a way around this.
-
-<details>
-
-![Screenshot](Docs/Screenshot_2023-04-03-12-40-22-746_com.termux.x11.jpg)
-</details>
+- "Control" tab in Start menu not open. You can just open `control` using "Run"
 
 And there are probably other issues, so feel free to open an issue.
-
-- "Control" tab in Start menu not open. You can just open `control` using "Run"
 
 ## TO-DO list
 
