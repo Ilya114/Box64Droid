@@ -3,7 +3,7 @@
 while true; do
 clear
 
-echo " Please select a resolution for Xvfb: "
+echo " Select need resolution for Xvfb:"
 echo ""
 echo "1) 640x480 (4:3)"
 echo "2) 800x600 (4:3)"
