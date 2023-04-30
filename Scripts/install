@@ -1,5 +1,5 @@
 echo -e " Starting installation, please wait..." & sleep 3
-echo -e " Box4Droid creates a folder called "Box4Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press CTRL + c to cancel the installation)." & sleep 9 &>/dev/null
+echo -e " Box46Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press CTRL + c to cancel the installation)." & sleep 9 &>/dev/null
 termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
 echo -e ""
@@ -10,7 +10,7 @@ echo -e " X11-repo installed."
 echo -e ""
 echo -e " Downloading and installing termux-x11 starting script"
 echo -e ""
-curl -o start-x11 https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-x11 &>/dev/null
+curl -o start-x11 https://raw.githubusercontent.com/Ilya114/Box64Droid/main/Scripts/start-x11 &>/dev/null
 chmod +x start-x11 &>/dev/null
 mv start-x11 $PREFIX/bin
 echo -e " Script installed."
@@ -29,14 +29,14 @@ echo -e ""
 proot-distro remove ubuntu &>/dev/null
 echo -e " Downloading preconfigured rootfs..."
 echo -e ""
-wget https://github.com/Ilya114/Box4Droid/releases/download/alpha/box86-64-rootfs-alpha.tar.xz &>/dev/null
+wget https://github.com/Ilya114/Box64Droid/releases/download/alpha/box86-64-rootfs-alpha.tar.xz &>/dev/null
 echo -e " Installing rootfs, please wait..."
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
 proot-distro restore box86-64-rootfs-alpha.tar.xz &>/dev/null
 echo -e " Downloading starting box86-64 script..."
-wget https://raw.githubusercontent.com/Ilya114/Box4Droid/main/Scripts/start-box86 &>/dev/null
+wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/Scripts/start-box86 &>/dev/null
 chmod +x start-box86 &>/dev/null
 mv start-box86 $PREFIX/bin &>/dev/null
 echo " Script installed"
@@ -57,4 +57,4 @@ echo -e " And if everything goes as planned, the Wine environment will start and
 echo ""
 echo -e " When stopping using the x11 server, it is recommended to force stop Termux through the settings. You can also use the 'kill' command + the Termux-X11 pid(type termux-x11, and at the end the id will appear)"
 echo ""
-echo -e "That's all."
+echo -e " That's all."
