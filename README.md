@@ -13,7 +13,7 @@ First you need to install [Termux](https://f-droid.org/en/packages/com.termux) a
 
 After the installation is completed, you just need to start Termux-x11 by typing `start-x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, starting script will ask what`s need start: Box86 or Box64
 
-You can also use Input Bridge, just run `installer.bat` and Input Bridge will start automatically.
+You can also use Input Bridge, just run it from Start menu.
 
 ## System requirements 
 
@@ -49,7 +49,7 @@ Create a launcher.
 
 ## Things to note
 
-Some issues/instabilities can happen when using Box86 in proot environment, so it's not recommended to use Box86 in proot as debug/testing environment, there are better options for that.
+Some issues/instabilities can happen when using Box86 and Box64 in proot environment, so it's not recommended to use Box86 and Box64 in proot as debug/testing environment, there are better options for that.
 
 ## Third party applications
 
