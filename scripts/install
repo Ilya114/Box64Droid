@@ -8,13 +8,6 @@ echo -e " Installing x11-repo..."
 echo -e ""
 pkg install x11-repo -y &>/dev/null
 echo -e " X11-repo installed."
-echo -e ""
-echo -e " Downloading and installing termux-x11 starting script"
-echo -e ""
-curl -o start-x11 https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-x11 &>/dev/null
-chmod +x start-x11 &>/dev/null
-mv start-x11 $PREFIX/bin
-echo -e " Script installed."
 echo ""
 echo -e " Installing need packages..."
 pkg install xorg-server-xvfb pulseaudio xwayland wget proot-distro -y &>/dev/null
@@ -39,9 +32,9 @@ proot-distro restore box86-64-rootfs-beta.tar.xz &>/dev/null
 echo -e "Rootfs installed"
 echo ""
 echo -e " Downloading starting box86-64 script..."
-wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/Scripts/start-box86 &>/dev/null
-chmod +x start-box86 &>/dev/null
-mv start-box86 $PREFIX/bin &>/dev/null
+wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box &>/dev/null
+chmod +x start-box &>/dev/null
+mv start-box $PREFIX/bin &>/dev/null
 echo " Script installed"
 echo ""
 echo -e " Removing installation waste..."
