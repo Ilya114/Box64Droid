@@ -3,19 +3,7 @@ Box64Droid is a simple script that automates the installation of a preconfigured
 
 ## Do you need root?
 
-No, Box64Droid uses proot to run rootfs, so no, root is not required. If you have root, you can use chroot, run `start-box-root` 
-If you have /dev /proc /sys /sdcard error no such file or directory create it:
-```
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/dev
-
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/sys
-
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/proc
-
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/dev/pts
-
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/sdcard
-```
+No, Box64Droid uses proot to run rootfs, so no, root is not required.
 
 ## How to install?  
 
