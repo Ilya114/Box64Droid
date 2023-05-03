@@ -31,11 +31,12 @@ mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubun
 proot-distro restore box86-64-rootfs-beta.tar.xz &>/dev/null
 echo -e "Rootfs installed"
 echo ""
-echo -e " Downloading starting box86-64 script..."
+echo -e " Downloading starting box86-64 scripts..."
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box &>/dev/null
-chmod +x start-box &>/dev/null
-mv start-box $PREFIX/bin &>/dev/null
-echo " Script installed"
+wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box-root &>/dev/null
+chmod +x start-box start-box-root &>/dev/null
+mv start-box start-box-root $PREFIX/bin &>/dev/null
+echo " Scripts installed"
 echo ""
 echo -e " Removing installation waste..."
 rm -rf box86-64-rootfs-beta.tar.xz &>/dev/null
