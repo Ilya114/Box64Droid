@@ -39,28 +39,28 @@ Xvfb -listen tcp :0 -ac -screen 0 $res &>/dev/null & DISPLAY=:0 termux-x11 &>/de
 clear
 echo ""
 echo -e "Termux-x11 started."
-
+su
 # The path of Ubuntu rootfs
 UBUNTUPATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu"
 
 # Fix setuid issue
-sudo busybox mount -o remount,dev,suid /data
+busybox mount -o remount,dev,suid /data
 
-sudo busybox mount --bind /dev $UBUNTUPATH/dev
-sudo busybox mount --bind /sys $UBUNTUPATH/sys
-sudo busybox mount --bind /proc $UBUNTUPATH/proc
-sudo busybox mount -t devpts devpts $UBUNTUPATH/dev/pts
+busybox mount --bind /dev $UBUNTUPATH/dev
+busybox mount --bind /sys $UBUNTUPATH/sys
+busybox mount --bind /proc $UBUNTUPATH/proc
+busybox mount -t devpts devpts $UBUNTUPATH/dev/pts
 
 # Mount sdcard
-sudo busybox mount --bind /sdcard $UBUNTUPATH/sdcard
-sudo busybox mount --bind /data/data/com.termux/files/usr/tmp $UBUNTUPATH/tmp
+busybox mount --bind /sdcard $UBUNTUPATH/sdcard
+busybox mount --bind /data/data/com.termux/files/usr/tmp $UBUNTUPATH/tmp
 
 # chroot into Ubuntu
-sudo busybox chroot $UBUNTUPATH /bin/su - root
+busybox chroot $UBUNTUPATH /bin/su - root
 
 # Umount everything after exit
-sudo busybox umount $UBUNTUPATH/dev/pts
-sudo busybox umount $UBUNTUPATH/dev
-sudo busybox umount $UBUNTUPATH/proc
+busybox umount $UBUNTUPATH/dev/pts
+busybox umount $UBUNTUPATH/dev
+busybox umount $UBUNTUPATH/proc
 
 # Original script can be found here: https://ivonblog.com/en-us/posts/termux-chroot-ubuntu/
