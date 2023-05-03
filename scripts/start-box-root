@@ -62,5 +62,5 @@ sudo busybox chroot ./ usr/bin/env -i HOME=/root TERM="$TERM" /bin/bash --login
 busybox umount $UBUNTUPATH/dev/pts
 busybox umount $UBUNTUPATH/dev
 busybox umount $UBUNTUPATH/proc
-cd ~/
+
 # Original script can be found here: https://ivonblog.com/en-us/posts/termux-chroot-ubuntu/
