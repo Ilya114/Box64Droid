@@ -41,7 +41,7 @@ echo ""
 echo -e "Termux-x11 started."
 
 # The path of Ubuntu rootfs
-UBUNTUPATH="/data/data/com.termux/files/var/lib/proot-distro/installed-rootfs/ubuntu"
+UBUNTUPATH="/data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu"
 
 # Fix setuid issue
 sudo busybox mount -o remount,dev,suid /data
@@ -53,7 +53,7 @@ sudo busybox mount -t devpts devpts $UBUNTUPATH/dev/pts
 
 # Mount sdcard
 sudo busybox mount --bind /sdcard $UBUNTUPATH/sdcard
-sudo busybox mount --bind /data/data/com.termux/files/tmp $UBUNTUPATH/tmp
+sudo busybox mount --bind /data/data/com.termux/files/usr/tmp $UBUNTUPATH/tmp
 
 # chroot into Ubuntu
 sudo busybox chroot $UBUNTUPATH /bin/su - root
