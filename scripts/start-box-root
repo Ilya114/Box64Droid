@@ -54,13 +54,13 @@ busybox mount -t devpts devpts $UBUNTUPATH/dev/pts
 # Mount sdcard
 busybox mount --bind /sdcard $UBUNTUPATH/sdcard
 busybox mount --bind /data/data/com.termux/files/usr/tmp $UBUNTUPATH/tmp
-
+cd $UBUNTUPATH
 # chroot into Ubuntu
-busybox chroot $UBUNTUPATH /bin/su - root
+sudo busybox chroot ./ usr/bin/env -i HOME=/root TERM="$TERM" /bin/bash --login
 
 # Umount everything after exit
 busybox umount $UBUNTUPATH/dev/pts
 busybox umount $UBUNTUPATH/dev
 busybox umount $UBUNTUPATH/proc
-
+cd ~/
 # Original script can be found here: https://ivonblog.com/en-us/posts/termux-chroot-ubuntu/
