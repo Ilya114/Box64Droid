@@ -1,7 +1,7 @@
 clear
 echo -e " Starting installation, please wait..." & sleep 3
 echo -e " Box64Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press CTRL + c to cancel the installation)." & sleep 9 &>/dev/null
-termux-setup-storage
+termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
 echo -e ""
 echo -e " Installing x11-repo..."
