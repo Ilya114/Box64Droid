@@ -7,11 +7,11 @@ No, Box64Droid uses proot to run rootfs, so no, root is not required.
 
 ## How to install?  
 
-First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707).  After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.
+First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.
 
 ## How to start Box + Wine?
 
-After the installation is completed, you just need to start Termux-x11 by typing `start-x11` in the terminal, enter the Termux-x11 app, then go back to Termux, and then type `start-box86`, starting script will ask what's need start: Box86 or Box64
+After the installation is completed, type `start-box`, starting script will start Termux-x11 and ask what's need start: Box86 or Box64
 
 You can also use Input Bridge, just run it from Start menu.
 
