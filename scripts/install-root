@@ -27,6 +27,7 @@ wget https://github.com/Ilya114/Box64Droid/releases/download/chroot/box86-64-roo
 echo -e " Unpacking rootfs, please wait..."
 mkdir ~/ubuntu &>/dev/null
 sudo tar --numeric-owner -xJf box86-64-rootfs-beta-chroot.tar.xz -C ~/ubuntu &>/dev/null
+echo ""
 echo -e " Rootfs installed"
 echo ""
 echo -e " Downloading starting box86-64 scripts..."
