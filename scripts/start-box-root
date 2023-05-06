@@ -49,7 +49,7 @@ clear
 echo ""
 echo -e "Termux-x11 started."
 
-busybox chroot $ROOTFSPATH /bin/su - root
+sudo chroot $ROOTFSPATH /bin/su - root
 sudo umount $ROOTFSPATH/proc
 sudo umount $ROOTFSPATH/sys
 sudo umount $ROOTFSPATH/dev
