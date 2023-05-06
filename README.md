@@ -3,11 +3,11 @@ Box64Droid is a simple script that automates the installation of a preconfigured
 
 ## Do you need root?
 
-No, Box64Droid uses proot to run rootfs, so no, root is not required.
+Box64Droid uses proot to run rootfs, so no, root is not required, chroot also can use.
 
 ## How to install?  
 
-First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install` and paste it in the Termux terminal and wait until the installation completes.
+First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install` or `curl -o install -root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-root && chmod +x install && ./install-root` to install chroot version and paste it in the Termux terminal and wait until the installation completes.
 
 ## How to start Box + Wine?
 
