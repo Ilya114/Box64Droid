@@ -7,7 +7,7 @@ sudo mount sys -t sysfs $ROOTFSPATH/sys
 sudo mount --bind /dev $ROOTFSPATH/dev
 sudo mount --bind /dev/pts $ROOTFSPATH/dev/pts
 sudo mount --bind /sdcard $ROOTFSPATH/sdcard
-sudo mount --bind $PREFIX/tmp $ROOTFSPATH/tmp
+sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix
 
 while true; do
 echo " Starting Termux-x11..."
@@ -49,10 +49,12 @@ clear
 echo ""
 echo -e "Termux-x11 started."
 
+sudo ln $PREFIX/tmp/termux-x11 $UBUNTUPATH/tmp/termux-x11
 sudo chroot $ROOTFSPATH /bin/su - root
 sudo umount $ROOTFSPATH/proc
 sudo umount $ROOTFSPATH/sys
 sudo umount $ROOTFSPATH/dev/pts
 sudo umount $ROOTFSPATH/dev
 sudo umount $ROOTFSPATH/sdcard
-sudo umount $ROOTFSPATH/tmp
+sudo umount $ROOTFSPATH/tmp/.X11-unix
+sudo rm $ROOTFSPATH/tmp/termux-x11
