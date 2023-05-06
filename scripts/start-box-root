@@ -49,7 +49,7 @@ clear
 echo ""
 echo -e "Termux-x11 started."
 
-sudo ln $PREFIX/tmp/termux-x11 $UBUNTUPATH/tmp/termux-x11
+sudo ln $PREFIX/tmp/termux-x11 $ROOTFSPATH/tmp/termux-x11
 sudo chroot $ROOTFSPATH /bin/su - root
 sudo umount $ROOTFSPATH/proc
 sudo umount $ROOTFSPATH/sys
