@@ -29,6 +29,7 @@ mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
 proot-distro restore box86-64-rootfs-beta.tar.xz &>/dev/null
+echo ""
 echo -e " Rootfs installed"
 echo ""
 echo -e " Downloading starting box86-64 scripts..."
