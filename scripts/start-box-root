@@ -52,6 +52,7 @@ echo -e "Termux-x11 started."
 sudo chroot $ROOTFSPATH /bin/su - root
 sudo umount $ROOTFSPATH/proc
 sudo umount $ROOTFSPATH/sys
+sudo umount $ROOTFSPATH/dev/pts
 sudo umount $ROOTFSPATH/dev
 sudo umount $ROOTFSPATH/sdcard
 sudo umount $ROOTFSPATH/tmp
