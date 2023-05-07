@@ -1,5 +1,5 @@
 ---
-name:
+name: Bug report
 about: Create a report to help Box64Droid improve
 title: ''
 labels: ''
