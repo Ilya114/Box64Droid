@@ -17,7 +17,13 @@ A clear and concise description of what the bug is.
 
 **Screenshots**
 
-If applicable, add screenshots to help explain your problem.
+If possible, make and add screenshots in spoiler to help explain your problem.
+
+<details>
+
+
+</details>
+
 
 **Smartphone (please complete the following information):**
 
