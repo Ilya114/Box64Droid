@@ -1,13 +1,15 @@
 ## What is Box64Droid?
-Box64Droid is a simple script that automates the installation of a preconfigured Rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
+Box64Droid is a simple script that automates the installation of a preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/) and [DXVK](https://github.com/doitsujin/dxvk) installed, made by me. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
 
 ## Do you need root?
 
-Box64Droid uses proot to run rootfs, so no, root is not required, chroot also can use.
+Box64Droid using proot to run rootfs, so no, root is not required, chroot also can use.
 
 ## How to install?  
 
-First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy the command `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install` or `curl -o install-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-root && chmod +x install-root && ./install-root` to install chroot version and paste it in the Termux terminal and wait until the installation completes.
+First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy, paste in Termux this command and wait when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+
+If you have root, you can use chroot version instead of proot: `curl -o install-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-root && chmod +x install-root && ./install-root`
 
 ## How to start Box + Wine?
 
