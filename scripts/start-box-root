@@ -2,6 +2,7 @@
 
 unset LD_PRELOAD
 export ROOTFSPATH=~/ubuntu
+sudo mount -o remount,dev,suid /data
 sudo mount proc -t proc $ROOTFSPATH/proc
 sudo mount sys -t sysfs $ROOTFSPATH/sys
 sudo mount --bind /dev $ROOTFSPATH/dev
