@@ -51,7 +51,7 @@ echo ""
 echo -e "Termux-x11 started."
 
 sudo ln $PREFIX/tmp/termux-x11 $ROOTFSPATH/tmp/termux-x11
-sudo chroot $ROOTFSPATH /bin/su - root
+sudo chroot $ROOTFSPATH /bin/su
 sudo umount $ROOTFSPATH/proc
 sudo umount $ROOTFSPATH/sys
 sudo umount $ROOTFSPATH/dev/pts
