@@ -20,7 +20,7 @@ echo ""
 echo -e " Checking for other rootfs and removing them if any" 
 echo -e ""
 sudo rm -r ~/ubuntu &>/dev/null
-echo -e " Downloading preconfigured rootfs..."
+echo -e " Downloading preconfigured rootfs... (might be long)"
 echo -e ""
 wget https://github.com/Ilya114/Box64Droid/releases/download/chroot/box86-64-rootfs-beta-chroot.tar.xz &>/dev/null
 echo -e " Unpacking rootfs, please wait..."
