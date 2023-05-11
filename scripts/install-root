@@ -5,7 +5,6 @@ termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
 echo -e ""
 echo -e " Installing x11-repo..."
-echo -e ""
 pkg install x11-repo -y &>/dev/null
 echo -e " X11-repo installed."
 echo ""
@@ -34,6 +33,7 @@ echo ""
 echo -e " Downloading starting box86-64 scripts..."
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box-root &>/dev/null
 chmod +x start-box-root &>/dev/null
+echo ""
 mv start-box-root $PREFIX/bin &>/dev/null
 echo " Scripts installed"
 echo ""
