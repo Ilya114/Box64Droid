@@ -6,6 +6,7 @@ pkg update -y
 echo -e ""
 echo -e " Installing x11-repo..."
 pkg install x11-repo -y &>/dev/null
+echo -e ""
 echo -e " X11-repo installed."
 echo ""
 echo -e " Installing need packages..."
