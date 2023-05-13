@@ -72,3 +72,9 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Wine](https://wiki.winehq.org/Licensing)
 
 - [Winetricks](https://wiki.winehq.org/Winetricks)
+
+
+## Thanks to:
+- [Herick75](https://github.com/Herick75) - for Mesa Turnip patches which make possible compile it
+
+- [Inguna87](https://github.com/inguna87) - for start chroot fix for MIUI and probably Oxygen
