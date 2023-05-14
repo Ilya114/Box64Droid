@@ -20,6 +20,7 @@ echo -e " Termux-x11 installed."
 echo ""
 echo -e " Checking for other rootfs and removing them if any" 
 echo -e ""
+rm -r /sdcard/Box64Droid &>/dev/null
 proot-distro remove ubuntu &>/dev/null
 echo -e " Downloading preconfigured rootfs... (might be long)"
 echo -e ""
