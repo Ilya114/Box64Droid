@@ -1,31 +1,32 @@
+## Box64Droid
 Box64Droid is a script that automates the installation of a preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/), [DXVK](https://github.com/doitsujin/dxvk) and [vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) installed. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
 
 Project chat in Telegram: https://t.me/box64droidchat
 
-## Do you need root?
+### Do you need root?
 
 Box64Droid using proot to run rootfs, so no, root is not required, chroot also can use.
 
-## How to install?  
+### How to install?  
 
 First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy, paste in Termux this command and wait when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
 If you have root, you can use chroot version instead of proot: `curl -o install-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-root && chmod +x install-root && ./install-root`
 
-## How to start Box + Wine?
+### How to start Box + Wine?
 
 After the installation is completed, type `start-box`, starting script will start Termux-x11 and ask what's need start: Box86 or Box64
 
 You can also use Input Bridge, just run it from Start menu.
 
-## System requirements 
+### System requirements 
 
 - Adreno 616+ (Another GPU's and Adreno 7xx not working now)
 - Android 8+ 
 - 64-bit Android 
 - You also need at 5,3 GB free for the installation to go without problems.
 
-## How to configure?  
+### How to configure?  
 
 You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box8664.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box64Droid folder right after the first run of Box86 or Box64.
 
@@ -35,7 +36,7 @@ The `DXVK_env.conf` file is for you to use the environment variables referring t
 
 The `dxvk.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
 
-## Known issues
+### Known issues
 
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
 - Proton not working in Box86 (seems Box86 problem, asked ptitSeb)
@@ -43,11 +44,11 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 
 And there are probably other issues, so feel free to open an issue.
 
-## Things to note
+### Things to note
 
 Some issues/instabilities can happen when using Box86 and Box64 in proot environment, so it's not recommended to use Box86 and Box64 in proot as debug/testing environment, there are better options for that.
 
-## Third party applications
+### Third party applications
 - [Termux-app](https://github.com/termux/termux-app) GPLv3 license
 - [Box64 by ptitseb](https://github.com/ptitSeb/box64) MIT license
 - [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
@@ -58,6 +59,6 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Winetricks](https://wiki.winehq.org/Winetricks)
 - [Vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) GPL-2.1 license
 
-## Thanks to:
+### Thanks to:
 - [Herick75](https://github.com/Herick75) - for Mesa Turnip patches which make possible compile it
 - [Inguna87](https://github.com/inguna87) - for start chroot fix for MIUI and probably Oxygen
