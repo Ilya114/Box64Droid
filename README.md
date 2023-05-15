@@ -1,7 +1,7 @@
 ## Box64Droid
 Box64Droid is a script that automates the installation of a preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Wine 7.20](https://www.winehq.org/), [DXVK](https://github.com/doitsujin/dxvk) and [vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) installed. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
 
-Project chat in Telegram: https://t.me/box64droidchat
+Project chat [available](https://t.me/box64droidchat) in Telegram
 
 ### Do you need root?
 
