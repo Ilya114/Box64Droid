@@ -1,43 +1,10 @@
 #!/bin/bash
 
-while true; do
-echo " Starting Termux-x11..."
-clear
-echo " Select need resolution for Xvfb:"
-echo ""
-echo "1) 640x480 (4:3)"
-echo "2) 800x600 (4:3)"
-echo "3) 1024x768 (4:3)"
-echo "4) 1280x720 (16:9)"
-echo "5) 1920x1080 (16:9)"
-echo "6) 1400x600 (7:3)"
-echo "7) 2560x1600 (16:10)"
-echo "8) Custom resoultion"
-
-
-echo ""
-echo ""
-echo " The 1400x600 resolution manages to adapt to the proportion of the cell phone screen, to use it correctly enter the Termux-x11 settings, and in "Display resolution mode" set it to "scaled" and set it to 160%."
-echo ""
-    read -p " ..." option
-
-    case $option in
-        [1]* ) export res=640x480x24;break;;
-        [2]* ) export res=800x600x24;break;;
-	      [3]* ) export res=1024x768x24;break;;
-	      [4]* ) export res=1280x720x24;break;;
-	      [5]* ) export res=1920x1080x24;break;;
-	      [6]* ) export res=1400x600x24;break;;
-        [7]* ) export res=2560x1600x24;break;;
-	      [8]* ) echo "Which resolution you want use? (e.g. 800x600x24)" && read reso && export res=$reso;break;;
-    esac
-done
-echo $res
 pkill Xvfb
 pkill Xwayland
-Xvfb -listen tcp :0 -ac -screen 0 $res &>/dev/null & DISPLAY=:0 termux-x11 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
-clear
+echo "Starting Termux-x11..."
+Xvfb :0 -ac &>/dev/null & DISPLAY=:0 termux-x11 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
 echo ""
-echo -e "Termux-x11 started."
+echo -e "Termux-x11 started"
 
 proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix --bind $PREFIX/tmp/termux-x11:/tmp/termux-x11
