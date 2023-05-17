@@ -7,7 +7,7 @@ Xvfb :0 -ac &>/dev/null & DISPLAY=:0 termux-x11 &>/dev/null & pulseaudio --start
 echo ""
 echo -e "Termux-x11 started"
 echo ""
-ecgo "Starting VirGL..."
+echo "Starting VirGL..."
 MESA_NO_ERROR=1 virgl_test_server_android &
 echo "VirGL started"
 
