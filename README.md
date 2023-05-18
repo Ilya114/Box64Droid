@@ -41,8 +41,7 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 ## Known issues
 
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
-- Proton not working in Box86 (seems Box86 problem, asked ptitSeb)
-- Can't install Proton versions lower than 8 (will be use only 8.0-2)
+- Proot version cant work on Android less than 11, you can try chroot (need root rights)
 
 And there are probably other issues, so feel free to open an issue.
 
