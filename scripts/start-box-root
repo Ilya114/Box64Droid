@@ -12,10 +12,10 @@ sudo mount --bind /sdcard $ROOTFSPATH/sdcard
 echo " Starting Termux-x11..."
 pkill Xvfb
 pkill Xwayland
-Xvfb -ac :0 &>/dev/null & DISPLAY=:0 termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
+Xvfb -ac :0 &>/dev/null & DISPLAY=:0 termux-x11 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
 clear
 echo ""
-echo -e "Termux-x11 started."
+echo -e " Termux-x11 started."
 
 sudo ln $PREFIX/tmp/termux-x11 $ROOTFSPATH/tmp/termux-x11
 sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix
