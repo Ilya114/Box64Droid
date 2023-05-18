@@ -24,7 +24,7 @@ You can also use Input Bridge, install 0.1.9 apk then just run app in Android an
 ### System requirements 
 
 - Adreno 616+ (Another GPU's and Adreno 7xx not working now)
-- Android 11+ 
+- Android 11+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
 - You also need at 5,3 GB free for the installation to go without problems.
 
@@ -41,7 +41,6 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 ## Known issues
 
 - "Control" tab in Start menu not open. You can just open `control` using "Run"
-- Proot version cant work on Android less than 11, you can try chroot (need root rights)
 
 And there are probably other issues, so feel free to open an issue.
 
