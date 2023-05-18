@@ -7,4 +7,4 @@ Xvfb :0 -ac &>/dev/null & DISPLAY=:0 termux-x11 &>/dev/null & pulseaudio --start
 echo ""
 echo -e " Termux-x11 started"
 
-proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix --bind $PREFIX/tmp/termux-x11:/tmp/termux-x11
+proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix
