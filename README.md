@@ -1,5 +1,5 @@
 # Box64Droid
-Box64Droid is a script that automates the installation of a preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Proton 8.0-2]([https://www.winehq.org/](https://github.com/ValveSoftware/Proton)), [DXVK](https://github.com/doitsujin/dxvk) and [vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) installed. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
+Box64Droid is a script that automates the installation of a preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk) and [vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) installed. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
 
 Project chat [available](https://t.me/box64droidchat) in Telegram
 
@@ -9,7 +9,7 @@ Box64Droid using proot to run rootfs, so no, root is not required, chroot also c
 
 ## How to install?  
 
-First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://github.com/termux/termux-x11/actions/runs/4385798707). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+First you need to install [Termux](https://f-droid.org/en/packages/com.termux) and [Termux-x11](https://raw.githubusercontent.com/Ilya114/Box64Droid/main/apps/app-debug.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
 If you have Mali, PowerVR or Adreno below 616 you can use rootfs with VirGL: `curl -o install-virgl https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-virgl && chmod +x install-virgl && ./install-virgl`
 
