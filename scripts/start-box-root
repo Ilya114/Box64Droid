@@ -17,7 +17,6 @@ clear
 echo ""
 echo -e " Termux-x11 started."
 
-sudo ln $PREFIX/tmp/termux-x11 $ROOTFSPATH/tmp/termux-x11
 sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix
 sudo chroot $ROOTFSPATH /bin/su -
 
