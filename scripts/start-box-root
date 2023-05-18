@@ -26,4 +26,3 @@ sudo umount $ROOTFSPATH/dev/pts
 sudo umount $ROOTFSPATH/dev
 sudo umount $ROOTFSPATH/sdcard
 sudo umount $ROOTFSPATH/tmp/.X11-unix
-sudo rm $ROOTFSPATH/tmp/termux-x11
