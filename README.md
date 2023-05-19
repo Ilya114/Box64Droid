@@ -21,7 +21,7 @@ After the installation is completed, type `start-box`, starting script will star
 
 You can also use Input Bridge, install 0.1.9 apk then just run app in Android and in Wine from start menu,
 
-### System requirements 
+## System requirements 
 
 - Adreno 616+ recommend (Another GPU's supporting but less games work)
 - Android 11+ (proot version), Android 10+ (chroot version)
