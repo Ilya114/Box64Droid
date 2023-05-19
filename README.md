@@ -23,7 +23,7 @@ You can also use Input Bridge, install 0.1.9 apk then just run app in Android an
 
 ### System requirements 
 
-- Adreno 616+ (Another GPU's and Adreno 7xx not working now)
+- Adreno 616+ recommend (Another GPU's supporting but less games work)
 - Android 11+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
 - You also need at 5,3 GB free for the installation to go without problems.
