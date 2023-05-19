@@ -43,6 +43,7 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 - Error when updating Termux packages. Clear Termux data will help.
 - "Control" menu in Wine (in Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run"
 - Box64Droid can exit after start. This is a TFM issue, no have idea why and how to fix. 
+- Winetricks runs a long of time when Proton installed (proot)
 
 And there are probably other issues, so feel free to open an issue.
 
