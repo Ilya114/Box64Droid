@@ -7,7 +7,7 @@ echo -e ""
 echo -e " Installing x11-repo..."
 echo -e ""
 pkg install x11-repo -y &>/dev/null
-echo -e " X11-repo installed."
+echo -e " x11-repo installed."
 echo ""
 echo -e " Installing need packages..."
 pkg install xorg-server-xvfb pulseaudio xwayland wget proot-distro -y &>/dev/null
@@ -22,9 +22,10 @@ echo -e " Checking for other rootfs and removing them if any"
 echo -e ""
 rm -r /sdcard/Box64Droid &>/dev/null
 proot-distro remove ubuntu &>/dev/null
-echo -e " Downloading preconfigured rootfs... (might be long)"
+echo -e " Downloading preconfigured rootfs..."
 echo -e ""
-wget https://github.com/Ilya114/Box64Droid/releases/download/beta/box86-64-rootfs-beta.tar.xz &>/dev/null
+wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box86-64-rootfs-beta.tar.xz 
+echo -e ""
 echo -e " Installing rootfs, please wait..."
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
