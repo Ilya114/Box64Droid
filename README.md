@@ -41,7 +41,7 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 ## Known issues
 
 - Error when updating Termux packages. Clear Termux data will help.
-- Android can kill Termux (`[Process completed (signal 9) - press Enter]`), to fix run this command in `adb shell`: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
+- Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`, to fix run this command in adb shell: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
 - "Control" menu in Wine (in Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run"
 - Box64Droid can exit after start. This is a TFM issue, no have idea why and how to fix. 
 - Winetricks runs a long of time when Proton installed (proot)
