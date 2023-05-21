@@ -49,6 +49,10 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 
 And there are probably other issues, so feel free to open an issue.
 
+## Instructions how to mount SD-card (can work without root) or external HDD/SSD (need root)
+
+Not finished
+
 ## Things to note
 
 Some issues/instabilities can happen when using Box86 and Box64 in proot environment, so it's not recommended to use Box86 and Box64 in proot as debug/testing environment, there are better options for that.
