@@ -1,4 +1,5 @@
 # Box64Droid
+# WARNING!!! Still in early stage, therefore there may be problems and shortcomings
 Box64Droid is a script that automates the installation of a preconfigured rootfs with [Box86](https://github.com/ptitSeb/box86), [Box64](https://github.com/ptitSeb/box64), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk) and [vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) installed. Project based on Box4Droid, original author is [Herick75](https://github.com/Herick75)
 
 Project chat [available](https://t.me/box64droidchat) in Telegram, also there is a [site](https://Ilya114.github.io/Box64Droid/)
