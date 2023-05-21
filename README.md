@@ -49,9 +49,9 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 
 And there are probably other issues, so feel free to open an issue.
 
-## Instructions how to mount SD-card (can work without root) or external HDD/SSD (need root)
+## Instructionsl how to mount SD-card external HDD/SSD (chroot version)
 
-Not finished
+If you want mount sdcard or external HDD (SSD), you need to add mountpoint. For sdcard go to /storage and see folder example `8D3E-2B7K`. For external drivers go to /mnt/media_rw and see folder like `C3G3H6B8A56212H7`. Type `nano $PREFIX/bin/start-box-root` and add mount command before `sudo chroot login ...` line: `sudo mount --bind /mnt/media_rw/drivename (or /storage/sdcardname) $ROOTFSPATH/needfolder`. You need to create `needfolder` yourself in ~/ubuntu folder by using `sudo mkdir foldername` 
 
 ## Things to note
 
