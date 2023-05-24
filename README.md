@@ -62,7 +62,7 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Box64 by ptitseb](https://github.com/ptitSeb/box64) MIT license
 - [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 - [Proot-distro](https://github.com/termux/proot-distro) GPL-3.0 license
-- [Wine](https://wiki.winehq.org/Licensing) GPL-2.1 license
+- [Wine Stable, Staging and Staging-tkg GPL-2.1 license](https://wiki.winehq.org/Licensing) (builded by [Kron4ek](https://github.com/Kron4ek) by MIT License), [Wine Proton by Valve](https://github.com/ValveSoftware/Proton) (own license), [Wine GE](https://github.com/GloriousEggroll/wine-ge-custom) (using in Lutris)
 - [Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
 - [DXVK](https://github.com/doitsujin/dxvk) Zlib license 
 - [Winetricks](https://wiki.winehq.org/Winetricks)
