@@ -10,7 +10,7 @@ Box64Droid using proot to run rootfs, so no, root is not required, chroot also c
 
 ## How to install?  
 
-First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://raw.githubusercontent.com/Ilya114/Box64Droid/main/apps/app-debug.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/beta/termux-x11.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
 If you have Mali, PowerVR or Adreno below 616 you can use rootfs with VirGL (Not stable and much games maybe not working): `curl -o install-virgl https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-virgl && chmod +x install-virgl && ./install-virgl`
 
