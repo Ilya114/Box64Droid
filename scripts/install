@@ -10,7 +10,7 @@ pkg install x11-repo -y &>/dev/null
 echo -e " x11-repo installed."
 echo ""
 echo -e " Installing need packages..."
-pkg install xorg-server-xvfb pulseaudio xwayland wget proot-distro -y &>/dev/null
+pkg install pulseaudio xwayland wget proot-distro -y &>/dev/null
 echo ""
 echo -e " Downloading and installing the Termux-x11 package..."
 echo -e ""
