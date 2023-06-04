@@ -10,9 +10,9 @@ then
 	&>/dev/null
 else
 	clear
-	echo "Invalid version, rerun install script"
-	exit
+	echo "Invalid version, rerun installation script"
 	rm -rf install &>/dev/null
+	exit
 fi
 clear
 echo -e " Starting Box64Droid install..." & sleep 3
