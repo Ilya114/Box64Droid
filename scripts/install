@@ -9,8 +9,9 @@ if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	&>/dev/null
 else
-	echo "Invalid version"
-	. ~/install
+	clear
+	echo "Invalid version, rerun install script"
+	rm -rf install &>/dev/null
 fi
 clear
 echo -e " Starting Box64Droid install..." & sleep 3
