@@ -26,9 +26,9 @@ echo ""
 echo -e " Installing need packages..."
 if [ $version = 1 ] || [ $version = 3 ]
 then
-       pkg install pulseaudio wget proot-distro -y &>/dev/null 
+       pkg install pulseaudio wget xwayland proot-distro -y &>/dev/null 
 else
-       pkg install pulseaudio wget tsu -y &>/dev/null
+       pkg install pulseaudio wget tsu xwayland -y &>/dev/null
 fi
 echo ""
 echo -e " Downloading and installing the Termux-x11 package..."
