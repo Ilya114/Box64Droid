@@ -12,13 +12,9 @@ Box64Droid using proot to run rootfs, so no, root is not required, chroot also c
 
 First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://raw.githubusercontent.com/Ilya114/Box64Droid/main/apps/app-debug.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
-If you have Mali, PowerVR or Adreno below 616 you can use rootfs with VirGL (Not stable and much games maybe not working): `curl -o install-virgl https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-virgl && chmod +x install-virgl && ./install-virgl`
+## How to start Box64 + Wine?
 
-If you have root, you can use chroot version instead of proot: `curl -o install-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install-root && chmod +x install-root && ./install-root`
-
-## How to start Box + Wine?
-
-After the installation is completed, type `start-box`, starting script will start Termux-X11 and show start menu.
+After the installation is completed, type `box64droid --start`, starting script will start Termux-X11 and show start menu.
 
 You can also use Input Bridge, install 0.1.9 apk then just run app in Android and in Wine from start menu,
 
@@ -27,17 +23,17 @@ You can also use Input Bridge, install 0.1.9 apk then just run app in Android an
 - Adreno 616+ recommend (Another GPU's supporting but less games work)
 - Android 12+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
-- You also need at ~5,0 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
+- You also need at ~4,5 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
 
 ## How to configure?  
 
 You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box8664.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box64Droid folder right after the first run of Box86 or Box64.
 
-The `Box8664.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like.
+The `Box64Droid.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like.
 
-The `DXVK_env.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), in addition to other settings.  
+The `DXVK_HUD.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), in addition to other settings.  
 
-The `dxvk.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
+The `DXVK.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
 
 ## Known issues
 
@@ -47,7 +43,7 @@ The `dxvk.conf` file is for you to use the environment variables referring to [d
 - Box64Droid can exit after start. This is a TFM issue, no have idea why and how to fix. 
 - Winetricks runs a long of time when Proton installed (proot)
 
-And there are probably other issues, so feel free to open an issue.
+If you has other issues like black screen or crashing game/app run Box64 in debug mode then open issue and attach /sdcard/Box64Droid.log
 
 ## Instructionsl how to mount SD-card external HDD/SSD (chroot version)
 
@@ -64,9 +60,9 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Proot-distro](https://github.com/termux/proot-distro) GPL-3.0 license
 - [Wine](https://wiki.winehq.org/Licensing) GPL-2.1 license
 - [Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
-- [DXVK](https://github.com/doitsujin/dxvk) Zlib license 
+- [DXVK](https://github.com/doitsujin/dxvk) Zlib license
+- [WineD3D for Windows](https://fdossena.com/?p=wined3d/index.frag) GPL-2.0+ License
 - [Winetricks](https://wiki.winehq.org/Winetricks)
-- [Vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) GPL-2.1 license
 
 ## Thanks to:
 - [Herick75](https://github.com/Herick75) - for Mesa Turnip patches which make possible compile it

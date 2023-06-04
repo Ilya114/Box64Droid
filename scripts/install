@@ -1,6 +1,20 @@
 clear
-echo -e " Starting installation, please wait..." & sleep 3
-echo -e " Box64Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press CTRL + c to cancel the installation)." & sleep 9 &>/dev/null
+echo "Select need Box64Droid version to install:"
+echo "1) Non-root version"
+echo "2) Root version"
+echo "3) VirGL version"
+echo ""
+read version
+if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
+then
+	&>/dev/null
+else
+	echo "Invalid version"
+	. ~/install
+fi
+clear
+echo -e " Starting Box64Droid install..." & sleep 3
+echo -e " Box64Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press Ctrl + C to cancel the installation)." & sleep 9 &>/dev/null	
 termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
 echo -e ""
@@ -10,46 +24,80 @@ pkg install x11-repo -y &>/dev/null
 echo -e " x11-repo installed."
 echo ""
 echo -e " Installing need packages..."
-pkg install xorg-server-xvfb pulseaudio xwayland wget proot-distro -y &>/dev/null
+if [ $version = 1 ] || [ $version = 3 ]
+then
+       pkg install pulseaudio wget proot-distro -y &>/dev/null 
+else
+       pkg install pulseaudio wget tsu -y &>/dev/null
+fi
 echo ""
 echo -e " Downloading and installing the Termux-x11 package..."
 echo -e ""
 wget https://github.com/Ilya114/Box64Droid/raw/main/apps/termux-x11-1.02.07-0-all.deb &>/dev/null
 dpkg -i termux-x11-1.02.07-0-all.deb &>/dev/null
-echo -e " Termux-x11 installed."
+echo -e " Termux-x11 installed"
 echo ""
 echo -e " Checking for other rootfs and removing them if any" 
 echo -e ""
 rm -r /sdcard/Box64Droid &>/dev/null
-proot-distro remove ubuntu &>/dev/null
+if [ $version = 1 ] || [ $version = 3 ]
+then
+	proot-distro remove ubuntu &>/dev/null
+else
+	sudo rm -r ~/ubuntu
+fi
 echo -e " Downloading preconfigured rootfs..."
 echo -e ""
-wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box86-64-rootfs-beta.tar.xz 
-echo -e ""
+if [ $version = 1 ]
+then
+	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
+	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
+	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box86-64-rootfs-beta.tar.xz 
+elif [ $version = 2 ]
+then
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box86-64-rootfs-beta-chroot.tar.xz
+else
+	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
+	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
+	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box86-64-rootfs-beta-virgl.tar.xz
+fi 
 echo -e " Installing rootfs, please wait..."
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-proot-distro restore box86-64-rootfs-beta.tar.xz &>/dev/null
+if [ $version = 1 ] || [ $version = 3 ]
+then
+	proot-distro restore box86-64-rootfs-beta.tar.xz &>/dev/null
+else
+	sudo tar -xJf box86-64-rootfs-beta-chroot.tar.xz -C ~/ubuntu &>/dev/null  
+fi
 echo ""
 echo -e " Rootfs installed"
 echo ""
-echo -e " Downloading starting box86-64 scripts..."
-wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box &>/dev/null
-chmod +x start-box &>/dev/null
-mv start-box $PREFIX/bin &>/dev/null
-echo " Scripts installed"
+echo -e " Downloading Box64Droid starting script..."
+if [ $version = 1 ]
+then
+	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid &>/dev/null
+	chmod +x box64droid &>/dev/null
+	mv box64droid $PREFIX/bin/box64droid &>/dev/null
+elif [ $version = 2 ]
+then
+	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid-root &>/dev/null
+	chmod +x box64droid-root &>/dev/null
+	mv box64droid-root $PREFIX/bin/box64droid &>/dev/null
+else
+	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid-virgl &>/dev/null
+	chmod +x box64droid-virgl &>/dev/null
+	mv box64droid-virgl $PREFIX/bin/box64droid &>/dev/null
+fi
+echo " Script installed"
 echo ""
 echo -e " Removing installation waste..."
-rm -rf box86-64-rootfs-beta.tar.xz &>/dev/null
+rm -rf box86-64-rootfs-beta*.tar.xz &>/dev/null
 rm -rf install &>/dev/null
 rm -rf termux-x11-1.02.07-0-all.deb &>/dev/null
 clear
 echo ""
-echo -e " Install finished. To start Box86 and Box64 type 'start-box' "
+echo -e " Install finished. To start Box86 and Box64 type 'box64droid --start', to see more arguments type 'box64droid --help'"
 echo -e ""
 echo -e " And if everything goes as planned, the Wine environment will start and soon after TFM will open, that's it."
 echo ""
-echo -e " When stopping using the x11 server, it is recommended to force stop Termux through the settings. You can also use the 'kill' command + the Termux-X11 pid(type termux-x11, and at the end the id will appear)"
-echo ""
-echo -e " That's all."

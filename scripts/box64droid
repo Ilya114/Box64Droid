@@ -1,0 +1,40 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+	echo "Empty argument, use --help to see available arguments"
+elif [ $1 = "--start" ]
+then
+	echo "Starting Termux-x11..."
+	termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
+	echo ""
+	echo -e "Termux-x11 started"
+	echo ""
+	echo "Starting Box64Droid..."
+	proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix
+	pkill -f "app_process / com.termux.x11"
+elif [ $1 = "--update" ]
+then
+	cd ~/
+	curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install
+elif [ $1 = "--uninstall" ]
+then
+	echo "Uninstalling Box64Droid..."
+	proot-distro remove ubuntu &>/dev/null
+	rm $PREFIX/bin/box64droid
+	echo "Done!"
+elif [ $1 = "--version" ]
+then
+        echo "04.06.23 (beta)"
+elif [ $1 = "--help" ]
+then
+        echo "Box64Droid - preconfigured Ubuntu 22.04 rootfs with Box64, Box86, Wine Proton, DXVK and Adreno GPU drivers for Android"
+	echo "Usage: box64droid {argument}"
+	echo "Available arguments:"
+	echo "--start - start Box64Droid"
+	echo "--update - update Box64Droid (all data in rootfs will be clear)"
+	echo "--uninstall - uninstall Box64Droid (all data in rootfs will be clear)"
+	echo "--version - show current version of Box64Droid"
+	echo "--help - see available arguments"
+else
+	echo "Invalid argument, use --help to see available arguments"
+fi 
