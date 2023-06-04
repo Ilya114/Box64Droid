@@ -56,12 +56,12 @@ then
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta.tar.xz 
 elif [ $version = 2 ]
 then
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta-chroot.tar.xz
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/chroot/box64droid-rootfs-beta-chroot.tar.xz
 else
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta-virgl.tar.xz
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/virgl/box64droid-rootfs-beta-virgl.tar.xz
 fi 
 echo -e " Installing rootfs, please wait..."
 if [ $version = 1 ]
