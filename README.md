@@ -10,7 +10,7 @@ Box64Droid using proot to run rootfs, so no, root is not required, chroot also c
 
 ## How to install?  
 
-First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://raw.githubusercontent.com/Ilya114/Box64Droid/main/apps/app-debug.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/beta/termux-x11.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
 ## How to start Box64 + Wine?
 
@@ -58,7 +58,7 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Box64 by ptitseb](https://github.com/ptitSeb/box64) MIT license
 - [Box86 by ptitseb](https://github.com/ptitSeb/box86) MIT license
 - [Proot-distro](https://github.com/termux/proot-distro) GPL-3.0 license
-- [Wine](https://wiki.winehq.org/Licensing) GPL-2.1 license
+- [Wine Stable, Staging and Staging-tkg GPL-2.1 license](https://wiki.winehq.org/Licensing) (builded by [Kron4ek](https://github.com/Kron4ek) by MIT License), [Wine Proton by Valve](https://github.com/ValveSoftware/Proton) (own license), [Wine GE](https://github.com/GloriousEggroll/wine-ge-custom) (using in Lutris)
 - [Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
 - [DXVK](https://github.com/doitsujin/dxvk) Zlib license
 - [WineD3D for Windows](https://fdossena.com/?p=wined3d/index.frag) GPL-2.0+ License
