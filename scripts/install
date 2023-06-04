@@ -24,9 +24,12 @@ pkg install x11-repo -y &>/dev/null
 echo -e " x11-repo installed."
 echo ""
 echo -e " Installing need packages..."
-if [ $version = 1 ] || [ $version = 3 ]
+if [ $version = 1 ]
 then
        pkg install pulseaudio wget xwayland proot-distro -y &>/dev/null 
+elif [ $version = 3 ]
+then
+       pkg install pulseaudio wget xwayland virglrenderer-android proot-distro -y &>/dev/null 
 else
        pkg install pulseaudio wget tsu xwayland -y &>/dev/null
 fi
@@ -69,6 +72,7 @@ then
 	proot-distro restore box64droid-rootfs-beta.tar.xz &>/dev/null
 elif [ $version = 2 ]
 then
+	sudo mkdir ~/ubuntu
 	sudo tar -xJf box64droid-rootfs-beta-chroot.tar.xz -C ~/ubuntu &>/dev/null  
 else
 	proot-distro restore box64droid-rootfs-beta-virgl.tar.xz &>/dev/null
