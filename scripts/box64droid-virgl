@@ -5,7 +5,7 @@ then
 elif [ $1 = "--start" ]
 then
         echo "Starting Termux-x11..."
-        termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
+        termux-x11 :0 &>/dev/null & sleep 1 & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
         echo ""
         echo -e "Termux-x11 started"
 	echo "Starting VirGL..."
@@ -14,7 +14,7 @@ then
 	echo ""
 	echo "Starting Box64Droid..."
         echo ""
-        proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix
+        proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix --bind $PREFIX/tmp/.X11-unix:/tmp/.virgl_test
         pkill -f "app_process / com.termux.x11"
 elif [ $1 = "--update" ]
 then
