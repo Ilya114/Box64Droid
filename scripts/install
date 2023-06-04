@@ -11,6 +11,7 @@ then
 else
 	clear
 	echo "Invalid version, rerun install script"
+	exit
 	rm -rf install &>/dev/null
 fi
 clear
