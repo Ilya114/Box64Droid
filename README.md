@@ -10,7 +10,7 @@ Box64Droid using proot to run rootfs, so no, root is not required, chroot also c
 
 ## How to install?  
 
-First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/beta/app-debug.apk). After installing them, just copy and paste in Termux this command then when Box64Droid install: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+First you need to install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/beta/app-debug.apk). After installing them, just copy and paste in Termux Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
 ## How to start Box64 + Wine?
 
@@ -20,14 +20,14 @@ You can also use Input Bridge, install 0.1.9 apk then just run app in Android an
 
 ## System requirements 
 
-- Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy. Very thanks to Hamad for build it)
+- Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy)
 - Android 12+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
 - You also need at ~4,4 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
 
 ## How to configure?  
 
-You can choose to use environment variables, there are 3 files, `DXVK_D8VK.conf`, `Box64Droid.conf` and `DXVK_D8VK.conf`. These files are created and found in the internal storage inside the Box64Droid folder right after the first run of Box86 or Box64.
+You can choose to use environment variables, there are 3 files, `DXVK_D8VK.conf`, `Box64Droid.conf` and `DXVK_D8VK.conf`. These files are created and found in the /sdcard/Box64Droid/ folder right after the first run of Box86 or Box64.
 
 The `Box64Droid.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like.
 
