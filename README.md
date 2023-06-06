@@ -20,7 +20,7 @@ You can also use Input Bridge, install 0.1.9 apk then just run app in Android an
 
 ## System requirements 
 
-- Adreno 616+ recommend (Another GPU's supporting but less games work)
+- Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `install.sh` in terminal mode then restart Box64Droid and enjoy. Very thanks to Hamad for build it)
 - Android 12+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
 - You also need at ~4,5 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
