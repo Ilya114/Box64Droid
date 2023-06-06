@@ -23,17 +23,17 @@ You can also use Input Bridge, install 0.1.9 apk then just run app in Android an
 - Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy. Very thanks to Hamad for build it)
 - Android 12+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
-- You also need at ~4,5 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
+- You also need at ~4,4 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
 
 ## How to configure?  
 
-You can choose to use environment variables, there are 3 files, `dxvk.conf`, `Box8664.conf` and `DXVK_env.conf`. These files are created and found in the internal storage inside the Box64Droid folder right after the first run of Box86 or Box64.
+You can choose to use environment variables, there are 3 files, `DXVK_D8VK.conf`, `Box64Droid.conf` and `DXVK_D8VK.conf`. These files are created and found in the internal storage inside the Box64Droid folder right after the first run of Box86 or Box64.
 
 The `Box64Droid.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like.
 
-The `DXVK_HUD.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), in addition to other settings.  
+The `DXVK_D8VK_HUD.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud), in addition to other settings.  
 
-The `DXVK.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
+The `DXVK_D8VK.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
 
 ## Known issues
 
@@ -61,6 +61,9 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Wine Stable, Staging and Staging-tkg GPL-2.1 license](https://wiki.winehq.org/Licensing) (builded by [Kron4ek](https://github.com/Kron4ek) by MIT License), [Wine Proton by Valve](https://github.com/ValveSoftware/Proton) (own license), [Wine GE](https://github.com/GloriousEggroll/wine-ge-custom) (using in Lutris)
 - [Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
 - [DXVK](https://github.com/doitsujin/dxvk) Zlib license
+- [D8VK](https://github.com/AlpyneDreams/d8vk) Zlib license
+- [DXVK-Async](https://github.com/Sporif/dxvk-async) 
+- [DXVK-GPLAsync](https://gitlab.com/Ph42oN/dxvk-gplasync)
 - [WineD3D for Windows](https://fdossena.com/?p=wined3d/index.frag) GPL-2.0+ License
 - [Winetricks](https://wiki.winehq.org/Winetricks)
 
