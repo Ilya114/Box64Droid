@@ -60,7 +60,7 @@ if [ $version = 1 ] || [ $version = 3 ]
 then
 	proot-distro remove ubuntu &>/dev/null
 else
-	sudo rm -r ~/ubuntu
+	sudo rm -r ~/ubuntu &>/dev/null
 fi
 echo -e " Downloading preconfigured rootfs..."
 echo -e ""
