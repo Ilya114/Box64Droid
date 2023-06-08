@@ -58,6 +58,7 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Wine Stable, Staging and Staging-tkg GPL-2.1 license](https://wiki.winehq.org/Licensing) (builded by [Kron4ek](https://github.com/Kron4ek) by MIT License), [Wine Proton by Valve](https://github.com/ValveSoftware/Proton) (own license), [Wine GE](https://github.com/GloriousEggroll/wine-ge-custom) (using in Lutris)
 - [Termux-x11](https://github.com/termux/termux-x11) GPL-3.0 license
 - [DXVK](https://github.com/doitsujin/dxvk) Zlib license
+- [Forked Mesa to work Turnip on Adreno 610](https://gitlab.freedesktop.org/Danil/mesa/-/tree/freedreno/feature/a610?ref_type=heads) 
 - [D8VK](https://github.com/AlpyneDreams/d8vk) Zlib license
 - [DXVK-Async](https://github.com/Sporif/dxvk-async) 
 - [DXVK-GPLAsync](https://gitlab.com/Ph42oN/dxvk-gplasync)
