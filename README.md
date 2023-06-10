@@ -17,7 +17,7 @@ You can use Input Bridge, install 0.1.9 apk then just run app in Android and in 
 
 ## System requirements 
 
-- Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy)
+- Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy). If you have have Adreno 730 or 740, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA7xx.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy)
 - Android 12+ (proot version), Android 10+ (chroot version)
 - 64-bit Android 
 - You also need at ~4,4 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
@@ -30,7 +30,7 @@ The `Box64Droid.conf` file is for you to use the Box86 and Box64 environment var
 
 The `DXVK_D8VK_HUD.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud).
 
-The `DXVK_D8VK.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf)(To use it, it is necessary to uncomment the line that exports your directory, this variable is found in `DXVK_env.conf`).
+The `DXVK_D8VK.conf` file is for you to use the environment variables referring to [dxvk](https://github.com/doitsujin/dxvk/blob/master/dxvk.conf).
 
 ## Known issues
 
