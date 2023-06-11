@@ -1,3 +1,4 @@
+#!/bin/bash
 clear
 echo "Select need Box64Droid version to install:"
 echo "1) Non-root version"
