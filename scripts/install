@@ -1,13 +1,19 @@
+#!/bin/bash
 clear
 echo "Select need Box64Droid version to install:"
 echo "1) Non-root version"
 echo "2) Root version"
 echo "3) VirGL version"
+echo "4) Cancel Box64Droid installation"
 echo ""
 read version
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	&>/dev/null
+elif [ $version = 4 ]
+then
+	clear
+	exit
 else
 	clear
 	echo "Invalid version, rerun installation script"
@@ -15,17 +21,17 @@ else
 	exit
 fi
 clear
-echo -e " Starting Box64Droid install..." & sleep 3
-echo -e " Box64Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed (or deny and press Ctrl + C to cancel the installation)." & sleep 9 &>/dev/null	
+echo " Starting Box64Droid installation..." & sleep 3
+echo " Box64Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null	
 termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
-echo -e ""
-echo -e " Installing x11-repo..."
-echo -e ""
-pkg install x11-repo -y &>/dev/null
-echo -e " x11-repo installed."
 echo ""
-echo -e " Installing need packages..."
+echo " Installing x11-repo..."
+echo ""
+pkg install x11-repo -y &>/dev/null
+echo " x11-repo installed"
+echo ""
+echo " Installing need packages..."
 if [ $version = 1 ]
 then
        pkg install pulseaudio wget xkeyboard-config proot-distro -y &>/dev/null 
@@ -36,14 +42,14 @@ else
        pkg install pulseaudio wget tsu xkeyboard-config -y &>/dev/null
 fi
 echo ""
-echo -e " Downloading and installing the Termux-x11 package..."
-echo -e ""
+echo " Downloading and installing the Termux-x11 package..."
+echo ""
 wget https://github.com/Ilya114/Box64Droid/raw/main/apps/termux-x11-1.02.07-0-all.deb &>/dev/null
 dpkg -i termux-x11-1.02.07-0-all.deb &>/dev/null
-echo -e " Termux-x11 installed"
+echo " Termux-x11 installed"
 echo ""
-echo -e " Checking for older Box64Droid and removing them if any" 
-echo -e ""
+echo " Checking for older Box64Droid and removing them if any" 
+echo ""
 if [ -f $PREFIX/bin/box64droid ]
 then
 	rm $PREFIX/bin/box64droid &>/dev/null
@@ -62,8 +68,8 @@ then
 else
 	sudo rm -r ~/ubuntu &>/dev/null
 fi
-echo -e " Downloading preconfigured rootfs..."
-echo -e ""
+echo " Downloading preconfigured rootfs..."
+echo ""
 if [ $version = 1 ]
 then
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
@@ -80,7 +86,7 @@ else
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/virgl/box64droid-rootfs-beta-virgl.tar.xz
 fi 
 echo ""
-echo -e " Installing rootfs, please wait..."
+echo " Installing rootfs, please wait..."
 if [ $version = 1 ]
 then
 	proot-distro restore box64droid-rootfs-beta.tar.xz &>/dev/null
@@ -92,9 +98,9 @@ else
 	proot-distro restore box64droid-rootfs-beta-virgl.tar.xz &>/dev/null
 fi
 echo ""
-echo -e " Rootfs installed"
+echo " Rootfs installed"
 echo ""
-echo -e " Downloading Box64Droid starting script..."
+echo " Downloading Box64Droid starting script..."
 if [ $version = 1 ]
 then
 	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid &>/dev/null
@@ -110,15 +116,16 @@ else
 	chmod +x box64droid-virgl &>/dev/null
 	mv box64droid-virgl $PREFIX/bin/box64droid &>/dev/null
 fi
+echo ""
 echo " Script installed"
 echo ""
-echo -e " Removing installation waste..."
+echo " Removing installation waste..."
 rm -rf box64droid-rootfs-beta*.tar.xz &>/dev/null
 rm -rf install &>/dev/null
 rm -rf termux-x11-1.02.07-0-all.deb &>/dev/null
 clear
 echo ""
-echo -e " Install finished. To start Box86 and Box64 type 'box64droid --start', to see more arguments type 'box64droid --help'"
-echo -e ""
-echo -e " And if everything goes as planned, the Wine environment will start and soon after TFM will open, that's it."
+echo " Install finished. To start Box64Droid type 'box64droid --start', to see more arguments type 'box64droid --help'"
+echo ""
+echo " And if everything goes as planned, the Wine environment will start and soon after TFM will open, that's it."
 echo ""
