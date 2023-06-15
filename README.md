@@ -17,16 +17,16 @@ You can use Input Bridge, install 0.1.9 apk then just run app in Android and in 
 
 ## System requirements 
 
-- Adreno 616+ recommend (Another GPU's supporting but less games work). If you have Adreno 610, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA610.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy). If you have have Adreno 730 or 740, you can use this [Turnip](https://github.com/Ilya114/Box64Droid/releases/download/beta/TurnipA7xx.tar.xz) (to install unpack archive and run `sh install.sh` in terminal mode in unpacked folder then restart Box64Droid and enjoy)
-- Android 12+ (proot version), Android 10+ (chroot version)
+- Adreno 610+ (Another supporting by VirGL but much games don't working)
+- Android 12+ (non-root, VirGL version), Android 10+ (root version)
 - 64-bit Android 
-- You also need at ~4,4 GB (or ~3,3 for VirGL version) free for the installation to go without problems.
+- You also need at ~4,0 (for root version), 4,4 (for non-root version) and ~3,3 GB (for VirGL version) free space for the installation without problems.
 
 ## Configuring
 
 You can choose to use environment variables, there are 3 files, `DXVK_D8VK.conf`, `Box64Droid.conf` and `DXVK_D8VK.conf`. These files are created and found in the /sdcard/Box64Droid/ folder after the first Box64Droid run.
 
-The `Box64Droid.conf` file is for you to use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like.
+The `Box64Droid.conf` file is with rootfs, Box86, Box64 and Wine configuration. You can use the Box86 and Box64 environment variables, see all of them [here](https://github.com/ptitSeb/box86/blob/master/docs/USAGE.md#) and [here](https://github.com/ptitSeb/box64/blob/main/docs/USAGE.md). You can add as many variables as you like.
 
 The `DXVK_D8VK_HUD.conf` file is for you to use the environment variables referring to [DXVK_HUD](https://github.com/doitsujin/dxvk#hud).
 
