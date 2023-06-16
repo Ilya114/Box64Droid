@@ -10,7 +10,7 @@ then
 	echo -e "Termux-x11 started"
 	echo ""
 	echo "Starting Box64Droid..."
-	./$PREFIX/bin/start-box64droid
+	$PREFIX/bin/start-box64droid
 	pkill -f "app_process / com.termux.x11"
 elif [ $1 = "--update" ]
 then
