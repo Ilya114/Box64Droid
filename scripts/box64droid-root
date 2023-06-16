@@ -13,10 +13,10 @@ then
 	sudo mount --bind /dev/pts $ROOTFSPATH/dev/pts
 	sudo mount --bind /sdcard $ROOTFSPATH/sdcard
         echo "Starting Termux-x11..."
-        termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
+        termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
         echo ""
         echo -e "Termux-x11 started"
-	sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix
+	sudo mount --bind $PREFIX/tmp $ROOTFSPATH/tmp
 	echo ""
 	echo "Starting Box64Droid..."
         echo ""
@@ -26,7 +26,7 @@ then
 	sudo umount $ROOTFSPATH/dev/pts
 	sudo umount $ROOTFSPATH/dev
 	sudo umount $ROOTFSPATH/sdcard
-	sudo umount $ROOTFSPATH/tmp/.X11-unix
+	sudo umount $ROOTFSPATH/tmp
 	pkill -f "app_process / com.termux.x11"
 elif [ $1 = "--update" ]
 then
