@@ -10,7 +10,7 @@ then
 	echo -e "Termux-x11 started"
 	echo ""
 	echo "Starting Box64Droid..."
-	proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix
+	./$PREFIX/bin/start-box64droid
 	pkill -f "app_process / com.termux.x11"
 elif [ $1 = "--update" ]
 then

@@ -14,14 +14,14 @@ then
 	echo ""
 	echo "Starting Box64Droid..."
         echo ""
-        proot-distro login ubuntu --isolated --bind /sdcard:/sdcard --bind $PREFIX/tmp/.X11-unix:/tmp/.X11-unix --bind $PREFIX/tmp/.virgl_test:/tmp/.virgl_test --no-sysvipc
+	./$PREFIX/bin/start-box64droid
         pkill -f "app_process / com.termux.x11"
 elif [ $1 = "--update" ]
 then
 	cd ~/
         curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install
 elif [ $1 = "--uninstall" ]
-then 
+then
         echo "Uninstalling Box64Droid..."
         proot-distro remove ubuntu &>/dev/null
         rm $PREFIX/bin/box64droid
