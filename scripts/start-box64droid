@@ -9,7 +9,6 @@ command+=" -b /dev"
 command+=" -b /proc"
 command+=" -b /sys"
 command+=" -b /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu/root:/dev/shm"
-## uncomment the following line to have access to the home directory of termux
 command+=" -b /data/data/com.termux/files/usr/tmp:/tmp"
 command+=" -b /sdcard"
 command+=" -w /root"
