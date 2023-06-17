@@ -1,9 +1,9 @@
 #!/bin/bash
 clear
 echo "Select need Box64Droid version to install:"
-echo "1) Non-root version"
-echo "2) Root version"
-echo "3) VirGL version"
+echo "1) Non-root version (Adreno 610-740, Android 12+)"
+echo "2) Root version (Adreno 610-740, Android 10+)"
+echo "3) VirGL version (Another GPU's, for non-root phones, Android 12+)"
 echo "4) Cancel Box64Droid installation"
 echo ""
 read version
