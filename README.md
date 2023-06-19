@@ -1,7 +1,7 @@
 # Box64Droid
 Box64Droid is a project with scripts that automate installation of a preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally a fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Still in beta stage, can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games
 
-Project chat [available](https://t.me/box64droidchat) in Telegram, also there is a [site](https://Ilya114.github.io/Box64Droid/)
+Project chat [available](https://t.me/box64droidchat) in Telegram, in [Discord](https://discord.gg/HyWcS7pJnv), and there is a [site](https://Ilya114.github.io/Box64Droid/)
 
 ## Do I need root?
 
