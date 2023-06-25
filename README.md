@@ -1,7 +1,5 @@
 # Box64Droid
-Box64Droid is a project with scripts that automate installation of a preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally a fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Still in beta stage, can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games
-
-Project chat [available](https://t.me/box64droidchat) in Telegram, in [Discord](https://discord.gg/XAVATdrCrq), and there is a [site](https://Ilya114.github.io/Box64Droid/)
+Box64Droid is a project with scripts that automate installation of a preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally a fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Still in beta stage, can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/)
 
 ## Do I need root?
 
@@ -40,7 +38,10 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 - Box64Droid can exit after start. This is a TFM issue, no have idea why and how to fix. 
 - Winetricks runs a long of time when Proton installed (non-root version)
 
-If you has other issues like black screen or crashing game/app run Box64 in debug mode then open issue and attach /sdcard/Box64Droid.log
+If you have another problems you can ask me in:
+
+- [Telegram](https://t.me/box64droidchat)
+- [Discord](https://discord.gg/XAVATdrCrq)
 
 ## Instructionsl how to mount SD-card external HDD/SSD (chroot version)
 
