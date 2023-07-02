@@ -43,6 +43,8 @@ If you have another problems you can ask me in:
 - [Telegram](https://t.me/box64droidchat)
 - [Discord](https://discord.gg/XAVATdrCrq)
 
+News about project publising in [Telegram](https://t.me/box64droidch) channel.
+
 ## Instructionsl how to mount SD-card external HDD/SSD (chroot version)
 
 If you want mount sdcard or external HDD (SSD), you need to add mountpoint maually. For SD-card go to /storage and see (`sudo ls`) folder example `8D3E-2B7K`. For external drives go to /mnt/media_rw and see folder like `C3G3H6B8A56212H7`. Type `nano $PREFIX/bin/box64droid` and add mount command before `sudo chroot login ...` line: `sudo mount --bind /mnt/media_rw/drivename (or /storage/sdcardname) $ROOTFSPATH/needfolder`. You need to create `needfolder` yourself in ~/ubuntu folder by using `sudo mkdir foldername` 
