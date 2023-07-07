@@ -34,7 +34,7 @@ echo ""
 echo " Installing need packages..."
 if [ $version = 1 ]
 then
-       pkg install pulseaudio wget xkeyboard-config proot-distro -y &>/dev/null 
+       pkg install pulseaudio wget xkeyboard-config proot-distro -y &>/dev/null
 elif [ $version = 3 ]
 then
        pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro -y &>/dev/null 
@@ -75,7 +75,7 @@ then
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta.tar.xz 
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta.tar.xz
 elif [ $version = 2 ]
 then
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/chroot/box64droid-rootfs-beta-chroot.tar.xz
@@ -93,7 +93,7 @@ then
 elif [ $version = 2 ]
 then
 	sudo mkdir ~/ubuntu
-	sudo tar -xJf box64droid-rootfs-beta-chroot.tar.xz -C ~/ubuntu &>/dev/null  
+	sudo tar -xJf box64droid-rootfs-beta-chroot.tar.xz -C ~/ubuntu &>/dev/null
 else
 	proot-distro restore box64droid-rootfs-beta-virgl.tar.xz &>/dev/null
 fi
