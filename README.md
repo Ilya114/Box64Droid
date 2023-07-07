@@ -43,7 +43,7 @@ If you have another problems you can ask me in:
 - [Telegram](https://t.me/box64droidchat)
 - [Discord](https://discord.gg/XAVATdrCrq)
 
-News about project publising in [Telegram](https://t.me/box64droidch) channel. New versions are posted after the release of the new stable version of Mesa (~2-3 weeks)
+News about project publising in [Telegram](https://t.me/box64droidch) channel.
 
 ## Instructions how to mount SD-card external HDD/SSD (chroot version)
 
