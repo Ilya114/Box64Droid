@@ -35,7 +35,7 @@ then
         echo "Usage: box64droid {argument}"
 	echo "Available arguments:"
         echo "--start - start Box64Droid"
-        echo "--update - update Box64Droid (all data in rootfs will be clear)"
+        echo "--update - update Box64Droid"
         echo "--uninstall - uninstall Box64Droid (all data in rootfs will be clear)"
         echo "--version - show current version of Box64Droid"
         echo "--help - see available arguments"
