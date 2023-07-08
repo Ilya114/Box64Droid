@@ -77,6 +77,16 @@ else
                 else
 			&>/dev/null
                 fi
+		if [ -c ~/ubuntu/dev/urandom ]
+	        then
+              	        sudo umount ~/ubuntu/proc &>/dev/null
+        	        sudo umount ~/ubuntu/sys &>/dev/null
+                	sudo umount ~/ubuntu/dev/pts &>/dev/null
+	                sudo umount ~/ubuntu/dev &>/dev/null
+	                sudo umount ~/ubuntu/sdcard &>/dev/null
+        	else
+                	&>/dev/null
+	        fi
         else
                 &>/dev/null
         fi
