@@ -56,7 +56,8 @@ then
                 elif [ $choice = no ]
                 then
                         &>/dev/null
-                else
+                elif [ -z $choice ]
+		then
 			&>/dev/null
                 fi
         else
@@ -75,7 +76,8 @@ else
                 elif [ $choice = no ]
                 then
                         &>/dev/null
-                else
+                elif [ -z $choice ]
+		then
 			&>/dev/null
                 fi
 		if [ -c ~/ubuntu/dev/urandom ]
