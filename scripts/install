@@ -48,7 +48,10 @@ then
         then
                 echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
                 read choice
-		if [ $choice = yes ]
+		if [ -z $choice ]
+		then
+			&>/dev/null
+		elif [ $choice = yes ]
                 then
                         mv $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine ~/
                         echo "Backup finished"
@@ -56,10 +59,7 @@ then
                 elif [ $choice = no ]
                 then
                         &>/dev/null
-                elif [ -z $choice ]
-		then
-			&>/dev/null
-                fi
+		fi
         else
                 &>/dev/null
         fi
