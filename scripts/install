@@ -184,11 +184,11 @@ then
 	echo ""
 	if [ $version = 1 ] || [ $version = 3 ]
 	then
-		cp -r ~/.wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/
-		rm -r ~/.wine
+		rm -r $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine
+		mv ~/.wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/
 	else
-		sudo cp -r ~/.wine ~/ubuntu/root/
-		sudo rm -r ~/.wine
+		sudo rm -r ~/ubuntu/root/.wine
+		sudo mv ~/.wine ~/ubuntu/root/
 	fi
 	echo " Backup restored"
 else
