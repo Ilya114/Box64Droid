@@ -41,11 +41,12 @@ then
 else
        pkg install pulseaudio wget tsu xkeyboard-config -y &>/dev/null
 fi
+echo ""
 if [ $version = 1 ] || [ $version = 3 ]
 then
         if [ -d $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine ]
         then
-                echo "Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
+                echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
                 read choice
 		if [ $choice = yes ]
                 then
@@ -64,7 +65,7 @@ then
 else
         if sudo [ -d /data/data/com.termux/files/home/ubuntu/root/.wine ]
         then
-                echo "Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no), another = skip)"
+                echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
                 read choice
                 if [ $choice = yes ]
                 then
@@ -184,11 +185,11 @@ then
 	echo ""
 	if [ $version = 1 ] || [ $version = 3 ]
 	then
-		cp -r ~/.wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/
-		rm -r ~/.wine
+		rm -r $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine
+		mv ~/.wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/
 	else
-		sudo cp -r ~/.wine ~/ubuntu/root/
-		sudo rm -r ~/.wine
+		sudo rm -r ~/ubuntu/root/.wine
+		sudo mv ~/.wine ~/ubuntu/root/
 	fi
 	echo " Backup restored"
 else
