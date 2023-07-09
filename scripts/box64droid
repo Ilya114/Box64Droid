@@ -21,6 +21,7 @@ then
 	echo "Uninstalling Box64Droid..."
 	proot-distro remove ubuntu &>/dev/null
 	rm $PREFIX/bin/box64droid
+	rm $PREFIX/bin/start-box64droid
 	echo "Done!"
 elif [ $1 = "--version" ]
 then
