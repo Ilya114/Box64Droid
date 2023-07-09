@@ -64,7 +64,7 @@ then
 else
         if sudo [ -d /data/data/com.termux/files/home/ubuntu/root/.wine ]
         then
-                echo "Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no), another = skip)"
+                echo "Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
                 read choice
                 if [ $choice = yes ]
                 then
