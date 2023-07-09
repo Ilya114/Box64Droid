@@ -1,9 +1,5 @@
 # Box64Droid
-Box64Droid is a project with scripts that automate installation of a preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally a fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Still in beta stage, can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/)
-
-## Do I need root?
-
-Box64Droid using proot to run rootfs, so no, root is not required, chroot also can use.
+Box64Droid is a project with scripts that automate installation on Android preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Proton 8.0-2](https://github.com/ValveSoftware/Proton), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally a fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Still in beta stage, can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/)
 
 ## Installation instructons
 
@@ -19,6 +15,7 @@ You can use Input Bridge, install 0.1.9 apk then just run app in Android and in 
 - Android 12+ (non-root, VirGL version), Android 10+ (root version)
 - 64-bit Android 
 - You also need at ~4,0 (for root version), 4,4 (for non-root version) and ~3,3 GB (for VirGL version) free space for the installation without problems.
+- If you want get more FPS and stability, use root version (you need root rights on your device)
 
 ## Configuring
 
