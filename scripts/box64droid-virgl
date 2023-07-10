@@ -9,7 +9,7 @@ then
         echo ""
         echo -e "Termux-x11 started"
 	echo "Starting VirGL..."
-	MESA_NO_ERROR=1 virgl_test_server_android &
+	MESA_NO_ERROR=1 taskset -c 4-7 virgl_test_server_android &
 	echo "VirGL started"
 	echo ""
 	echo "Starting Box64Droid..."
