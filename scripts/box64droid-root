@@ -34,6 +34,12 @@ then
 elif [ $1 = "--uninstall" ]
 then
         echo "Uninstalling Box64Droid..."
+        sudo umount $ROOTFSPATH/proc
+	sudo umount $ROOTFSPATH/sys
+	sudo umount $ROOTFSPATH/dev/pts
+	sudo umount $ROOTFSPATH/dev
+	sudo umount $ROOTFSPATH/sdcard
+	sudo umount $ROOTFSPATH/tmp/.X11-unix
         sudo rm -r ~/ubuntu
         rm $PREFIX/bin/box64droid
 	echo "Done!"
