@@ -46,17 +46,17 @@ if [ $version = 1 ] || [ $version = 3 ]
 then
         if [ -d $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine ]
         then
-                echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
+                echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no/y/n, another = skip)"
                 read choice
 		if [ -z $choice ]
 		then
 			&>/dev/null
-		elif [ $choice = yes ]
+		elif [ $choice = yes ] || [ $choice = y ]
                 then
                         mv $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine ~/
                         echo "Backup finished"
                         echo ""
-                elif [ $choice = no ]
+                elif [ $choice = no ] || [ $choice = n ]
                 then
                         &>/dev/null
 		fi
@@ -66,14 +66,14 @@ then
 else
         if sudo [ -d /data/data/com.termux/files/home/ubuntu/root/.wine ]
         then
-                echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no, another = skip)"
+                echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no/y/n, another = skip)"
                 read choice
-                if [ $choice = yes ]
+                if [ $choice = yes ] || [ $choice = y ]
                 then
                         sudo mv /data/data/com.termux/files/home/ubuntu/root/.wine ~/
                         echo "Backup finished"
                         echo ""
-                elif [ $choice = no ]
+                elif [ $choice = no ] || [ $choice = n ]
                 then
                         &>/dev/null
                 elif [ -z $choice ]
