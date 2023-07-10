@@ -34,6 +34,16 @@ then
 elif [ $1 = "--uninstall" ]
 then
         echo "Uninstalling Box64Droid..."
+	if [ -c ~/ubuntu/dev/urandom ]
+	then
+              	sudo umount ~/ubuntu/proc &>/dev/null
+        	sudo umount ~/ubuntu/sys &>/dev/null
+                sudo umount ~/ubuntu/dev/pts &>/dev/null
+	        sudo umount ~/ubuntu/dev &>/dev/null
+	        sudo umount ~/ubuntu/sdcard &>/dev/null
+        else
+                &>/dev/null
+	fi
         sudo rm -r ~/ubuntu
         rm $PREFIX/bin/box64droid
 	echo "Done!"
