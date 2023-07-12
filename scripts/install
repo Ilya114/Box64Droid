@@ -68,7 +68,10 @@ else
         then
                 echo " Previous Box64Droid detected. You want backup Wine prefix and restore after update? (yes/no/y/n, another = skip)"
                 read choice
-                if [ $choice = yes ] || [ $choice = y ]
+		if [ -z $choice ]
+		then
+			&>/dev/null
+                elif [ $choice = yes ] || [ $choice = y ]
                 then
                         sudo mv /data/data/com.termux/files/home/ubuntu/root/.wine ~/
                         echo "Backup finished"
@@ -76,10 +79,7 @@ else
                 elif [ $choice = no ] || [ $choice = n ]
                 then
                         &>/dev/null
-                elif [ -z $choice ]
-		then
-			&>/dev/null
-                fi
+		fi
 		if [ -c ~/ubuntu/dev/urandom ]
 	        then
               	        sudo umount ~/ubuntu/proc &>/dev/null
