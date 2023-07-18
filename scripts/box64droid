@@ -25,7 +25,7 @@ then
 	echo "Done!"
 elif [ $1 = "--version" ]
 then
-        echo "12.07.23 (beta)"
+        echo "18.07.23 (beta)"
 elif [ $1 = "--help" ]
 then
         echo "Box64Droid - preconfigured Ubuntu 22.04 rootfs with Box64, Box86, Wine Proton, DXVK and Adreno GPU drivers for Android"
