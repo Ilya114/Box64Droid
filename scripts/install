@@ -54,7 +54,7 @@ then
 		elif [ $choice = yes ] || [ $choice = y ]
                 then
                         mv $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine ~/
-                        echo "Backup finished"
+                        echo " Backup finished"
                         echo ""
                 elif [ $choice = no ] || [ $choice = n ]
                 then
@@ -74,7 +74,7 @@ else
                 elif [ $choice = yes ] || [ $choice = y ]
                 then
                         sudo mv /data/data/com.termux/files/home/ubuntu/root/.wine ~/
-                        echo "Backup finished"
+                        echo " Backup finished"
                         echo ""
                 elif [ $choice = no ] || [ $choice = n ]
                 then
