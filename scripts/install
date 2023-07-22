@@ -54,6 +54,7 @@ then
 		elif [ $choice = yes ] || [ $choice = y ]
                 then
                         mv $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine ~/
+						mv $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/opt/wine ~/
                         echo " Backup finished"
                         echo ""
                 elif [ $choice = no ] || [ $choice = n ]
@@ -74,6 +75,7 @@ else
                 elif [ $choice = yes ] || [ $choice = y ]
                 then
                         sudo mv /data/data/com.termux/files/home/ubuntu/root/.wine ~/
+						sudo mv /data/data/com.termux/files/home/ubuntu/opt/wine ~/
                         echo " Backup finished"
                         echo ""
                 elif [ $choice = no ] || [ $choice = n ]
@@ -186,9 +188,13 @@ then
 	then
 		rm -r $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/.wine
 		mv ~/.wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/
+		rm -r $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/opt/wine
+		mv ~/wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/opt/
 	else
 		sudo rm -r ~/ubuntu/root/.wine
+		sudo rm -r ~/ubuntu/opt/wine
 		sudo mv ~/.wine ~/ubuntu/root/
+		sudo mv ~/wine ~/ubuntu/opt/
 	fi
 	echo " Backup restored"
 else
