@@ -63,8 +63,9 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [D8VK](https://github.com/AlpyneDreams/d8vk) - Zlib license
 - [DXVK-Async](https://github.com/Sporif/dxvk-async) 
 - [DXVK-GPLAsync](https://gitlab.com/Ph42oN/dxvk-gplasync)
-- [WineD3D for Windows](https://fdossena.com/?p=wined3d/index.frag) - GPL-2.0+ License
+- [WineD3D for Windows](https://fdossena.com/?p=wined3d/index.frag) - GPL-2.0+ license
 - [Winetricks](https://wiki.winehq.org/Winetricks)
+- [vkd3d-proton](https://github.com/HansKristian-Work/vkd3d-proton) - LGPL v2.1 license
 
 ## Thanks to:
 - [Herick75](https://github.com/Herick75) - for Mesa Turnip patches which make possible compile it
