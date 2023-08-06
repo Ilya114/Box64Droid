@@ -204,5 +204,5 @@ clear
 echo ""
 echo " Install finished. To start Box64Droid type 'box64droid --start', to see more arguments type 'box64droid --help'"
 echo ""
-echo " And if everything goes as planned, the Wine environment will start and soon after TFM will open, that's it."
+echo " And if everything goes as planned, the Wine and 7-Zip file manager will start."
 echo ""
