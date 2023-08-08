@@ -5,6 +5,7 @@ then
 elif [ $1 = "--start" ]
 then
 	unset LD_PRELOAD
+	su -c "settings put global settings_enable_monitor_phantom_procs false"
 	export ROOTFSPATH=~/ubuntu
 	sudo mount -o remount,dev,suid /data
 	sudo mount proc -t proc $ROOTFSPATH/proc
