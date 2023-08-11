@@ -13,7 +13,7 @@ You also can use Input Bridge, install 0.1.9 apk then just run app in Android an
 - Adreno 610+ (Another supporting by VirGL but much games don't working)
 - Android 12+ (non-root, VirGL version), Android 10+ (root version)
 - 64-bit Android 
-- You also need at ~4,0 (for root version), 4,4 (for non-root version) and ~3,3 GB (for VirGL version) free space for the installation without problems.
+- You also need at ~4,2 (for root version), 4,5 (for non-root version) and ~3,3 GB (for VirGL version) free space for the installation without problems.
 - If you want get more FPS and stability, use root version (you need root rights on your device)
 
 ## Configuring
