@@ -6,6 +6,7 @@ elif [ $1 = "--start" ]
 then
 	unset LD_PRELOAD
 	su -c "settings put global settings_enable_monitor_phantom_procs false"
+	export TMPDIR=~/ubuntu/tmp
 	export ROOTFSPATH=~/ubuntu
 	sudo mount -o remount,dev,suid /data
 	sudo mount proc -t proc $ROOTFSPATH/proc
@@ -14,7 +15,7 @@ then
 	sudo mount --bind /dev/pts $ROOTFSPATH/dev/pts
 	sudo mount --bind /sdcard $ROOTFSPATH/sdcard
         echo "Starting Termux-x11..."
-        termux-x11 :0 -xstartup "sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix" &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
+        termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
         echo ""
         echo -e "Termux-x11 started"
 	echo ""
