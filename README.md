@@ -32,6 +32,7 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 - Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`, to fix run this command in adb shell: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
 - "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run"
 - Winetricks runs a long of time when Proton installed (non-root version)
+- Wine GE 8.14 and Wine 8.14 have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14 
 
 If you have another problems you can ask me in:
 
