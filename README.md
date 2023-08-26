@@ -58,7 +58,6 @@ Some issues/instabilities can happen when using Box86 and Box64 in proot environ
 - [Termux-x11](https://github.com/termux/termux-x11) - GPL-3.0 license
 - [DXVK](https://github.com/doitsujin/dxvk) - Zlib license
 - [Proot-distro](https://github.com/termux/proot-distro) - GPL-3.0 license
-- [Forked Mesa to work Turnip on Adreno 610](https://gitlab.freedesktop.org/Danil/mesa/-/tree/freedreno/feature/a610) 
 - [Forked Mesa to work Turnip on Adreno 730 and 740](https://gitlab.freedesktop.org/Danil/mesa/-/tree/turnip/feature/a7xx-basic-support)
 - [D8VK](https://github.com/AlpyneDreams/d8vk) - Zlib license
 - [DXVK-Async](https://github.com/Sporif/dxvk-async) 
