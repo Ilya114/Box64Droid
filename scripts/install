@@ -149,7 +149,7 @@ then
 	sudo mkdir ~/ubuntu
 	sudo tar -xJf box64droid-rootfs-chroot.tar.xz -C ~/ubuntu &>/dev/null
 else
-	proot-distro restore box64droid-rootfs-beta-virgl.tar.xz &>/dev/null
+	proot-distro restore box64droid-rootfs-virgl.tar.xz &>/dev/null
 fi
 echo ""
 echo " Rootfs installed"
