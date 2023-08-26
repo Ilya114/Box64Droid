@@ -129,25 +129,25 @@ then
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/beta/box64droid-rootfs-beta.tar.xz
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs.tar.xz
 elif [ $version = 2 ]
 then
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/chroot/box64droid-rootfs-beta-chroot.tar.xz
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-chroot.tar.xz
 else
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/virgl/box64droid-rootfs-beta-virgl.tar.xz
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-virgl.tar.xz
 fi
 echo ""
 echo " Installing rootfs, please wait..."
 if [ $version = 1 ]
 then
-	proot-distro restore box64droid-rootfs-beta.tar.xz &>/dev/null
+	proot-distro restore box64droid-rootfs.tar.xz &>/dev/null
 elif [ $version = 2 ]
 then
 	sudo mkdir ~/ubuntu
-	sudo tar -xJf box64droid-rootfs-beta-chroot.tar.xz -C ~/ubuntu &>/dev/null
+	sudo tar -xJf box64droid-rootfs-chroot.tar.xz -C ~/ubuntu &>/dev/null
 else
 	proot-distro restore box64droid-rootfs-beta-virgl.tar.xz &>/dev/null
 fi
@@ -179,7 +179,7 @@ echo ""
 echo " Scripts installed"
 echo ""
 echo " Removing installation waste..."
-rm box64droid-rootfs-beta*.tar.xz install termux-x11-1.02.07-0-all.deb
+rm box64droid-*.tar.xz install termux-x11-1.02.07-0-all.deb
 if [ -d ~/.wine ]
 then
 	echo " Restoring backup..."

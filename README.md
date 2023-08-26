@@ -1,8 +1,8 @@
 # Box64Droid
-Box64Droid is a project with scripts that automate installing on Android preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine GE 8-13](https://github.com/GloriousEggroll/wine-ge-custom), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally was fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Still in beta stage, can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/)
+Box64Droid is a project with scripts that automate installing on Android preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine GE 8-13](https://github.com/GloriousEggroll/wine-ge-custom), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) installed. Originally was fork of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/)
 
 ## Installation instructons
-Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/beta/app-arm64-v8a-debug.apk), then in Termux run Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/stable/app-arm64-v8a-debug.apk), then in Termux run Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
 After the installation is completed, type `box64droid --start`, starting script will start Termux-X11 and show start menu.
 
@@ -31,7 +31,6 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 - Error when updating Termux packages. Clear Termux data will help.
 - Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`, to fix run this command in adb shell: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
 - "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run"
-- Box64Droid can exit after start. This is a TFM issue, no have idea why and how to fix. 
 - Winetricks runs a long of time when Proton installed (non-root version)
 
 If you have another problems you can ask me in:

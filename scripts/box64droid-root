@@ -14,10 +14,11 @@ then
 	sudo mount --bind /dev/pts $ROOTFSPATH/dev/pts
 	sudo mount --bind /sdcard $ROOTFSPATH/sdcard
         echo "Starting Termux-x11..."
-        termux-x11 :0 -xstartup "sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix" &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null        
+	termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
 	echo ""
         echo -e "Termux-x11 started"
 	echo ""
+	sudo mount --bind $PREFIX/tmp/.X11-unix $ROOTFSPATH/tmp/.X11-unix
 	echo "Starting Box64Droid..."
         echo ""
 	sudo chroot $ROOTFSPATH /bin/su -
@@ -50,7 +51,7 @@ then
 	echo "Done!"
 elif [ $1 = "--version" ]
 then
-        echo "17.08.23 (beta)"
+        echo "25.08.23"
 elif [ $1 = "--help" ]
 then
         echo "Box64Droid (Root version) - preconfigured Ubuntu 22.04 rootfs with Box64, Box86, Wine Proton, DXVK and Adreno GPU drivers for Android"
