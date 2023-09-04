@@ -3,9 +3,9 @@ Box64Droid is a project with scripts that automate installing preconfigured root
 
 ## Installation instructons
 1. Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/stable/app-arm64-v8a-debug.apk).
-2. In Termux run Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+2. In Termux run the Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
-After the installation is completed, type `box64droid --start`, the starting script will start Termux-X11 and show the start menu.
+After the installation is completed, run `box64droid --start`. The starting script will start Termux-X11 and show the start menu.
 
 You also can use Input Bridge, install 0.1.9 apk then just run app in Android and in Wine from start menu.
 
@@ -14,7 +14,7 @@ You also can use Input Bridge, install 0.1.9 apk then just run app in Android an
 - Adreno 610+ (Other GPUs are supported by VirGL, but many games might not work)
 - Android 12+ (non-root, VirGL version), Android 10+ (root version)
 - 64-bit Android 
-- You also need ~4,2GB (for root version), 4,5GB (for non-root version) or ~3,3GB (for VirGL version) worth of free space for the installation to have no problems.
+- You also need ~4,2GB (for root version), 4,5GB (for non-root version) or ~3,3GB (for VirGL version) worth of free space for the installation to run without problems.
 
 If you want to get more FPS and stability, use the root version (you will need root rights on your device).
 
@@ -31,7 +31,7 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 ## Known issues
 
 - Error when updating Termux packages. Clearing Termux data will help.
-- Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`, to fix run this run this command in adb shell: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
+- Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`. To fix it run this command in adb shell from your pc: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
 - "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run" (Win + R).
 - Winetricks runs a long of time when Proton installed (non-root version).
 - Wine GE 8.14 and Wine 8.14 have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14.
