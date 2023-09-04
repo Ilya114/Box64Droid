@@ -202,7 +202,7 @@ else
 fi
 clear
 echo ""
-echo " Install finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'".
+echo " Install finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'"
 echo ""
 echo " And if everything goes as planned, Wine and 7-Zip file manager will start."
 echo ""
