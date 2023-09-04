@@ -1,7 +1,14 @@
 # Box64Droid
-Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine GE 8-14](https://github.com/GloriousEggroll/wine-ge-custom), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/).
+Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine GE 8-14](https://github.com/GloriousEggroll/wine-ge-custom), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was a [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/).
 
-## Installation instructons
+- [Installation instructions](#installation-instructions)
+- [System requirements](#system-requirements)
+- [Configuring](#configuring)
+- [Known issues](#known-issues)
+- [Things to note](#things-to-note)
+- [Applications and scripts which were used in Box64Droid](#applications-and-scripts-which-were-used-in-box64droid)
+
+## Installation instructions
 1. Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/stable/app-arm64-v8a-debug.apk).
 2. In Termux run the Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
 
@@ -58,7 +65,7 @@ If you want mount a sdcard or a external drive (HDD/SSD), you need to add the mo
 
 Some issues/instabilities can happen when using Box86 and Box64 in a proot environment, so it's not recommended to use Box86 and Box64 in proot as a debug/testing environment, there are far better options for that.
 
-## Applications and scripts which using in Box64Droid
+## Applications and scripts which were used in Box64Droid
 - [Termux-app](https://github.com/termux/termux-app) - GPLv3 license
 - [Box64 by ptitseb](https://github.com/ptitSeb/box64) - MIT license
 - [Box86 by ptitseb](https://github.com/ptitSeb/box86) - MIT license
