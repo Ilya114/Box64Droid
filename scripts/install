@@ -1,10 +1,10 @@
 #!/bin/bash
 clear
-echo "Select need Box64Droid version to install:"
-echo "1) Non-root version (Adreno 610-740, Android 12+)"
-echo "2) Root version (Adreno 610-740, Android 10+)"
-echo "3) VirGL version (Another GPU's, for non-root phones, Android 12+)"
-echo "4) Cancel Box64Droid installation"
+echo "Select the needed Box64Droid version to install:"
+echo "1) Non-root version (Adreno 610-740, Android 12+)."
+echo "2) Root version (Adreno 610-740, Android 10+)."
+echo "3) VirGL version (For other GPUs, non-root phones, Android 12+)."
+echo "4) Cancel the Box64Droid installation."
 echo ""
 read version
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
@@ -16,13 +16,13 @@ then
 	exit
 else
 	clear
-	echo "Invalid version, rerun installation script"
+	echo "Invalid version! Rerun installation the script."
 	rm -rf install &>/dev/null
 	exit
 fi
 clear
 echo " Starting Box64Droid installation..." & sleep 3
-echo " Box64Droid creates a folder called "Box64Droid" at the internal storage to store configuration files. For Termux to create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null	
+echo " Box64Droid creates a folder called "Box64Droid" on the internal storage to store configuration files. For Termux, to create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null	
 termux-setup-storage & sleep 3 &>/dev/null
 pkg update -y
 echo ""
@@ -31,7 +31,7 @@ echo ""
 pkg install x11-repo -y &>/dev/null
 echo " x11-repo installed"
 echo ""
-echo " Installing need packages..."
+echo " Installing required packages..."
 if [ $version = 1 ]
 then
        pkg install pulseaudio wget xkeyboard-config proot-distro -y &>/dev/null
@@ -102,7 +102,7 @@ wget https://github.com/Ilya114/Box64Droid/raw/main/apps/termux-x11-nightly-1.03
 dpkg -i termux-x11-nightly-1.03.00-0-all.deb &>/dev/null
 echo " Termux-x11 installed"
 echo ""
-echo " Checking for older Box64Droid and removing them if any"
+echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
 if [ -f $PREFIX/bin/box64droid ]
 then
@@ -122,7 +122,7 @@ then
 else
 	sudo rm -r ~/ubuntu &>/dev/null
 fi
-echo " Downloading preconfigured rootfs..."
+echo " Downloading the preconfigured rootfs..."
 echo ""
 if [ $version = 1 ]
 then
@@ -140,7 +140,7 @@ else
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-virgl.tar.xz
 fi
 echo ""
-echo " Installing rootfs, please wait..."
+echo " Installing the rootfs, please wait..."
 if [ $version = 1 ]
 then
 	proot-distro restore box64droid-rootfs.tar.xz &>/dev/null
@@ -178,7 +178,7 @@ fi
 echo ""
 echo " Scripts installed"
 echo ""
-echo " Removing installation waste..."
+echo " Removing the installation waste..."
 rm box64droid-*.tar.xz install termux-x11-nightly-1.03.00-0-all.deb
 if [ -d ~/.wine ]
 then
@@ -202,7 +202,7 @@ else
 fi
 clear
 echo ""
-echo " Install finished. To start Box64Droid type 'box64droid --start', to see more arguments type 'box64droid --help'"
+echo " Install finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'"
 echo ""
-echo " And if everything goes as planned, the Wine and 7-Zip file manager will start."
+echo " And if everything goes as planned, Wine and 7-Zip file manager will start."
 echo ""
