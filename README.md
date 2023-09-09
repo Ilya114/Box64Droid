@@ -46,7 +46,7 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 If you have other problems you can ask me at:
 
 - [Telegram](https://t.me/box64droidchat)
-- [Discord](https://discord.gg/XAVATdrCrq)
+- [Discord](https://discord.gg/b4f7fDRvt8)
 
 News about the project publising in the [Telegram](https://t.me/box64droidch) channel.
 
