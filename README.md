@@ -1,5 +1,14 @@
 # Box64Droid
-Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine 8.0](https://github.com/Kron4ek/Wine-Builds), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was a [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/).
+Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine 8.0](https://github.com/Kron4ek/Wine-Builds), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was a [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/). 
+
+Made by guy from [Lysychansk](https://en.wikipedia.org/wiki/Lysychansk), [Luhansk region](https://en.wikipedia.org/wiki/Luhansk_Oblast) of Ukraine.
+
+If you have problems (note what I shouldn't know answer on all your questions like "Why game not working?") you can ask me at:
+
+- [Telegram](https://t.me/box64droidchat)
+- [Discord](https://discord.gg/b4f7fDRvt8)
+
+README parts:
 
 - [Installation instructions](#installation-instructions)
 - [System requirements](#system-requirements)
@@ -42,11 +51,6 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 - "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run" (Win + R).
 - Winetricks runs a long of time when Proton installed (non-root version).
 - Wine GE 8.14 and Wine 8.14 have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14.
-
-If you have other problems you can ask me at:
-
-- [Telegram](https://t.me/box64droidchat)
-- [Discord](https://discord.gg/b4f7fDRvt8)
 
 News about the project publising in the [Telegram](https://t.me/box64droidch) channel.
 
