@@ -8,6 +8,8 @@ If you have problems (note what I shouldn't know answer on all your questions li
 - [Telegram](https://t.me/box64droidchat)
 - [Discord](https://discord.gg/b4f7fDRvt8)
 
+News about the project publising in the [Telegram](https://t.me/box64droidch) channel.
+
 README parts:
 
 - [Installation instructions](#installation-instructions)
@@ -51,8 +53,6 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 - "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run" (Win + R).
 - Winetricks runs a long of time when Proton installed (non-root version).
 - Wine GE 8.14 and Wine 8.14 have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14.
-
-News about the project publising in the [Telegram](https://t.me/box64droidch) channel.
 
 ## Instructions on how to mount SD-card external HDD/SSD (chroot version only)
 
