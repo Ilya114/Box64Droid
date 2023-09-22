@@ -1,12 +1,12 @@
 # Box64Droid
-Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine 8.0](https://github.com/Kron4ek/Wine-Builds), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was a [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/). 
+Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine Stable 8.0](https://github.com/Kron4ek/Wine-Builds), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was a [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/). 
 
 Made by guy from [Lysychansk](https://en.wikipedia.org/wiki/Lysychansk), [Luhansk region](https://en.wikipedia.org/wiki/Luhansk_Oblast) of Ukraine.
 
 If you have problems (note what I shouldn't know answer on all your questions like "Why game not working?") you can ask me at:
 
 - [Telegram](https://t.me/box64droidchat)
-- [Discord](https://discord.gg/b4f7fDRvt8)
+- [Discord](https://discord.gg/thjpZ4P7Bm)
 
 News about the project publising in the [Telegram](https://t.me/box64droidch) channel.
 
@@ -31,7 +31,7 @@ You also can use Input Bridge, install 0.1.9 apk then just run app in Android an
 
 - Adreno 610+ (Other GPUs are supported by VirGL, but many games might not work)
 - Android 12+ (non-root, VirGL version), Android 10+ (root version)
-- 64-bit Android 
+- 64-bit Android
 - You also need ~4,2GB (for root version), 4,5GB (for non-root version) or ~3,3GB (for VirGL version) worth of free space for the installation to run without problems.
 
 If you want to get more FPS and stability, use the root version (you will need root rights on your device).
@@ -52,7 +52,7 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 - Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`. To fix it run this command in adb shell from your pc: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
 - "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run" (Win + R).
 - Winetricks runs a long of time when Proton installed (non-root version).
-- Wine GE 8.14 and Wine 8.14 have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14.
+- Wine GE 8.14 and above and Wine 8.14 and above have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14.
 
 ## Instructions on how to mount SD-card external HDD/SSD (chroot version only)
 
