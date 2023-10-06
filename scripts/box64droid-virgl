@@ -29,7 +29,7 @@ then
 	echo "Done!"
 elif [ $1 = "--version" ]
 then
-        echo "22.09.23"
+        echo "06.10.23"
 elif [ $1 = "--help" ]
 then
         echo "Box64Droid (VirGL version) - preconfigured Ubuntu 22.04 rootfs with Box64, Box86, Wine Proton, DXVK and VirGL to work 3D on all GPU's for Android"
