@@ -14,7 +14,7 @@ then
 		&>/dev/null
 		else
 		mkdir $folder
-		fi
+	fi
 	if [ -f $folder/DXVK_D8VK_HUD.conf ]
 	then
 	        &>/dev/null
@@ -68,7 +68,7 @@ then
         echo "23.10.23 (alpha)"
 elif [ $1 = "--help" ]
 then
-  echo "Box64Droid (Termux version) - preconfigured Ubuntu 22.04 rootfs with Box64, Box86, Wine Proton, DXVK and Adreno GPU drivers for Android"
+ 	echo "Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.14, DXVK with Adreno GPU drivers in Termux"
 	echo "Usage: box64droid {argument}"
 	echo "Available arguments:"
 	echo "--start - start Box64Droid"
