@@ -158,7 +158,8 @@ if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	echo " Downloading the preconfigured rootfs..."
 else
-	echo " Downloading glibc and Wine prefix...."
+	echo " Downloading glibc and Wine prefix..."
+fi
 echo ""
 if [ $version = 1 ]
 then
