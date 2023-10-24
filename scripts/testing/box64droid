@@ -1,0 +1,80 @@
+#!/bin/bash
+if [ $# -eq 0 ]
+then
+	echo "Empty argument, use --help to see available arguments"
+elif [ $1 = "--start" ]
+then
+	clear
+	export folder="/sdcard/Box64Droid"
+	echo "WARNING! TESTING VERSION!"
+	sleep 3
+	echo "Checking configuration..."
+	if [ -d $folder ]
+	then
+		&>/dev/null
+		else
+		mkdir $folder
+		fi
+	if [ -f $folder/DXVK_D8VK_HUD.conf ]
+	then
+	        &>/dev/null
+	else
+	        cp $PREFIX/glibc/opt/DXVK_D8VK_HUD.conf $folder/
+	fi
+	if [ -f $folder/DXVK_D8VK.conf ]
+	then
+    		&>/dev/null
+	else
+    		cp $PREFIX/glibc/opt/DXVK_D8VK.conf $folder/
+	fi
+	if [ -f $folder/Box64Droid.conf ]
+	then
+    		&>/dev/null
+	else
+	        cp $PREFIX/glibc/opt/Box64Droid.conf $folder/
+	fi
+	. $folder/Box64Droid.conf
+	. $folder/DXVK_D8VK_HUD.conf
+	echo "Configuration check completed"
+	echo "Starting Termux-x11..."
+	termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
+	echo ""
+	echo -e "Termux-x11 started"
+	clear
+	echo "Box64Droid by Ilya114, Glory to Ukraine!"
+	echo "Select to start:"
+	echo "1) Box64"
+	echo "2) Exit"
+	read choice
+	if [ $choice = 1 ]
+	then
+		. start-box64
+	elif [ $choice = 2 ]
+	then
+		exit
+	else
+		echo "Wrong option"
+		. box64droid
+	fi
+elif [ $1 = "--uninstall" ]
+then
+	echo "Uninstalling Box64Droid..."
+	rm $PREFIX/bin/box64droid
+	rm $PREFIX/bin/start-box64
+	rm -r $PREFIX/glibc
+	rm -r $HOME/.wine
+elif [ $1 = "--version" ]
+then
+        echo "23.10.23 (alpha)"
+elif [ $1 = "--help" ]
+then
+  echo "Box64Droid (Termux version) - preconfigured Ubuntu 22.04 rootfs with Box64, Box86, Wine Proton, DXVK and Adreno GPU drivers for Android"
+	echo "Usage: box64droid {argument}"
+	echo "Available arguments:"
+	echo "--start - start Box64Droid"
+	echo "--uninstall - uninstall Box64Droid (all data in rootfs will be clear)"
+	echo "--version - show current version of Box64Droid"
+	echo "--help - see available arguments"
+else
+	echo "Invalid argument, use --help to see available arguments"
+fi
