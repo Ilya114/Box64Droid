@@ -228,8 +228,8 @@ then
 	mv start-box64droid $PREFIX/bin/
 elif [ $version = 4 ]
 then
-        wget https://github.com/Ilya114/Box64Droid/releases/download/alpha/box64droid &>/dev/null
-	wget https://github.com/Ilya114/Box64Droid/releases/download/alpha/start-box64 &>/dev/null
+        wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/testing/box64droid &>/dev/null
+	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/testing/start-box64 &>/dev/null
 	chmod +x box64droid start-box64
 	mv box64droid start-box64 $PREFIX/bin/
 fi
