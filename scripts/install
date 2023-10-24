@@ -4,20 +4,22 @@ echo "Select the needed Box64Droid version to install:"
 echo "1) Non-root version (Adreno 610-740, Android 12+)."
 echo "2) Root version (Adreno 610-740, Android 10+)."
 echo "3) VirGL version (For other GPUs, non-root phones, Android 12+)."
-echo "4) Cancel the Box64Droid installation."
+echo "4) Native version (Adreno 610-660, testing version, thanks JeezDisReez for his hard works)."
+echo "5) Cancel the Box64Droid installation."
 echo ""
 read version
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	&>/dev/null
-elif [ $version = 4 ]
+elif [[ $version = 4 ]
 then
-	clear
-	exit
+	echo "WARNING! YOU WILL INSTALL NON-FINISHED AND UNSTABLE VERSION OF BOX64DROID! Some things not included, example you won't change Wine version."
+	echo "Thanks JeezDisReez for glibc-prefix, patched Wine 8.14 and help!"
+	sleep 3
 else
 	clear
 	echo "Invalid version! Rerun installation the script."
-	rm -rf install &>/dev/null
+	rm install &>/dev/null
 	exit
 fi
 clear
@@ -64,7 +66,7 @@ then
         else
                 &>/dev/null
         fi
-else
+elif || [ $version = 2 ]
         if sudo [ -d /data/data/com.termux/files/home/ubuntu/root/.wine ]
         then
                 echo " Previous Box64Droid detected. You want backup then restore Wine after update? (yes/no/y/n, another = skip)"
@@ -95,6 +97,26 @@ else
         else
                 &>/dev/null
         fi
+else
+        if [ -d $HOME/.wine ]
+        then
+                echo " Previous Box64Droid detected. You want backup then restore Wine after update? (yes/no/y/n, another = skip)"
+                read choice
+		if [ -z $choice ]
+		then
+			&>/dev/null
+		elif [ $choice = yes ] || [ $choice = y ]
+                then
+                        mv $HOME/.wine $PREFIX/
+                        echo " Backup finished"
+                        echo ""
+                elif [ $choice = no ] || [ $choice = n ]
+                then
+                        &>/dev/null
+		fi
+        else
+                &>/dev/null
+        fi
 fi
 echo " Downloading and installing the Termux-x11 package..."
 echo ""
@@ -119,10 +141,17 @@ fi
 if [ $version = 1 ] || [ $version = 3 ]
 then
 	proot-distro remove ubuntu &>/dev/null
-else
+elif [ $version = 2 ]
 	sudo rm -r ~/ubuntu &>/dev/null
+elif [ $version = 4 ]
+	rm -r ~/.wine
+	rm -r $PREFIX/glibc
 fi
-echo " Downloading the preconfigured rootfs..."
+if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
+then
+	echo " Downloading the preconfigured rootfs..."
+else
+	echo " Downloading glibc and Wine prefix...."
 echo ""
 if [ $version = 1 ]
 then
@@ -133,14 +162,23 @@ then
 elif [ $version = 2 ]
 then
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-chroot.tar.xz
-else
+elif [ $version = 3 ]
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-virgl.tar.xz
+elif [ $version = 4 ]
+then
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz
+	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-prefix.tar.xz
 fi
 echo ""
-echo " Installing the rootfs, please wait..."
+if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
+then
+	echo " Installing the rootfs, please wait..."
+else
+	echo " Unpacking Wine and glibc-prefix, please wait..."
+fi
 if [ $version = 1 ]
 then
 	proot-distro restore box64droid-rootfs.tar.xz &>/dev/null
@@ -148,8 +186,13 @@ elif [ $version = 2 ]
 then
 	sudo mkdir ~/ubuntu
 	sudo tar -xJf box64droid-rootfs-chroot.tar.xz -C ~/ubuntu &>/dev/null
-else
+elif [ $version = 3 ]
+then
 	proot-distro restore box64droid-rootfs-virgl.tar.xz &>/dev/null
+elif [ $version = 4 ]
+then
+	tar -xJf glibc-prefix.tar.xz -C $PREFIX/
+	tar -xJf wine-prefix.tar.xz -C $HOME/
 fi
 echo ""
 echo " Rootfs installed"
@@ -159,27 +202,38 @@ if [ $version = 1 ]
 then
 	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid &>/dev/null
 	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box64droid &>/dev/null
-	chmod +x start-box64droid
-	chmod +x box64droid &>/dev/null
-	mv box64droid start-box64droid $PREFIX/bin/ &>/dev/null
+	chmod +x start-box64droid box64droid
+	mv box64droid start-box64droid $PREFIX/bin/
 elif [ $version = 2 ]
 then
 	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid-root &>/dev/null
-	chmod +x box64droid-root &>/dev/null
-	mv box64droid-root $PREFIX/bin/box64droid &>/dev/null
-else
+	chmod +x box64droid-root
+	mv box64droid-root $PREFIX/bin/box64droid
+elif [ $version = 3 ]
+then
 	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid-virgl &>/dev/null
 	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box64droid &>/dev/null
 	chmod +x start-box64droid
-	chmod +x box64droid-virgl &>/dev/null
-	mv box64droid-virgl $PREFIX/bin/box64droid &>/dev/null
-	mv start-box64droid $PREFIX/bin/ &>/dev/null
+	chmod +x box64droid-virgl
+	mv box64droid-virgl $PREFIX/bin/box64droid
+	mv start-box64droid $PREFIX/bin/
+elif [ $version = 4 ]
+then
+	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/testing/box64droid &>/dev/null
+	wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/testing/start-box64 &>/dev/null
+	chmod +x box64droid start-box64
+	mv box64droid start-box64 $PREFIX/bin/
 fi
 echo ""
 echo " Scripts installed"
 echo ""
 echo " Removing the installation waste..."
-rm box64droid-*.tar.xz install termux-x11-nightly-1.03.00-0-all.deb
+if [ $version = 1 ] || if [ $version = 2 ] || if [ $version = 3 ]
+then
+	rm box64droid-*.tar.xz install termux-x11-nightly-1.03.00-0-all.deb
+else
+	rm glibc-prefix.tar.xz wine-prefix.tar.xz install termux-x11-nightly-1.03.00-0-all.deb
+fi
 if [ -d ~/.wine ]
 then
 	echo " Restoring backup..."
@@ -190,11 +244,14 @@ then
 		mv ~/.wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/root/
 		rm -r $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/opt/wine
 		mv ~/wine $PREFIX/var/lib/proot-distro/installed-rootfs/ubuntu/opt/
-	else
+	elif [ $version = 2 ]
+	then
 		sudo rm -r ~/ubuntu/root/.wine
 		sudo rm -r ~/ubuntu/opt/wine
 		sudo mv ~/.wine ~/ubuntu/root/
 		sudo mv ~/wine ~/ubuntu/opt/
+	else
+		sudo mv $PREFIX/.wine ~/
 	fi
 	echo " Backup restored"
 else
