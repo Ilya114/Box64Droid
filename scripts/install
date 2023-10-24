@@ -13,6 +13,7 @@ then
 	&>/dev/null
 elif [ $version = 4 ]
 then
+        clear
 	echo "WARNING! YOU WILL INSTALL NON-FINISHED AND UNSTABLE VERSION OF BOX64DROID! Some things not included, example you won't change Wine version."
 	echo "Thanks JeezDisReez for glibc-prefix, patched Wine 8.14 and help!"
 	sleep 3
@@ -40,8 +41,11 @@ then
 elif [ $version = 3 ]
 then
        pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro -y &>/dev/null
-else
+elif [ $version = 2 ]
+then
        pkg install pulseaudio wget tsu xkeyboard-config -y &>/dev/null
+else
+       pkg install pulseaudio wget xkeyboard-config -y &>/dev/null
 fi
 echo ""
 if [ $version = 1 ] || [ $version = 3 ]
@@ -143,8 +147,10 @@ if [ $version = 1 ] || [ $version = 3 ]
 then
 	proot-distro remove ubuntu &>/dev/null
 elif [ $version = 2 ]
+then
 	sudo rm -r ~/ubuntu &>/dev/null
 elif [ $version = 4 ]
+then
 	rm -r ~/.wine
 	rm -r $PREFIX/glibc
 fi
