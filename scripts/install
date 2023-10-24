@@ -151,8 +151,8 @@ then
 	sudo rm -r ~/ubuntu &>/dev/null
 elif [ $version = 4 ]
 then
-	rm -r ~/.wine
-	rm -r $PREFIX/glibc
+	rm -r ~/.wine &>/dev/null
+	rm -r $PREFIX/glibc &>/dev/null
 fi
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
@@ -170,6 +170,7 @@ elif [ $version = 2 ]
 then
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-chroot.tar.xz
 elif [ $version = 3 ]
+then
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ &>/dev/null
 	mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu &>/dev/null
