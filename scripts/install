@@ -123,10 +123,9 @@ else
                 &>/dev/null
         fi
 fi
-echo " Downloading and installing the Termux-x11 package..."
+echo " Installing Termux-x11..."
 echo ""
-wget https://github.com/Ilya114/Box64Droid/raw/main/apps/termux-x11-nightly-1.03.00-0-all.deb &>/dev/null
-dpkg -i termux-x11-nightly-1.03.00-0-all.deb &>/dev/null
+pkg install termux-x11-nightly -y &>/dev/null
 echo " Termux-x11 installed"
 echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
