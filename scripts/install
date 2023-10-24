@@ -11,7 +11,7 @@ read version
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	&>/dev/null
-elif [[ $version = 4 ]
+elif [ $version = 4 ]
 then
 	echo "WARNING! YOU WILL INSTALL NON-FINISHED AND UNSTABLE VERSION OF BOX64DROID! Some things not included, example you won't change Wine version."
 	echo "Thanks JeezDisReez for glibc-prefix, patched Wine 8.14 and help!"
@@ -66,7 +66,8 @@ then
         else
                 &>/dev/null
         fi
-elif || [ $version = 2 ]
+elif [ $version = 2 ]
+then
         if sudo [ -d /data/data/com.termux/files/home/ubuntu/root/.wine ]
         then
                 echo " Previous Box64Droid detected. You want backup then restore Wine after update? (yes/no/y/n, another = skip)"
