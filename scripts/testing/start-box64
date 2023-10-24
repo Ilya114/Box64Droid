@@ -31,5 +31,5 @@ else
 
 read -p "" yn
 case $yn in
-       	[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f "app_process / com.termux.x11";
+       	[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f "app_process / com.termux.x11";echo ""
 esac
