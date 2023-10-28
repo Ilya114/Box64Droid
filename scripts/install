@@ -136,6 +136,12 @@ then
 else
 	&>/dev/null
 fi
+if [ -f $PREFIX/bin/start-box64 ]
+then
+        rm $PREFIX/bin/start-box64 &>/dev/null
+else
+        &>/dev/null
+fi
 if [ -d /sdcard/Box64Droid ]
 then
 	rm -r /sdcard/Box64Droid &>/dev/null
