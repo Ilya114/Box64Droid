@@ -15,7 +15,7 @@ elif [ $version = 4 ]
 then
         clear
 	echo "WARNING! YOU WILL INSTALL NON-FINISHED AND UNSTABLE VERSION OF BOX64DROID! Some things not included, example you won't change Wine version."
-	echo "Thanks JeezDisReez and Pipetto-crypto for glibc-prefix, help and patched Wine 8.0!"
+	echo "Thanks JeezDisReez for glibc-prefix, help and patched Wine 8.0!"
 	sleep 3
 else
 	clear
