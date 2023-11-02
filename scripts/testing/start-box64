@@ -25,6 +25,7 @@ then
 	. $PREFIX/bin/box64droid
 else
 		echo "Incorrect resolution"
+		sleep 0.5
 		clear
 		. $PREFIX/bin/start-box64
 	fi
@@ -33,5 +34,5 @@ echo "Launching Termux-X11..."
 am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 read -p "" yn
 case $yn in
-       	[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f "app_process / com.termux.x11";echo ""
+       	[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f pulseaudio;pkill -f "app_process / com.termux.x11";echo ""
 esac
