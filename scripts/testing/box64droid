@@ -33,13 +33,13 @@ then
 	else
 	        cp $PREFIX/glibc/opt/Box64Droid.conf $folder/
 	fi
-	. $folder/Box64Droid.conf
-	. $folder/DXVK_D8VK_HUD.conf
 	echo "Configuration check completed"
 	echo "Starting Termux-x11..."
 	termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
 	echo ""
 	echo -e "Termux-x11 started"
+	. $folder/Box64Droid.conf
+	. $folder/DXVK_D8VK_HUD.conf
 	clear
 	echo "Box64Droid by Ilya114, Glory to Ukraine!"
 	echo "Select to start:"
@@ -51,9 +51,12 @@ then
 		. start-box64
 	elif [ $choice = 2 ]
 	then
+		pkill -f "app_process / com.termux.x11"
+		pkill -f pulseaudio
 		exit
 	else
 		echo "Wrong option"
+		sleep 1
 		. box64droid
 	fi
 elif [ $1 = "--uninstall" ]
