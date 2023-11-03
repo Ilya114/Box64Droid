@@ -37,7 +37,9 @@ then
 	. $folder/DXVK_D8VK_HUD.conf
 	echo "Configuration check completed"
 	echo "Starting Termux-x11..."
-	termux-x11 :0 &>/dev/null & pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null & sleep 1
+	termux-x11 :0 &>/dev/null
+	echo "Starting PulseAudio..."
+	pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null
 	echo ""
 	echo -e "Termux-x11 started"
 	clear
