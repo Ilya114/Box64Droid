@@ -11,19 +11,23 @@ read res
 clear
 if [ $res = 1 ]
 then
-	echo -e "\033[0;33mWine will start now, go to Termux-x11 and wait. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
+	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
+	sleep 1
 	taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 2 ]
 then
-       	echo -e "\033[0;33mWine will start now, go to Termux-x11 and wait. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+       	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+	sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1024x768 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 3 ]
 then
-       	echo -e "\033[0;33mWine will start now, go to Termux-x11 and wait. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+       	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+	sleep 1
 	taskset -c 4-7 box64 wine explorer /desktop=shell,1280x720 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 4 ]
 then
-       	echo -e "\033[0;33mWine will start now, go to Termux-x11 and wait. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+       	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+	sleep 1
 	taskset -c 4-7 box64 wine explorer /desktop=shell,1920x1080 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 5 ]
 then
@@ -35,7 +39,6 @@ else
 		. $PREFIX/bin/start-box64
 	fi
 echo ""
-echo "Launching Termux-X11..."
 am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 read -p "" yn
 case $yn in
