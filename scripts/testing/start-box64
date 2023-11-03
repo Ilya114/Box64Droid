@@ -3,8 +3,9 @@ clear
 echo "Select need resoultion:"
 echo "1) 800x600 (4:3)"
 echo "2) 1024x768 (4:3)"
-echo "3) Full screen (portait)"
-echo "4) Back to previous menu"
+echo "3) 1280x720 (16:9)"
+echo "4) 1920x1080 (16:9)"
+echo "5) Back to previous menu"
 echo ""
 read res
 clear
@@ -21,6 +22,10 @@ then
        	echo -e "\033[0;33mWine will start now, go to Termux-x11 and wait. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
 	taskset -c 4-7 box64 wine explorer /desktop=shell,1280x720 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 4 ]
+then
+       	echo -e "\033[0;33mWine will start now, go to Termux-x11 and wait. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+	taskset -c 4-7 box64 wine explorer /desktop=shell,1920x1080 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+elif [ $res = 5 ]
 then
 	. $PREFIX/bin/box64droid
 else
