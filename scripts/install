@@ -45,7 +45,7 @@ elif [ $version = 2 ]
 then
        pkg install pulseaudio wget tsu xkeyboard-config -y &>/dev/null
 else
-       pkg install pulseaudio wget xkeyboard-config -y &>/dev/null
+       pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng -y &>/dev/null
 fi
 echo ""
 if [ $version = 1 ] || [ $version = 3 ]
