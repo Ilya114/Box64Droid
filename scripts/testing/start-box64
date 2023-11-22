@@ -5,39 +5,45 @@ echo "1) 800x600 (4:3)"
 echo "2) 1024x768 (4:3)"
 echo "3) 1280x720 (16:9)"
 echo "4) 1920x1080 (16:9)"
-echo "5) Back to previous menu"
+echo "5) Termux-X11 resolution"
+echo "6) Back to previous menu"
 echo ""
 read res
 clear
 if [ $res = 1 ]
-then
-	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
-	sleep 1
-	taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+then                                                                                                                                                                                     echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
+        sleep 1
+        taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 2 ]
 then
-       	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
-	sleep 1
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+        sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1024x768 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 3 ]
 then
-       	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
-	sleep 1
-	taskset -c 4-7 box64 wine explorer /desktop=shell,1280x720 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+        sleep 1
+        taskset -c 4-7 box64 wine explorer /desktop=shell,1280x720 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 4 ]
 then
-       	echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
-	sleep 1
-	taskset -c 4-7 box64 wine explorer /desktop=shell,1920x1080 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+        sleep 1
+        taskset -c 4-7 box64 wine explorer /desktop=shell,1920x1080 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 5 ]
 then
-	. $PREFIX/bin/box64droid
+        export res="$(xrandr | grep current | awk '{print $8$9$10}' | tr -d ,)"
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the termina then press Enter."
+        sleep 1
+        taskset -c 4-7 box64 wine explorer /desktop=shell,$res $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+elif [ $res = 6 ]
+then
+        . $PREFIX/bin/box64droid
 else
-		echo "Incorrect resolution"
-		sleep 0.5
-		clear
-		. $PREFIX/bin/start-box64
-	fi
+                echo "Incorrect resolution"
+                sleep 0.5
+                clear
+                . $PREFIX/bin/start-box64
+        fi
 echo ""
 am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 read -p "" yn
