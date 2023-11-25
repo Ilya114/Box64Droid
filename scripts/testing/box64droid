@@ -6,8 +6,6 @@ elif [ $1 = "--start" ]
 then
 	clear
 	export folder="/sdcard/Box64Droid"
-	echo "WARNING! TESTING VERSION!"
-	sleep 3
 	echo "Checking configuration..."
 	if [ -d $folder ]
 	then
@@ -46,12 +44,59 @@ then
 	echo "Box64Droid by Ilya114, Glory to Ukraine!"
 	echo "Select to start:"
 	echo "1) Box64"
-	echo "2) Exit"
+	echo "2) Change Wine version"
+	echo "3) Exit"
 	read choice
 	if [ $choice = 1 ]
 	then
 		. start-box64
 	elif [ $choice = 2 ]
+	then
+		clear
+		echo "Select Wine version to install:"
+		echo "1) Wine GE 8-13"
+		echo "2) Back to previous menu"
+		read choice
+		if [ $choice = 1 ]
+		then
+			clear
+			echo "Remoing previous Wine..."
+			rm -r $PREFIX/glibc/opt/wine
+			echo "Removing previous Wine prefix..."
+			rm -r $HOME/.wine
+			echo "Downloading Wine GE 8-13..."
+			echo ""
+			wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-ge-8.13/wine-lutris-GE-Proton8-13-x86_64.tar.xz
+			echo ""
+			echo "Unpacking Wine GE 8-13..."
+			tar -xf wine-lutris-GE-Proton8-13-x86_64.tar.xz -C $PREFIX/glibc/opt
+			mv $PREFIX/glibc/opt/lutris-GE-Proton8-13-x86_64 $PREFIX/glibc/opt/wine
+			echo "Creating Wine prefix, going to Termux-X11..."
+			am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
+			. /sdcard/Box64Droid/Box64Droid.conf
+			box64 wine64 wineboot &>/dev/null
+			cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
+			ln -s /sdcard $HOME/.wine/dosdevices/d:
+			echo "Installing DXVK, D8VK and vkd3d-proton..."
+			box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
+			box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
+			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
+			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
+			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.10/* $HOME/.wine/drive_c/windows/syswow64
+			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.10/* $HOME/.wine/drive_c/windows/system32
+			echo "Removing archives..."
+			rm wine-lutris-GE-Proton8-13-x86_64.tar.xz
+			echo "Done!"
+			. box64droid
+		elif [ $choice = 2 ]
+		then
+			. box64droid
+		else
+			echo "Wrong option"
+			sleep 1
+			. box64droid
+		fi
+	elif [ $choice = 3 ]
 	then
 		pkill -f "app_process / com.termux.x11"
 		pkill -f pulseaudio
