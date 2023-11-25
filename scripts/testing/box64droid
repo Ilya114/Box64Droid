@@ -115,7 +115,7 @@ then
 	rm -r $HOME/.wine
 elif [ $1 = "--version" ]
 then
-        echo "23.10.23 (alpha)"
+        echo "25.11.23 (alpha)"
 elif [ $1 = "--help" ]
 then
  	echo "Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.14, DXVK with Adreno GPU drivers in Termux"
