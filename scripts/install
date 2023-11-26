@@ -37,15 +37,15 @@ echo ""
 echo " Installing required packages..."
 if [ $version = 1 ]
 then
-       pkg install pulseaudio wget xkeyboard-config proot-distro -y &>/dev/null
+       pkg install pulseaudio wget xkeyboard-config proot-distro termux-x11-nightly -y &>/dev/null
 elif [ $version = 3 ]
 then
-       pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro -y &>/dev/null
+       pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro termux-x11-nightly -y &>/dev/null
 elif [ $version = 2 ]
 then
        pkg install pulseaudio wget tsu xkeyboard-config -y &>/dev/null
 else
-       pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr -y &>/dev/null
+       pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly -y &>/dev/null
 fi
 echo ""
 if [ $version = 1 ] || [ $version = 3 ]
@@ -123,11 +123,6 @@ else
                 &>/dev/null
         fi
 fi
-echo " Installing Termux-x11..."
-echo ""
-pkg install termux-x11-nightly -y &>/dev/null
-echo " Termux-x11 installed"
-echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
 if [ -f $PREFIX/bin/box64droid ]
@@ -244,9 +239,9 @@ echo ""
 echo " Removing the installation waste..."
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
-	rm box64droid-*.tar.xz install termux-x11-nightly-1.03.00-0-all.deb
+	rm box64droid-*.tar.xz install
 else
-	rm glibc-prefix.tar.xz wine-prefix.tar.xz install termux-x11-nightly-1.03.00-0-all.deb
+	rm glibc-prefix.tar.xz wine-prefix.tar.xz install
 fi
 if [ -d ~/.wine ]
 then
