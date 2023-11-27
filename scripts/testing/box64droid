@@ -83,8 +83,8 @@ then
 			box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
 			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
 			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
-			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.10/* $HOME/.wine/drive_c/windows/syswow64
-			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.10/* $HOME/.wine/drive_c/windows/system32
+			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
+			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
 			echo "Removing archives..."
 			rm wine-lutris-GE-Proton8-13-x86_64.tar.xz
 			echo "Done!"
@@ -114,8 +114,8 @@ then
 			box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
 			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
 			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
-			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.10/* $HOME/.wine/drive_c/windows/syswow64
-			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.10/* $HOME/.wine/drive_c/windows/system32
+			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
+			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
 			echo "Removing archives..."
 			rm wine-8.0-amd64.tar.xz
 			echo "Done!"
