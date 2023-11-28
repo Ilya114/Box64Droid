@@ -59,7 +59,6 @@ then
 		cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
 		echo "Done!"
 		. box64droid
-    		
 	else
 		&>/dev/null
 	fi
