@@ -158,7 +158,7 @@ if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	echo " Downloading the preconfigured rootfs..."
 else
-	echo " Downloading glibc and Wine prefix..."
+	echo " Downloading Glibc prefix..."
 fi
 echo ""
 if [ $version = 1 ]
@@ -179,14 +179,13 @@ then
 elif [ $version = 4 ]
 then
 	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz
-	wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-prefix.tar.xz
 fi
 echo ""
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	echo " Installing the rootfs, please wait..."
 else
-	echo " Unpacking Wine and glibc-prefix, please wait..."
+	echo " Unpacking Glibc-prefix, please wait..."
 fi
 if [ $version = 1 ]
 then
@@ -201,7 +200,6 @@ then
 elif [ $version = 4 ]
 then
 	tar -xJf glibc-prefix.tar.xz -C $PREFIX/
-	tar -xJf wine-prefix.tar.xz -C $HOME/
 fi
 echo ""
 echo " Rootfs installed"
@@ -241,7 +239,7 @@ if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
 	rm box64droid-*.tar.xz install
 else
-	rm glibc-prefix.tar.xz wine-prefix.tar.xz install
+	rm glibc-prefix.tar.xz install
 fi
 if [ -d ~/.wine ]
 then
