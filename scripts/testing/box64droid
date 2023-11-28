@@ -47,6 +47,7 @@ then
 	echo "2) Change Wine version"
 	echo "3) Recreate Wine prefix"  
 	echo "4) Exit"
+	echo ""
 	read choice
 	if [ $choice = 1 ]
 	then
@@ -59,6 +60,7 @@ then
 		echo "2) Wine Stable 8.0"
 		echo "3) Wine Staging-TKG 8.13"
 		echo "4) Back to previous menu"
+		echo ""
 		read choice
 		if [ $choice = 1 ]
 		then
@@ -197,6 +199,7 @@ then
 	rm $PREFIX/bin/start-box64
 	rm -r $PREFIX/glibc
 	rm -r $HOME/.wine
+	echo "Done!"
 elif [ $1 = "--version" ]
 then
         echo "25.11.23 (alpha)"
