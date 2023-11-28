@@ -10,7 +10,7 @@ then
 	if [ -d $folder ]
 	then
 		&>/dev/null
-		else
+	else
 		mkdir $folder
 	fi
 	if [ -f $folder/DXVK_D8VK_HUD.conf ]
@@ -40,6 +40,28 @@ then
 	echo -e "Termux-x11 started"
 	. $folder/Box64Droid.conf
 	. $folder/DXVK_D8VK_HUD.conf
+	if [ -f $HOME/.wine ]
+	then
+    		&>/dev/null
+	else
+		echo ""
+	        echo "Wine prefix not found! It will be created..."
+		echo "Creating Wine prefix, going to Termux-X11..."
+		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
+		. /sdcard/Box64Droid/Box64Droid.conf
+		box64 wine64 wineboot &>/dev/null
+		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
+		ln -s /sdcard $HOME/.wine/dosdevices/d:
+		echo "Installing DXVK, D8VK and vkd3d-proton..."
+		box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
+		box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
+		box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
+		box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
+		cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
+		cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
+		echo "Done!"
+		. box64droid
+	fi
 	clear
 	echo "Box64Droid by Ilya114, Glory to Ukraine!"
 	echo "Select to start:"
@@ -62,104 +84,67 @@ then
 		echo "4) Back to previous menu"
 		echo ""
 		read choice
-		if [ $choice = 1 ]
+		if [ -z $choice ]
 		then
-			clear
-			echo "Remoing previous Wine..."
-			rm -r $PREFIX/glibc/opt/wine
-			echo "Removing previous Wine prefix..."
-			rm -r $HOME/.wine
-			echo "Downloading Wine GE 8-13..."
-			echo ""
-			wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-ge-8.13/wine-lutris-GE-Proton8-13-x86_64.tar.xz
-			echo ""
-			echo "Unpacking Wine GE 8-13..."
-			tar -xf wine-lutris-GE-Proton8-13-x86_64.tar.xz -C $PREFIX/glibc/opt
-			mv $PREFIX/glibc/opt/lutris-GE-Proton8-13-x86_64 $PREFIX/glibc/opt/wine
-			echo "Creating Wine prefix, going to Termux-X11..."
-			am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
-			. /sdcard/Box64Droid/Box64Droid.conf
-			box64 wine64 wineboot &>/dev/null
-			cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
-			ln -s /sdcard $HOME/.wine/dosdevices/d:
-			echo "Installing DXVK, D8VK and vkd3d-proton..."
-			box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
-			box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
-			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
-			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
-			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
-			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
-			echo "Removing archives..."
-			rm wine-lutris-GE-Proton8-13-x86_64.tar.xz
-			echo "Done!"
-			. box64droid
-		elif [ $choice = 2 ]
-		then
-			clear
-			echo "Remoing previous Wine..."
-			rm -r $PREFIX/glibc/opt/wine
-			echo "Removing previous Wine prefix..."
-			rm -r $HOME/.wine
-			echo "Downloading Wine Stable 8.0..."
-			echo ""
-			wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-8.0/wine-8.0-amd64.tar.xz
-			echo ""
-			echo "Unpacking Wine Stable 8.0..."
-			tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt
-			mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine
-			echo "Creating Wine prefix, going to Termux-X11..."
-			am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
-			. /sdcard/Box64Droid/Box64Droid.conf
-			box64 wine64 wineboot &>/dev/null
-			cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
-			ln -s /sdcard $HOME/.wine/dosdevices/d:
-			echo "Installing DXVK, D8VK and vkd3d-proton..."
-			box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
-			box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
-			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
-			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
-			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
-			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
-			echo "Removing archives..."
-			rm wine-8.0-amd64.tar.xz
-			echo "Done!"
-			. box64droid
-		elif [ $choice = 3 ]
-                then
-			clear
-			echo "Remoing previous Wine..."
-			rm -r $PREFIX/glibc/opt/wine
-			echo "Removing previous Wine prefix..."
-			rm -r $HOME/.wine
-			echo "Downloading Wine Staging-TKG 8.13..."
-			echo ""
-			wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-8.13-staging-tkg-amd64.tar.xz
-			echo ""
-			echo "Unpacking Wine Staging-TKG 8.13..."
-			tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt
-			mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine
-			echo "Creating Wine prefix, going to Termux-X11..."
-			am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
-			. /sdcard/Box64Droid/Box64Droid.conf
-			box64 wine64 wineboot &>/dev/null
-			cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
-			ln -s /sdcard $HOME/.wine/dosdevices/d:
-			echo "Installing DXVK, D8VK and vkd3d-proton..."
-			box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
-			box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
-			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
-			box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
-			cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
-			cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
-			echo "Removing archives..."
-			rm wine-8.13-staging-tkg-amd64.tar.xz
-			echo "Done!"
+			echo "Empty option, back to previous menu..."
+			sleep 1
 			. box64droid
 		elif [ $choice = 4 ]
 		then
 			. box64droid
+		elif [ $choice = 1 ] || [ $choice = 2 ] || [ $choice = 3 ]
+		then
+			clear
+			echo "Remoing previous Wine..."
+			rm -r $PREFIX/glibc/opt/wine
+			echo "Removing previous Wine prefix..."
+			rm -r $HOME/.wine
+			if [ $choice = 1 ]
+			then
+				echo "Downloading Wine GE 8-13..."
+				echo ""
+				wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-ge-8.13/wine-lutris-GE-Proton8-13-x86_64.tar.xz
+				echo ""
+				echo "Unpacking Wine GE 8-13..."
+				tar -xf wine-lutris-GE-Proton8-13-x86_64.tar.xz -C $PREFIX/glibc/opt
+				mv $PREFIX/glibc/opt/lutris-GE-Proton8-13-x86_64 $PREFIX/glibc/opt/wine
+			elif [ $choice = 2 ]
+			then
+				echo "Downloading Wine Stable 8.0..."
+				echo ""
+				wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-8.0/wine-8.0-amd64.tar.xz
+				echo ""
+				echo "Unpacking Wine Stable 8.0..."
+				tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt
+			elif [ $choice = 3 ]
+			then
+				echo "Downloading Wine Staging-TKG 8.13..."
+				echo ""
+				wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-8.13-staging-tkg-amd64.tar.xz
+				echo ""
+				echo "Unpacking Wine Staging-TKG 8.13..."
+				tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt
+				mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine
+			fi
+		echo "Creating Wine prefix, going to Termux-X11..."
+		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
+		. /sdcard/Box64Droid/Box64Droid.conf
+		box64 wine64 wineboot &>/dev/null
+		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
+		ln -s /sdcard $HOME/.wine/dosdevices/d:
+		echo "Installing DXVK, D8VK and vkd3d-proton..."
+		box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
+		box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
+		box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null
+		box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null
+		cp $PREFIX/glibc/opt/Resources/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/syswow64
+		cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
+		echo "Removing archives..."
+		rm wine-*.tar.xz
+		echo "Done!"
+		. box64droid
 		else
-			echo "Wrong option"
+			echo "Wrong option, back to previous menu..."
 			sleep 1
 			. box64droid
 		fi
@@ -188,6 +173,11 @@ then
 		pkill -f "app_process / com.termux.x11"
 		pkill -f pulseaudio
 		exit
+	elif [ -z $choice ]
+	then
+		echo "Empty option"
+		sleep 1
+		. box64droid
 	else
 		echo "Wrong option"
 		sleep 1
