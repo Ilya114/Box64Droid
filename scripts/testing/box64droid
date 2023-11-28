@@ -71,7 +71,12 @@ then
 	echo "4) Exit"
 	echo ""
 	read choice
-	if [ $choice = 1 ]
+	if [ -z $choice ]
+	then
+		echo "Empty option"
+		sleep 1
+		. box64droid
+	elif [ $choice = 1 ]
 	then
 		. start-box64
 	elif [ $choice = 2 ]
@@ -95,7 +100,7 @@ then
 		elif [ $choice = 1 ] || [ $choice = 2 ] || [ $choice = 3 ]
 		then
 			clear
-			echo "Remoing previous Wine..."
+			echo "Removing previous Wine..."
 			rm -r $PREFIX/glibc/opt/wine
 			echo "Removing previous Wine prefix..."
 			rm -r $HOME/.wine
@@ -116,6 +121,7 @@ then
 				echo ""
 				echo "Unpacking Wine Stable 8.0..."
 				tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt
+				mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine
 			elif [ $choice = 3 ]
 			then
 				echo "Downloading Wine Staging-TKG 8.13..."
@@ -173,11 +179,6 @@ then
 		pkill -f "app_process / com.termux.x11"
 		pkill -f pulseaudio
 		exit
-	elif [ -z $choice ]
-	then
-		echo "Empty option"
-		sleep 1
-		. box64droid
 	else
 		echo "Wrong option"
 		sleep 1
