@@ -40,7 +40,7 @@ then
 	echo -e "Termux-x11 started"
 	. $folder/Box64Droid.conf
 	. $folder/DXVK_D8VK_HUD.conf
-	if [ ! -f $HOME/.wine ]
+	if [ ! -d $HOME/.wine ]
 	then
 		echo ""
 	        echo "Wine prefix not found! It will be created..."
