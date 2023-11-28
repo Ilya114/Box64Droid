@@ -10,7 +10,7 @@ echo "6) Back to previous menu"
 echo ""
 read res
 clear
-if [ -z $choice ]
+if [ -z $res ]
 then
 	echo "Empty option"
 	sleep 1
@@ -50,11 +50,11 @@ elif [ $res = 6 ]
 then
         . $PREFIX/bin/box64droid
 else
-                echo "Incorrect resolution"
-                sleep 0.5
-                clear
-                . $PREFIX/bin/start-box64
-        fi
+        echo "Incorrect resolution"
+        sleep 0.5
+        clear
+        . $PREFIX/bin/start-box64
+fi
 echo ""
 am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 read -p "" yn
