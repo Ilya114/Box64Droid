@@ -11,30 +11,36 @@ echo ""
 read res
 clear
 if [ $res = 1 ]
-then                                                                                                                                                                                     echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
+then                                                                                                                                                                                     
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        box64 wine64 taskkill /f /im services.exe &>/dev/null &
 elif [ $res = 2 ]
 then
         echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1024x768 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        box64 wine64 taskkill /f /im services.exe &>/dev/null &
 elif [ $res = 3 ]
 then
         echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1280x720 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        box64 wine64 taskkill /f /im services.exe &>/dev/null &
 elif [ $res = 4 ]
 then
         echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1920x1080 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        box64 wine64 taskkill /f /im services.exe &>/dev/null &
 elif [ $res = 5 ]
 then
         export res="$(xrandr | grep current | awk '{print $8$9$10}' | tr -d ,)"
         echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal then press Enter."
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,$res $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        box64 wine64 taskkill /f /im services.exe &>/dev/null &
 elif [ $res = 6 ]
 then
         . $PREFIX/bin/box64droid
