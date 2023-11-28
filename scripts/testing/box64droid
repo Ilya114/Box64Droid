@@ -125,6 +125,7 @@ then
 			echo "Done!"
 			. box64droid
 		elif [ $choice = 3 ]
+                then
 			clear
 			echo "Remoing previous Wine..."
 			rm -r $PREFIX/glibc/opt/wine
