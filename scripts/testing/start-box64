@@ -10,7 +10,12 @@ echo "6) Back to previous menu"
 echo ""
 read res
 clear
-if [ $res = 1 ]
+if [ -z $choice ]
+then
+	echo "Empty option"
+	sleep 1
+	. start-box64
+elif [ $res = 1 ]
 then                                                                                                                                                                                     
         echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
         sleep 1
