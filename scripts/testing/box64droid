@@ -65,7 +65,7 @@ then
 	echo "Box64Droid by Ilya114, Glory to Ukraine!"
 	echo "Select to start:"
 	echo "1) Box64"
-	echo "2) Box64 (debug version"
+	echo "2) Box64 (debug version)"
 	echo "3) Change Wine version"
 	echo "4) Recreate Wine prefix"  
 	echo "5) Exit"
@@ -85,6 +85,7 @@ then
         	echo "Wine will be started with debug info, log will be saved in /sdcard/Box64Droid.log. Send /sdcard/Box64Droid.log in Telegram group if you have black screen or crashed apps/games"
         	echo "To exit from Box64Droid press type '1' then press Enter"
         	BOX86_LOG=1 BOX86_SHOWSEGV=1 BOX86_DYNAREC_LOG=1 BOX86_DYNAREC_MISSING=1 BOX86_DLSYM_ERROR=1 BOX64_LOG=1 BOX64_SHOWSEGV=1 BOX64_DYNAREC_LOG=1 BOX64_DYNAREC_MISSING=1 BOX64_DLSYM_ERROR=1 taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 /opt/7-Zip/7zFM >/sdcard/Box64Droid.log 2>&1 &
+		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 		box64 wine64 taskkill /f /im services.exe &>/dev/null &
 		read -p "" yn
 		case $yn in
