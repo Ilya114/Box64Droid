@@ -238,6 +238,15 @@ fi
 echo ""
 echo " Scripts installed"
 echo ""
+echo " Checking for Android 14 and apply fix for Termux-X11 if so"
+ANDROID_VERSION=$(termux-info | grep "13")
+if [ $ANDROID_VERSION = 14 ]
+then
+	find $PREFIX -type f -iname "*.apk" -exec chmod 400 "{}" \;
+else
+	&>/dev/null
+fi
+echo ""
 echo " Removing the installation waste..."
 if [ $version = 1 ] || [ $version = 2 ] || [ $version = 3 ]
 then
