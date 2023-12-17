@@ -5,7 +5,7 @@ echo ""
 echo " Box64Droid creates a folder called "Box64Droid" on /sdcard to store configuration files. To create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null	
 termux-setup-storage & sleep 3 &>/dev/null
 echo ""
-echo "Updating packages..."
+echo " Updating packages..."
 apt-get update &>/dev/null
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade &>/dev/null
 echo ""
@@ -45,6 +45,9 @@ if [ $ANDROID_VERSION = 14 ]
 then
 	find $PREFIX -type f -iname "*.apk" -exec chmod 400 "{}" \;
 fi
+echo ""
+echo " Removing the installation waste..."
+rm glibc-prefix.tar.xz install
 clear
 echo ""
 echo " Install finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'"
