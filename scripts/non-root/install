@@ -22,9 +22,12 @@ echo ""
 proot-distro remove ubuntu &>/dev/null
 echo " Downloading Box64Droid rootfs..."
 echo ""
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
-mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu
+if [ ! -d /data/data/com.termux/files/usr/var/lib/proot-distro ]
+then
+    mkdir /data/data/com.termux/files/usr/var/lib/proot-distro
+    mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
+    mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu
+fi
 wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs.tar.xz
 echo ""
 echo " Installing Box64Droid rootfs, please wait..."
