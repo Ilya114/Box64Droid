@@ -15,16 +15,16 @@ then
     exit
 elif [ $version = 1 ]
 then
-    curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/non-root/install && chmod +x install && ./install
+    curl -o non-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/non-root/install && chmod +x non-root && ./non-root
 elif [ $version = 2 ]
 then
-    curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/root/install && chmod +x install && ./install
+    curl -o root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/root/install && chmod +x root && ./root
 elif [ $version = 3 ]
 then
-    curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/virgl/install && chmod +x install && ./install
+    curl -o virgl https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/virgl/install && chmod +x virgl && ./virgl
 elif [ $version = 4 ]
 then
-    curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/install && chmod +x install && ./install
+    curl -o native https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/install && chmod +x native && ./native
 elif [ $version = 5 ]
 then
     rm install
