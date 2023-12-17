@@ -24,6 +24,7 @@ then
   if [ -c ~/ubuntu/dev/urandom ]
   then
     echo "/dev not umounted correctly! Reboot device and run install script again"
+    exit
   else
     sudo rm -r ~/ubuntu &>/dev/null
 fi
