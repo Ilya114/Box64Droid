@@ -5,6 +5,7 @@ echo ""
 echo " Box64Droid creates a folder called "Box64Droid" on /sdcard to store configuration files. To create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null	
 termux-setup-storage & sleep 3 &>/dev/null
 echo ""
+echo "Updating packages..."
 apt-get update &>/dev/null
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade &>/dev/null
 echo ""
@@ -15,6 +16,7 @@ echo " x11-repo installed"
 echo ""
 echo " Installing required packages..."
 pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly -y &>/dev/null
+echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
 if [ -d ~/.wine ]
@@ -23,9 +25,12 @@ then
   rm -r $PREFIX/glibc &>/dev/null
 fi
 echo " Downloading Glibc prefix..."
+echo ""
 wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz
+echo ""
 echo " Unpacking Glibc-prefix, please wait..."
 tar -xJf glibc-prefix.tar.xz -C $PREFIX/
+echo ""
 echo " Downloading Box64Droid starting scripts..."
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid &>/dev/null
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64 &>/dev/null
@@ -35,7 +40,7 @@ echo ""
 echo " Scripts downloaded"
 echo ""
 echo " Checking for Android 14 and apply fix for Termux-X11 if so"
-ANDROID_VERSION=$(termux-info | grep "13")
+ANDROID_VERSION=$(termux-info | grep "14")
 if [ $ANDROID_VERSION = 14 ]
 then
 	find $PREFIX -type f -iname "*.apk" -exec chmod 400 "{}" \;
