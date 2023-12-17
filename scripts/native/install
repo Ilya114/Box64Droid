@@ -47,7 +47,7 @@ then
 fi
 echo ""
 echo " Removing the installation waste..."
-rm glibc-prefix.tar.xz install
+rm glibc-prefix.tar.xz install native
 clear
 echo ""
 echo " Install finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'"
