@@ -49,7 +49,7 @@ then
 fi
 echo ""
 echo " Removing the installation waste..."
-rm box64droid-rootfs.tar.xz install
+rm box64droid-rootfs.tar.xz install non-root
 clear
 echo ""
 echo " Install finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'"
