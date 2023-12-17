@@ -35,8 +35,6 @@ wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/non-root/
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/non-root/start-box64droid &>/dev/null
 chmod +x start-box64droid box64droid
 mv box64droid start-box64droid $PREFIX/bin/
-chmod +x box64droid start-box64
-mv box64droid start-box64 $PREFIX/bin/
 echo ""
 echo " Scripts downloaded"
 echo ""
