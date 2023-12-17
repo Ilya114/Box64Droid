@@ -15,7 +15,7 @@ pkg install x11-repo -y &>/dev/null
 echo " x11-repo installed"
 echo ""
 echo " Installing required packages..."
-pkg install pulseaudio wget xkeyboard-config proot-distro termux-x11-nightly -y &>/dev/null
+pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro termux-x11-nightly -y &>/dev/null
 echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
