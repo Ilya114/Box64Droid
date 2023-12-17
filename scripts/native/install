@@ -2,7 +2,7 @@
 clear
 echo " Starting Box64Droid (native version) installation..." & sleep 3
 echo ""
-echo " Box64Droid creates /sdcard/Box64Droid folder to store configuration files. To create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null	
+echo " Box64Droid creates /sdcard/Box64Droid folder to store configuration files. To create this folder, it is necessary to have storage permissions, click on allow to proceed." & sleep 5 &>/dev/null
 termux-setup-storage & sleep 3 &>/dev/null
 echo ""
 echo " Updating packages..."
@@ -24,11 +24,11 @@ then
   rm -r ~/.wine &>/dev/null
   rm -r $PREFIX/glibc &>/dev/null
 fi
-echo " Downloading Glibc prefix..."
+echo " Downloading glibc prefix..."
 echo ""
 wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz
 echo ""
-echo " Unpacking Glibc-prefix, please wait..."
+echo " Unpacking glibc-prefix, please wait..."
 tar -xJf glibc-prefix.tar.xz -C $PREFIX/
 echo ""
 echo " Downloading Box64Droid starting scripts..."
