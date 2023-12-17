@@ -28,7 +28,7 @@ then
     mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs
     mkdir /data/data/com.termux/files/usr/var/lib/proot-distro/installed-rootfs/ubuntu
 fi
-#wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs.tar.xz
+wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs.tar.xz
 echo ""
 echo " Installing Box64Droid rootfs, please wait..."
 proot-distro restore box64droid-rootfs.tar.xz &>/dev/null
