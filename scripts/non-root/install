@@ -31,8 +31,8 @@ echo " Installing Box64Droid rootfs, please wait..."
 proot-distro restore box64droid-rootfs.tar.xz &>/dev/null
 echo ""
 echo " Downloading Box64Droid starting scripts..."
-wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/box64droid &>/dev/null
-wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/start-box64droid &>/dev/null
+wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/non-root/box64droid &>/dev/null
+wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/non-root/start-box64droid &>/dev/null
 chmod +x start-box64droid box64droid
 mv box64droid start-box64droid $PREFIX/bin/
 chmod +x box64droid start-box64
