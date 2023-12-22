@@ -15,7 +15,7 @@ pkg install x11-repo -y &>/dev/null
 echo " x11-repo installed"
 echo ""
 echo " Installing required packages..."
-pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro termux-x11-nightly -y &>/dev/null
+pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro termux-x11-nightly termux-am -y &>/dev/null
 echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
@@ -46,13 +46,6 @@ mv box64droid $PREFIX/bin/
 mv start-box64droid $PREFIX/bin/
 echo ""
 echo " Scripts downloaded"
-echo ""
-echo " Checking for Android 14 and apply fix for Termux-X11 if so"
-ANDROID_VERSION=$(termux-info | grep "13")
-if [ $ANDROID_VERSION = 14 ]
-then
-	find $PREFIX -type f -iname "*.apk" -exec chmod 400 "{}" \;
-fi
 echo ""
 echo " Removing the installation waste..."
 rm box64droid-rootfs-virgl.tar.xz install virgl
