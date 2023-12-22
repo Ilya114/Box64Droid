@@ -20,6 +20,10 @@ echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
 proot-distro remove ubuntu &>/dev/null
+if [ -d /sdcard/Box64Droid ]
+then
+  rm -r /sdcard/Box64Droid &>/dev/null
+fi
 echo " Downloading Box64Droid rootfs..."
 echo ""
 if [ ! -d /data/data/com.termux/files/usr/var/lib/proot-distro ]
