@@ -48,7 +48,8 @@ then
 		. /sdcard/Box64Droid/Box64Droid.conf
 		WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null
 		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
-		ln -s /sdcard $HOME/.wine/dosdevices/d:
+		ln -s /sdcard/Download $HOME/.wine/dosdevices/d:
+		ln -s /sdcard $HOME/.wine/dosdevices/e:
 		echo "Installing DXVK, D8VK and vkd3d-proton..."
 		box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
 		box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
@@ -175,7 +176,8 @@ then
 		. /sdcard/Box64Droid/Box64Droid.conf
 		box64 wine64 wineboot &>/dev/null
 		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
-		ln -s /sdcard $HOME/.wine/dosdevices/d:
+		ln -s /sdcard/Download $HOME/.wine/dosdevices/d:
+		ln -s /sdcard $HOME/.wine/dosdevices/e:
 		echo "Installing DXVK, D8VK and vkd3d-proton..."
 		box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null
 		box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null
