@@ -24,6 +24,10 @@ then
   rm -r ~/.wine &>/dev/null
   rm -r $PREFIX/glibc &>/dev/null
 fi
+if [ -d /sdcard/Box64Droid ]
+then
+  rm -r /sdcard/Box64Droid &>/dev/null
+fi
 echo " Downloading glibc prefix..."
 echo ""
 wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz
