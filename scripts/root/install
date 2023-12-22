@@ -29,6 +29,10 @@ then
     sudo rm -r ~/ubuntu &>/dev/null
   fi
 fi
+if [ -d /sdcard/Box64Droid ]
+then
+  rm -r /sdcard/Box64Droid &>/dev/null
+fi
 echo " Downloading Box64Droid rootfs..."
 echo ""
 wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-chroot.tar.xz
