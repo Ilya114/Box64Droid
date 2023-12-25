@@ -205,7 +205,7 @@ then
 	rm -r $PREFIX/glibc
 	rm -r $HOME/.wine
 	echo "Done!"
-elif [ $1 = "--version" ]
+elif [ $1 = "--reinstall" ]
 then
 	curl -o native https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/install && chmod +x native && ./native
 elif [ $1 = "--version" ]
