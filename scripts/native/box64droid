@@ -144,10 +144,9 @@ then
 				tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt
 				mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine
 			fi
-		echo "Creating Wine prefix, going to Termux-X11..."
-		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
-		. /sdcard/Box64Droid/Box64Droid.conf
-		box64 wine64 wineboot &>/dev/null
+		echo "Creating Wine prefix..."
+		. /sdcard/Box64Droid/Box64Droid.conf		
+		WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null
 		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
 		ln -s /sdcard $HOME/.wine/dosdevices/d:
 		echo "Installing DXVK, D8VK and vkd3d-proton..."
