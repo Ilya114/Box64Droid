@@ -5,8 +5,9 @@ echo "1) 800x600 (4:3)"
 echo "2) 1024x768 (4:3)"
 echo "3) 1280x720 (16:9)"
 echo "4) 1920x1080 (16:9)"
-echo "5) Termux-X11 resolution"
-echo "6) Back to previous menu"
+echo "5) Custom resolution"
+echo "6) Termux-X11 resolution"
+echo "7) Back to previous menu"
 echo ""
 read res
 clear
@@ -48,6 +49,21 @@ then
         box64 wine64 taskkill /f /im services.exe &>/dev/null &
 elif [ $res = 6 ]
 then
+	echo ""
+	echo "Write need resolution then press enter"
+	read res
+	if [ -z $res ]
+	then
+		echo "Empty resolution"
+		. $PREFIX/bin/start-box64
+	fi
+	clear
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal then press Enter."
+        sleep 1
+        taskset -c 4-7 box64 wine explorer /desktop=shell,$res $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
+        box64 wine64 taskkill /f /im services.exe &>/dev/null &
+elif [ $res =7 ]
+then
         . $PREFIX/bin/box64droid
 else
         echo "Incorrect resolution"
@@ -57,7 +73,7 @@ else
 fi
 echo ""
 am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
-read -p "" yn
-case $yn in
+read -p "" stop
+case $stop in
        	[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f pulseaudio;pkill -f "app_process / com.termux.x11";echo ""
 esac
