@@ -1,4 +1,7 @@
 # Box64Droid
+
+# Guys, I congratulate you with the coming New Year! 2023 wasn't easy year, same as 2022. I hope your next year will be happier and more interesting, in countries where there are currently conflicts will come peace and I hope you will have a good New Year table :)
+
 Box64Droid is a project with scripts that automate installing preconfigured rootfs with [Box64](https://github.com/ptitSeb/box64), [Box86](https://github.com/ptitSeb/box86), [Wine Stable 8.0](https://github.com/Kron4ek/Wine-Builds), [DXVK](https://github.com/doitsujin/dxvk), [D8VK](https://github.com/AlpyneDreams/d8vk) on Android. Originally was a [fork](https://github.com/Ilya114/Box4Droid) of [Box4Droid](https://github.com/Herick75/Box4Droid) with Box64. Can't launch all games in the world in 4K 60 FPS, note it when you are trying launch AAA games. Project site available [here](https://ilya114.github.io/Box64Droid/). 
 
 Made by guy from [Lysychansk](https://en.wikipedia.org/wiki/Lysychansk), [Luhansk region](https://en.wikipedia.org/wiki/Luhansk_Oblast) of Ukraine.
