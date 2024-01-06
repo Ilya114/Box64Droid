@@ -31,11 +31,11 @@ You also can use Input Bridge, install 0.1.9 apk then just run app in Android an
 ## System requirements 
 
 - Adreno 610+ (Other GPUs are supported by VirGL, but many games might not work)
-- Android 12+ (non-root, VirGL version), Android 10+ (root version)
+- Android 12+ (non-root, VirGL version), Android 10+ (native, root version)
 - 64-bit Android
 - You also need ~4,2GB (for root version), 4,5GB (for non-root version) or ~3,3GB (for VirGL version) worth of free space for the installation to run without problems.
 
-If you want to get more FPS and stability, use the root version (you will need root rights on your device).
+If you want to get more FPS and stability, use the root version (you will need root rights on your device) or native (not stable but same fps as root version) . 
 
 ## Configuring
 
@@ -51,9 +51,7 @@ The `DXVK_D8VK.conf` file is for you to use the environment variables referring 
 
 - Error when updating Termux packages. Clearing Termux data will help.
 - Android 12+ can kill Termux, you may get `[Process completed (signal 9) - press Enter]`. To fix it run this command in adb shell from your pc: `adb shell "/system/bin/device_config put activity_manager max_phantom_processes 2147483647"`
-- "Control" menu in Wine (in Wine Proton 8.0-2 working fine) shows nothing. You can just open `control` using "Run" (Win + R).
 - Winetricks runs a long of time when Proton installed (non-root version).
-- Wine GE 8.14 and above and Wine 8.14 and above have broken DXVK with drivers for Adreno 7xx/610. Install any Wine version before 8.14.
 
 ## Instructions on how to mount SD-card external HDD/SSD (chroot version only)
 
