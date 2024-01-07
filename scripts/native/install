@@ -27,7 +27,7 @@ fi
 if [ -d /sdcard/Box64Droid ]
 then
   rm -r /sdcard/Box64Droid &>/dev/null
-fi
+fiAIMP (on Wine)
 echo " Downloading glibc prefix..."
 echo ""
 wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz
@@ -38,8 +38,9 @@ echo ""
 echo " Downloading Box64Droid starting scripts..."
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid &>/dev/null
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64 &>/dev/null
-chmod +x box64droid start-box64
-mv box64droid start-box64 $PREFIX/bin/
+wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/changeenvvars &>/dev/null
+chmod +x box64droid start-box64 changeenvvars
+mv box64droid start-box64 changeenvvars $PREFIX/bin/
 echo ""
 echo " Scripts downloaded"
 echo ""
