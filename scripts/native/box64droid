@@ -66,9 +66,10 @@ then
 	echo "Select to start:"
 	echo "1) Box64"
 	echo "2) Box64 (debug version)"
-	echo "3) Change Wine version"
-	echo "4) Recreate Wine prefix"  
-	echo "5) Exit"
+	echo "3) Change Box64/86 settings"
+	echo "4) Change Wine version"
+	echo "5) Recreate Wine prefix"
+	echo "6) Exit"
 	echo ""
 	read choice
 	if [ -z $choice ]
@@ -86,12 +87,14 @@ then
         	echo "To exit from Box64Droid press type '1' then press Enter"
         	BOX86_LOG=1 BOX86_SHOWSEGV=1 BOX86_DYNAREC_LOG=1 BOX86_DYNAREC_MISSING=1 BOX86_DLSYM_ERROR=1 BOX64_LOG=1 BOX64_SHOWSEGV=1 BOX64_DYNAREC_LOG=1 BOX64_DYNAREC_MISSING=1 BOX64_DLSYM_ERROR=1 taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 /opt/7-Zip/7zFM >/sdcard/Box64Droid.log 2>&1 &
 		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
-		box64 wine64 taskkill /f /im services.exe &>/dev/null &
 		read -p "" yn
 		case $yn in
        			[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f pulseaudio;pkill -f "app_process / com.termux.x11";echo ""
 		esac
 	elif [ $choice = 3 ]
+	then
+		. changeenvvars
+	elif [ $choice = 4 ]
 	then
 		clear
 		echo "Select Wine version to install:"
@@ -165,7 +168,7 @@ then
 			sleep 1
 			. box64droid
 		fi
-	elif [ $choice = 4 ]
+	elif [ $choice = 5 ]
 	then
 		clear
 		echo "Removing previous Wine prefix..."
@@ -186,7 +189,7 @@ then
 		cp $PREFIX/glibc/opt/Resources64/vkd3d-proton2.11/* $HOME/.wine/drive_c/windows/system32
 		echo "Done!"
 		. box64droid
-	elif [ $choice = 5 ]
+	elif [ $choice = 6 ]
 	then
 		pkill -f "app_process / com.termux.x11"
 		pkill -f pulseaudio
