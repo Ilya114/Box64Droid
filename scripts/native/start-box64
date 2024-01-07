@@ -62,7 +62,7 @@ then
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,$res $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
         box64 wine64 taskkill /f /im services.exe &>/dev/null &
-elif [ $res =7 ]
+elif [ $res = 7 ]
 then
         . $PREFIX/bin/box64droid
 else
