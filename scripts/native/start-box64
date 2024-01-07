@@ -18,22 +18,22 @@ then
 	. start-box64
 elif [ $res = 1 ]
 then                                                                                                                                                                                     
-        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal."
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m"
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,800x600 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 2 ]
 then
-        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m"
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1024x768 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 3 ]
 then
-        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m"
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1280x720 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 4 ]
 then
-        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal and press Enter."
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m"
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,1920x1080 $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 5 ]
@@ -46,13 +46,13 @@ then
 		. $PREFIX/bin/start-box64
 	fi
 	clear
-        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal then press Enter."
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m"
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,$res $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 6 ]
 then
         export res="$(xrandr | grep current | awk '{print $8$9$10}' | tr -d ,)"
-        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m in the terminal then press Enter."
+        echo -e "\033[0;33mTermux-X11 and Wine will start now. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m"
         sleep 1
         taskset -c 4-7 box64 wine explorer /desktop=shell,$res $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &
 elif [ $res = 7 ]
@@ -69,4 +69,5 @@ am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 read -p "" stop
 case $stop in
        	[1]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f pulseaudio;pkill -f "app_process / com.termux.x11";echo ""
+	[2]* ) echo " Stopping Wine...";box64 wineserver -k &>/dev/null;echo "";. box64droid
 esac
