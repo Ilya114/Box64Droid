@@ -39,6 +39,8 @@ wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/
 echo ""
 echo " Installing Box64Droid rootfs, please wait..."
 sudo mkdir ~/ubuntu
+sudo mkdir ~/ubuntu/dev/shm
+sudo chmod 1777 ~/ubuntu/dev/shm
 sudo tar -xJf box64droid-rootfs-chroot.tar.xz -C ~/ubuntu &>/dev/null
 echo ""
 echo " Downloading Box64Droid starting scripts..."
