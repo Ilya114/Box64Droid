@@ -113,7 +113,7 @@ then
 		elif [ $choice = 5 ]
 		then
 			. box64droid
-		elif [ $choice = 1 ] || [ $choice = 2 ] || [ $choice = 3 ]
+		elif [ $choice = 1 ] || [ $choice = 2 ] || [ $choice = 3 ] || [ $choice = 4 ]
 		then
 			clear
 			echo "Removing previous Wine..."
