@@ -101,7 +101,8 @@ then
 		echo "1) Wine GE 8-13"
 		echo "2) Wine Stable 8.0"
 		echo "3) Wine Staging-TKG 8.13"
-		echo "4) Back to previous menu"
+		echo "4) Wine 9.0-rc4"
+		echo "5) Back to previous menu"
 		echo ""
 		read choice
 		if [ -z $choice ]
@@ -109,7 +110,7 @@ then
 			echo "Empty option, back to previous menu..."
 			sleep 1
 			. box64droid
-		elif [ $choice = 4 ]
+		elif [ $choice = 5 ]
 		then
 			. box64droid
 		elif [ $choice = 1 ] || [ $choice = 2 ] || [ $choice = 3 ]
@@ -137,7 +138,15 @@ then
 				echo "Unpacking Wine Stable 8.0..."
 				tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt
 				mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine
-			elif [ $choice = 3 ]
+			elif [ $choice = 4 ]
+				echo "Downloading Wine 9.0-rc4..."
+				echo ""
+				wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-9.0-rc4/wine-9.0-amd64.tar.xz
+				echo ""
+				echo "Unpacking Wine 9.0-rc4..."
+				tar -xf wine-9.0-amd64.tar.xz -C $PREFIX/glibc/opt
+				mv $PREFIX/glibc/opt/wine $PREFIX/glibc/opt/
+			elif [ $choice = 4 ]
 			then
 				echo "Downloading Wine Staging-TKG 8.13..."
 				echo ""
