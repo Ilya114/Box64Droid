@@ -139,6 +139,7 @@ then
 				tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt
 				mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine
 			elif [ $choice = 4 ]
+			then
 				echo "Downloading Wine 9.0-rc4..."
 				echo ""
 				wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-9.0-rc4/wine-9.0-amd64.tar.xz
