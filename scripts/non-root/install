@@ -19,7 +19,7 @@ pkg install pulseaudio wget xkeyboard-config proot-distro termux-x11-nightly ter
 echo ""
 echo " Checking for older Box64Droid versions and removing them if any..."
 echo ""
-proot-distro remove ubuntu &>/dev/null
+proot-distro remove ubuntu-box64droid &>/dev/null
 if [ -d /sdcard/Box64Droid ]
 then
   rm -r /sdcard/Box64Droid &>/dev/null
