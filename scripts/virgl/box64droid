@@ -23,7 +23,7 @@ then
 elif [ $1 = "--uninstall" ]
 then
         echo "Uninstalling Box64Droid..."
-        proot-distro remove ubuntu &>/dev/null
+        proot-distro remove ubuntu-box64droid &>/dev/null
         rm $PREFIX/bin/box64droid
 	rm $PREFIX/bin/start-box64droid
 	echo "Done!"
