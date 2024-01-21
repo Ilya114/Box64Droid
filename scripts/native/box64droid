@@ -183,10 +183,10 @@ then
 		clear
 		echo "Removing previous Wine prefix..."
 		rm -r $HOME/.wine
-		echo "Creating Wine prefix, going to Termux-X11..."
+		echo "Creating Wine prefix..."
 		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 		. /sdcard/Box64Droid/Box64Droid.conf
-		box64 wine64 wineboot &>/dev/null
+		WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null
 		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
 		ln -s /sdcard/Download $HOME/.wine/dosdevices/d:
 		ln -s /sdcard $HOME/.wine/dosdevices/e:
