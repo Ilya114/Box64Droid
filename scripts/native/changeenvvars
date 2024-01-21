@@ -31,9 +31,10 @@ echo "17) BOX86_DYNAREC_BLEEDING_EDGE"
 echo "18) BOX86_DYNAREC_CALLRET"
 echo ""
 echo "Misc"
-echo "19) Set to default all environment variables"
+echo "19) WINEESYNC (only for Wine 9.0-rc4)"
+echo "20) Set to default all environment variables"
 echo ""
-echo "20) Back to previous menu"
+echo "21) Back to previous menu"
 echo ""
 read envvar
 if [ -z $envvar ]
@@ -402,9 +403,27 @@ then
 	. changeenvvars
 elif [ $envvar = 19 ]
 then
-	cp $PREFIX/glibc/opt/Box64Droid.conf /sdcard/Box64Droid/
+	clear
+	echo "Select vaule (empty or another = default (0)):"
+	echo "1) 1"
+	echo ""
+	read envvar
+	if [ -z $envvar ]
+	then
+		sed -i "s/WINEESYNC=$WINEESYNC/WINEESYNC=0/g" /sdcard/Box64Droid/Box64Droid.conf
+	elif [ $envvar = 1 ]
+	then
+		sed -i "s/WINEESYNC=$WINEESYNC/WINEESYNC=1/g" /sdcard/Box64Droid/Box64Droid.conf
+	else
+		sed -i "s/WINEESYNC=$WINEESYNC/WINEESYNC=0/g" /sdcard/Box64Droid/Box64Droid.conf
+	fi
+	. /sdcard/Box64Droid/Box64Droid.conf
 	. changeenvvars
 elif [ $envvar = 20 ]
+then
+	cp $PREFIX/glibc/opt/Box64Droid.conf /sdcard/Box64Droid/
+	. changeenvvars
+elif [ $envvar = 21 ]
 then
 	. start-box64
 else
