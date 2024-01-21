@@ -138,6 +138,15 @@ then
 				echo "Unpacking Wine Stable 8.0..."
 				tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt
 				mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine
+			elif [ $choice = 3 ]
+			then
+				echo "Downloading Wine Staging-TKG 8.13..."
+				echo ""
+				wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-8.13-staging-tkg-amd64.tar.xz
+				echo ""
+				echo "Unpacking Wine Staging-TKG 8.13..."
+				tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt
+				mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine
 			elif [ $choice = 4 ]
 			then
 				echo "Downloading Wine 9.0-rc4..."
@@ -147,15 +156,6 @@ then
 				echo "Unpacking Wine 9.0-rc4..."
 				tar -xf wine-9.0-amd64.tar.xz -C $PREFIX/glibc/opt
 				mv $PREFIX/glibc/opt/wine $PREFIX/glibc/opt/
-			elif [ $choice = 4 ]
-			then
-				echo "Downloading Wine Staging-TKG 8.13..."
-				echo ""
-				wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-8.13-staging-tkg-amd64.tar.xz
-				echo ""
-				echo "Unpacking Wine Staging-TKG 8.13..."
-				tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt
-				mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine
 			fi
 		echo "Creating Wine prefix..."
 		. /sdcard/Box64Droid/Box64Droid.conf		
