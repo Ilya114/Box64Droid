@@ -21,16 +21,16 @@ then
     exit
 elif [ $version = 1 ]
 then
-    curl -o non-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/non-root.py && python3 non-root.py
+    curl -o non-root.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/non-root.py && python3 non-root.py
 elif [ $version = 2 ]
 then
-    curl -o non-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/root.py && python3 root.py
+    curl -o root.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/root.py && python3 root.py
 elif [ $version = 3 ]
 then
-    curl -o non-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/virgl.py && python3 virgl.py
+    curl -o virgl.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/virgl.py && python3 virgl.py
 elif [ $version = 4 ]
 then
-    curl -o non-root https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/native.py && python3 native.py
+    curl -o native.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/native.py && python3 native.py
 elif [ $version = 5 ]
 then
     rm install
