@@ -4,7 +4,7 @@ echo "Updating packages and installing dependencies to run installer"
 echo ""
 apt-get update &>/dev/null
 apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade &>/dev/null
-apt install python3 --no-install-recommends -y &>/dev/null
+apt install python --no-install-recommends -y &>/dev/null
 clear
 echo "Select the needed Box64Droid version to install:"
 echo "1) Non-root version (Adreno 610-740, Android 12+)."
