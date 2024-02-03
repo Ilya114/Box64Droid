@@ -155,7 +155,6 @@ then
 				echo ""
 				echo "Unpacking Wine 9.0-rc4..."
 				tar -xf wine-9.0-amd64.tar.xz -C $PREFIX/glibc/opt
-				mv $PREFIX/glibc/opt/wine $PREFIX/glibc/opt/
 			fi
 		echo "Creating Wine prefix..."
 		. /sdcard/Box64Droid/Box64Droid.conf		
