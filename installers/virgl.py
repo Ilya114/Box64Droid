@@ -1,4 +1,4 @@
-import os, shutil
+import os, shutil, time
 def packages():
     os.system("pkg install x11-repo -y &>/dev/null")
     os.system("pkg install pulseaudio wget xkeyboard-config virglrenderer-android proot-distro termux-x11-nightly termux-am -y &>/dev/null")
@@ -23,7 +23,7 @@ def clear_waste():
     os.system("clear")
 def storage():
     os.system("termux-setup-storage")
-    os.system("sleep 2")
+    time.sleep(2)
 os.system("clear")
 print(" Starting Box64Droid (virgl version) installation... Please allow storage permission!")
 storage()
