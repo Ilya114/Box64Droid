@@ -19,7 +19,7 @@ README parts:
 
 ## Installation instructions
 1. Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/stable/app-arm64-v8a-debug.apk).
-2. In Termux run the Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install`
+2. In Termux run the Box64Droid install command: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install`
 
 After the installation is completed, run `box64droid --start`. The starting script will start Termux-X11 and show the start menu.
 
