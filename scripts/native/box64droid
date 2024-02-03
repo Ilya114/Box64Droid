@@ -101,7 +101,7 @@ then
 		echo "1) Wine GE 8-13"
 		echo "2) Wine Stable 8.0"
 		echo "3) Wine Staging-TKG 8.13"
-		echo "4) Wine 9.0-rc4"
+		echo "4) Wine 9.0-rc4 (broken)"
 		echo "5) Back to previous menu"
 		echo ""
 		read choice
