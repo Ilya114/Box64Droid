@@ -1,7 +1,7 @@
 import os, shutil, time
 def packages():
     os.system("pkg install x11-repo -y &>/dev/null")
-    os.system("pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am -y &>/dev/null")
+    os.system("pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed -y --no-install-recommends &>/dev/null")
 def check_prev_version():
     prefix = "/data/data/com.termux/files/home/.wine"
     glibc = "/data/data/com.termux/files/usr/glibc"
@@ -31,7 +31,7 @@ os.system("clear")
 print(" Starting Box64Droid (native version) installation... Please allow storage permission!")
 storage()
 print("")
-print(" Installing packages...")
+print(" Installing packages (might be long)...")
 print("")
 packages()
 print(" Checking for older Box64Droid versions and removing them if any...")
