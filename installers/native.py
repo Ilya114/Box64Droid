@@ -1,7 +1,7 @@
 import os, shutil, time
 def packages():
     os.system("pkg install x11-repo -y &>/dev/null")
-    os.system("pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed -y --no-install-recommends &>/dev/null")
+    os.system("pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
 def check_prev_version():
     prefix = "/data/data/com.termux/files/home/.wine"
     glibc = "/data/data/com.termux/files/usr/glibc"
@@ -19,8 +19,9 @@ def scripts():
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid &>/dev/null")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64 &>/dev/null")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/changeenvvars &>/dev/null")
-    os.system("chmod +x box64droid start-box64 changeenvvars")
-    os.system("mv box64droid start-box64 changeenvvars $PREFIX/bin/")
+    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/winetricks &>/dev/null")
+    os.system("chmod +x box64droid start-box64 changeenvvars winetricks")
+    os.system("mv box64droid start-box64 changeenvvars winetricks $PREFIX/bin/")
 def clear_waste():
     os.system("rm glibc-prefix.tar.xz install native.py")
     os.system("clear")
