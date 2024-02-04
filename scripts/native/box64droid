@@ -183,7 +183,7 @@ then
 		echo "Removing previous Wine prefix..."
 		rm -r $HOME/.wine
 		echo "Creating Wine prefix..."
-	. /sdcard/Box64Droid/Box64Droid.conf
+		. /sdcard/Box64Droid/Box64Droid.conf
 		WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null
 		cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"
 		ln -s /sdcard/Download $HOME/.wine/dosdevices/d:
