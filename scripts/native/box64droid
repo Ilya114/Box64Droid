@@ -207,7 +207,7 @@ then
 		box64 winetricks >/dev/null 2>&1
 		read -p "" stop
 		case $stop in
-       			[1]* ) echo " Stopping Winetricks...";pkill -f "box64_bash winetricks" &>/dev/null;echo "";echo " Stopping Termux-X11...";pkill -f "app_process / com.termux.x11";. box64droid
+       			[1]* ) echo " Stopping Winetricks...";pkill -f "box64_bash winetricks" &>/dev/null;. box64droid
 		esac
 	elif [ $choice = 7 ]
 	then
