@@ -201,14 +201,11 @@ then
 	elif [ $choice = 6 ]
 	then
 		clear
-		echo "Starting Winetricks... To back to main menu press 1"
+		echo "Starting Winetricks... To back to main menu exit from Winetricks in Termux-X11"
 		echo ""
 		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 		box64 winetricks >/dev/null 2>&1
-		read -p "" stop
-		case $stop in
-       			[1]* ) echo " Stopping Winetricks...";pkill -f "box64_bash winetricks" &>/dev/null;. box64droid
-		esac
+		. box64droiв
 	elif [ $choice = 7 ]
 	then
 		pkill -f "app_process / com.termux.x11"
