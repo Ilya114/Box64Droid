@@ -22,6 +22,11 @@ def scripts():
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/winetricks &>/dev/null")
     os.system("chmod +x box64droid start-box64 changeenvvars winetricks")
     os.system("mv box64droid start-box64 changeenvvars winetricks $PREFIX/bin/")
+    os.system("ln -s $PREFIX/glibc/opt/wine/bin/wine $PREFIX/glibc/bin/wine")
+    os.system("ln -s $PREFIX/glibc/opt/wine/bin/wine64 $PREFIX/glibc/bin/wine64")
+    os.system("ln -s $PREFIX/glibc/opt/wine/bin/wineserver $PREFIX/glibc/bin/wineserver")
+    os.system("ln -s $PREFIX/glibc/opt/wine/bin/wineboot $PREFIX/glibc/bin/wineboot")
+    os.system("ln -s $PREFIX/glibc/opt/wine/bin/winecfg $PREFIX/glibc/bin/winecfg")
 def clear_waste():
     os.system("rm glibc-prefix.tar.xz install native.py")
     os.system("clear")
