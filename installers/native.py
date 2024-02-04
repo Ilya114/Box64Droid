@@ -8,9 +8,9 @@ def check_prev_version():
     config = "/sdcard/Box64Droid"
     if os.path.exists(prefix):
         shutil.rmtree(prefix)
-    elif os.path.exists(glibc):
+    if os.path.exists(glibc):
         shutil.rmtree(glibc)
-    elif os.path.exists(config):
+    if os.path.exists(config):
         shutil.rmtree(config)
 def install_glibc():
     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz")
