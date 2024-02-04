@@ -205,7 +205,7 @@ then
 		echo ""
 		am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null
 		box64 winetricks >/dev/null 2>&1
-		. box64droiв
+		. box64droid
 	elif [ $choice = 7 ]
 	then
 		pkill -f "app_process / com.termux.x11"
