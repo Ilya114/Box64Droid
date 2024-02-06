@@ -2,7 +2,7 @@ import os, time, shutil, sys
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
-        del os.environ("LD_PRELOAD")
+        del os.environ["LD_PRELOAD"]
     print("Starting Termux-X11...")
     os.system("termux-x11 :0 &>/dev/null &")
     print("Starting PulseAudio...")
