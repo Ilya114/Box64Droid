@@ -103,7 +103,7 @@ def main_menu():
                 print("Removing previous Wine prefix...")
                 if os.path.exists("/data/data/com.termux/files/home/.wine"):
                     shutil.rmtree("/data/data/com.termux/files/home/.wine")
-                elif choice == "1":
+                if choice == "1":
                     print("Downloading Wine Stable 8.0...")
                     print("")
                     os.system("wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-8.0/wine-8.0-amd64.tar.xz")
