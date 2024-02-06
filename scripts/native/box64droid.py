@@ -91,10 +91,10 @@ def main_menu():
             print("3) Back to previous menu")
             print("")
             choice = input()
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4":
+            if choice != "1" and choice != "2" and choice != "3":
                 print("Incorrect or empty option!")
                 change_wine_version()
-            elif choice == "4":
+            elif choice == "3":
                 main_menu()
             else:
                 os.system("clear")
@@ -120,8 +120,6 @@ def main_menu():
                     print("Unpacking Wine Staging-TKG 8.13...")
                     os.system("tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt")
                     os.system("mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine")
-                elif choice == "3":
-                    main_menu()
                 os.system("rm wine*")
                 print("Creating Wine prefix...")
                 create_prefix()
