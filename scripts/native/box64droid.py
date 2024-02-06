@@ -55,7 +55,7 @@ def main_menu():
     print("6) Exit")
     print("")
     choice = input()
-    if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6" and choice != "7":
+    if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
         print("Incorrect or empty option!")
         main_menu()
     elif choice == "1":
