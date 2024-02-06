@@ -25,7 +25,6 @@ def check_prefix():
     if not os.path.exists("/data/data/com.termux/files/home/.wine"):
         print("Wine prefix not found! Creating...")
         create_prefix()
-    main_menu()
 def recreate_prefix():
     prefix_path="/data/data/com.termux/files/home/.wine"
     os.system("clear")
