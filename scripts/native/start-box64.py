@@ -13,20 +13,20 @@ print("")
 res = input()
 if res != "1" and res != "2" and res != "3" and res != "4" and res != "5" and res != "6" and res != "7":
     print("Incorrect or empty resolution!")
-    os.system("python3 start-box64.py")
+    os.system("python3 $PREFIX/bin/start-box64.py")
     exit()
 elif res == "5":
     os.system("clear")
     res = input("Write need resolution: ")
     if res == "":
         print("Empty resolution!")
-        os.system("python3 start-box64.py")
+        os.system("python3 $PREFIX/bin/start-box64.py")
         exit()
     os.system("clear")
     print("\033[0;33mTermux-X11 and Wine started. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m (or any key) or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m")
     os.system("taskset -c 4-7 box64 wine explorer /desktop=shell," + res + " $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &")
 elif res == "6":
-    os.system("python3 box64droid.py --start")
+    os.system("python3 $PREFIX/bin/box64droid.py --start")
     exit()
 else:
     os.system("clear")
@@ -45,7 +45,7 @@ stop = input()
 if stop == "2":
     print(" Stopping Wine...")
     os.system("box64 wineserver -k &>/dev/null")
-    os.system("python3 box64droid.py --start")
+    os.system("python3 $PREFIX/bin/box64droid.py --start")
     exit()
 else:
     print(" Stopping Wine...")
