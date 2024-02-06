@@ -14,13 +14,13 @@ def check_config():
     dxvk_config_hud =  config_folder + "DXVK_D8VK_HUD.conf"
     print("Checking configuration...")
     if not os.path.exists(config_folder):
-            os.mkdir(config_folder)
+        os.mkdir(config_folder)
     if not os.path.exists(box64droid_config):
-            shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/Box64Droid.conf", box64droid_config)
+        shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/Box64Droid.conf", box64droid_config)
     if not os.path.exists(dxvk_config):
-            shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/DXVK_D8VK.conf", dxvk_config)
+        shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/DXVK_D8VK.conf", dxvk_config)
     if not os.path.exists(dxvk_config_hud):
-            shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/DXVK_D8VK_HUD.conf", dxvk_config_hud)
+        shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/DXVK_D8VK_HUD.conf", dxvk_config_hud)
     exec(open('/sdcard/Box64Droid/Box64Droid.conf').read())
     exec(open('/sdcard/Box64Droid/DXVK_D8VK_HUD.conf').read())
 def check_prefix():
