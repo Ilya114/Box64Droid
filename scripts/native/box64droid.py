@@ -147,6 +147,7 @@ elif sys.argv[1] == "--start":
     start_box64droid()
     check_config()
     check_prefix()
+    main_menu()
 elif sys.argv[1] == "--uninstall":
     print("Uninstalling Box64Droid...")
     glibc_path = "/data/data/com.termux/files/usr/glibc"
