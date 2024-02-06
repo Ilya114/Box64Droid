@@ -1,1 +1,1 @@
-python3 $PREFIX/bin/box64droid.py @s
+python3 $PREFIX/bin/box64droid.py $@
