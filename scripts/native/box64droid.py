@@ -59,7 +59,7 @@ def main_menu():
         print("Incorrect or empty option!")
         main_menu()
     elif choice == "1":
-        os.system("python3 start-box64.py")
+        os.system("python3 $PREFIX/bin/start-box64.py")
     elif choice == "2":
         os.system("clear")
         print("Wine will be started with debug info, log will be saved in /sdcard/Box64Droid.log. Send /sdcard/Box64Droid.log in Telegram group if you have black screen or crashed apps/games")
