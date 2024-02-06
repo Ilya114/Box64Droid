@@ -61,6 +61,7 @@ def main_menu():
         main_menu()
     elif choice == "1":
         os.system("python3 $PREFIX/bin/start-box64.py")
+        exit()
     elif choice == "2":
         os.system("clear")
         print("Wine will be started with debug info, log will be saved in /sdcard/Box64Droid.log. Send /sdcard/Box64Droid.log in Telegram group if you have black screen or crashed apps/games")
