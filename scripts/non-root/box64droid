@@ -15,7 +15,7 @@ then
 elif [ $1 = "--update" ]
 then
 	cd ~/
-	curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/install && chmod +x install && ./install
+	curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install
 elif [ $1 = "--uninstall" ]
 then
 	echo "Uninstalling Box64Droid..."
