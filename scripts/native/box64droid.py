@@ -153,8 +153,6 @@ def main_menu():
         exit()
 if len(sys.argv) < 2:
     print("Empty argument, use --help to see available arguments")
-elif sys.argv[1] != "--start" and sys.argv[1] != "--uninstall" and sys.argv[1] != "--reinstall" and sys.argv[1] != "--version" and sys.argv[1] !="--help":
-    print("Invalid argument, use --help to see available arguments")
 elif sys.argv[1] == "--start":
     start_box64droid()
     check_config()
@@ -182,3 +180,5 @@ elif sys.argv[1] == "--help":
     print("--reinstall - reinstall Box64Droid (all data in prefix will be clear)")
     print("--version - show current version of Box64Droid")
     print("--help - see this menu and exit")
+else:
+    print("Invalid argument, use --help to see available arguments")
