@@ -37,7 +37,7 @@ def recreate_prefix():
 def create_prefix():
     os.system('WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null')
     os.system('cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"')
-    os.system("rm $PREFIX/.wine/dosdevices/z:")
+    os.system("rm $HOME/.wine/dosdevices/z:")
     os.system("ln -s /sdcard/Download $HOME/.wine/dosdevices/d: &>/dev/null && ln -s /sdcard $HOME/.wine/dosdevices/e: &>/dev/null && ln -s /data/data/com.termux/files $HOME/.wine/dosdevices/z:")
     print("Installing DXVK, D8VK and vkd3d-proton...")
     os.system('box64 wine "$PREFIX/glibc/opt/Resources64/Run if you will install on top of WineD3D.bat" &>/dev/null && box64 wine "$PREFIX/glibc/opt/Resources64/DXVK2.3/DXVK2.3.bat" &>/dev/null')
