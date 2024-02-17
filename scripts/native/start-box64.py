@@ -24,7 +24,7 @@ elif res == "5":
         exit()
     os.system("clear")
     print("\033[0;33mTermux-X11 and Wine started. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m (or any key) or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m")
-    os.system("taskset -c 4-7 box64 wine explorer /desktop=shell," + res + " $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &")
+    os.system("taskset -c 4-7 box64 wine explorer /desktop=shell," + res + " $PREFIX/glibc/opt/autostart.bat &>/dev/null &")
 elif res == "6":
     os.system("python3 $PREFIX/bin/box64droid.py --start")
     exit()
@@ -39,7 +39,7 @@ else:
     if res == "4":
         res = "1920x1080"
     print("\033[0;33mTermux-X11 and Wine started. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m (or any key) or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m")
-    os.system("taskset -c 4-7 box64 wine explorer /desktop=shell," + res + " $PREFIX/glibc/opt/7-Zip/7zFM &>/dev/null &")
+    os.system("taskset -c 4-7 box64 wine explorer /desktop=shell," + res + " $PREFIX/glibc/opt/autostart.bat &>/dev/null &")
 os.system("am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null")
 stop = input()
 if stop == "2":
