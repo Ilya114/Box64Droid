@@ -54,8 +54,10 @@ def main_menu():
     print("2) Box64 (debug version)")
     print("3) Change Wine version")
     print("4) Recreate Wine prefix")
-    print("5) Winetricks (slow)")
-    print("6) Exit")
+    print("5) Update Box64")
+    print("6) Update starting scripts")
+    print("7) Winetricks (slow)")
+    print("8) Exit")
     print("")
     choice = input()
     if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
@@ -148,11 +150,22 @@ def main_menu():
         create_prefix()
     elif choice == "5":
         os.system("clear")
+        os.system("pkg install -y git; unset LD_PRELOAD; export GLIBC_PREFIX=/data/data/com.termux/files/usr/glibc; export PATH=$GLIBC_PREFIX/bin:$PATH; cd ~/; git clone https://github.com/ptitSeb/box64; cd ~/box64; sed -i 's/\/usr/\/data\/data\/com.termux\/files\/usr\/glibc/g' CMakeLists.txt; sed -i 's/\/etc/\/data\/data\/com.termux\/files\/usr\/glibc\/etc/g' CMakeLists.txt; mkdir build; cd build; cmake --install-prefix $PREFIX/glibc .. -DARM_DYNAREC=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBAD_SIGNAL=ON -DSD845=ON; make -j8; make install; rm -rf ~/box64; cd ~/")
+        os.system("python3 $PREFIX/bin/box64droid.py")
+        exit()
+    elif choice == "6":
+        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
+        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64.py &>/dev/null")
+        os.system("mv box64droid.py start-box64.py $PREFIX/bin/")
+        os.system("python3 $PREFIX/bin/box64droid.py")
+        exit()
+    elif choice == "7":
+        os.system("clear")
         print("Starting Winetricks... To back to main menu press Ctrl+c exit from Winetricks in Termux-X11")
         os.system("am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null")
         os.system("box64 winetricks >/dev/null 2>&1")
         main_menu()
-    elif choice == "6":
+    elif choice == "8":
         print("")
         print("Stopping Termux-X11...")
         print("")
