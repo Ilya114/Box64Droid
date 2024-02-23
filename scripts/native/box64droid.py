@@ -56,7 +56,7 @@ def main_menu():
     print("4) Recreate Wine prefix")
     print("5) Update Box64")
     print("6) Update starting scripts")
-    print("7) Winetricks (slow)")
+    print("7) Winetricks")
     print("8) Exit")
     print("")
     choice = input()
