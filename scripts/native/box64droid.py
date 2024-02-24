@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=240226
+ver=240227
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -170,34 +170,37 @@ def main_menu():
         os.system('pkill -f "app_process / com.termux.x11"')
         os.system('pkill -f pulseaudio')
         exit()
-if len(sys.argv) < 2:
-    print("Empty argument, use --help to see available arguments")
-elif sys.argv[1] == "--start":
-    start_box64droid()
-    check_config()
-    check_prefix()
-    main_menu()
-elif sys.argv[1] == "--uninstall":
-    print("Uninstalling Box64Droid...")
-    glibc_path = "/data/data/com.termux/files/usr/glibc"
-    wine_prefix_path ="/data/data/com.termux/files/home/.wine"
-    shutil.rmtree(glibc_path)
-    shutil.rmtree(wine_prefix_path)
-    os.system("rm $PREFIX/bin/box64droid")
-    os.system("rm $PREFIX/bin/box64droid.py")
-    os.system("rm $PREFIX/bin/start-box64.py")
-elif sys.argv[1] == "--reinstall":
-    os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
-elif sys.argv[1] == "--version":
-    print("24.02.24")
-elif sys.argv[1] == "--help":
-    print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
-    print("Usage: box64droid {argument}")
-    print("Available arguments:")
-    print("--start - start Box64Droid")
-    print("--uninstall - uninstall Box64Droid (all data in prefix will be clear)")
-    print("--reinstall - reinstall Box64Droid (all data in prefix will be clear)")
-    print("--version - show current version of Box64Droid")
-    print("--help - see this menu and exit")
-else:
-    print("Invalid argument, use --help to see available arguments")
+def start():
+    if len(sys.argv) < 2:
+        print("Empty argument, use --help to see available arguments")
+    elif sys.argv[1] == "--start":
+        start_box64droid()
+        check_config()
+        check_prefix()
+        main_menu()
+    elif sys.argv[1] == "--uninstall":
+        print("Uninstalling Box64Droid...")
+        glibc_path = "/data/data/com.termux/files/usr/glibc"
+        wine_prefix_path ="/data/data/com.termux/files/home/.wine"
+        shutil.rmtree(glibc_path)
+        shutil.rmtree(wine_prefix_path)
+        os.system("rm $PREFIX/bin/box64droid")
+        os.system("rm $PREFIX/bin/box64droid.py")
+        os.system("rm $PREFIX/bin/start-box64.py")
+    elif sys.argv[1] == "--reinstall":
+        os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
+    elif sys.argv[1] == "--version":
+        print("24.02.24")
+    elif sys.argv[1] == "--help":
+        print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
+        print("Usage: box64droid {argument}")
+        print("Available arguments:")
+        print("--start - start Box64Droid")
+        print("--uninstall - uninstall Box64Droid (all data in prefix will be clear)")
+        print("--reinstall - reinstall Box64Droid (all data in prefix will be clear)")
+        print("--version - show current version of Box64Droid")
+        print("--help - see this menu and exit")
+    else:
+        print("Invalid argument, use --help to see available arguments")
+if __name__ == "__main__":
+    start()
