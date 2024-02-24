@@ -1,6 +1,6 @@
 import os, time, shutil, sys
 def ver():
-    ver=240224
+    ver=240225
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
