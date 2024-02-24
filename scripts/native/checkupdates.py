@@ -1,8 +1,9 @@
 import os
 from box64droid import ver
 print("Checking for starting scripts updates...")
-ver2=240228
+ver2=240229
 if ver != ver2:
+    print("New update available! Installing...")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64.py &>/dev/null")
     os.system("mv box64droid.py start-box64.py $PREFIX/bin/")
