@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=220224
+ver=240224
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -155,9 +155,8 @@ def main_menu():
         os.system("python3 $PREFIX/bin/box64droid.py --start")
         exit()
     elif choice == "6":
-        print("Checking for starting scripts updates...")
-        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin && python3 checkupdates.py")
-        import checkupdates
+        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
+        os.system("python3 checkupdates.py")
         checkupdates.check()
     elif choice == "7":
         os.system("clear")
@@ -191,7 +190,7 @@ elif sys.argv[1] == "--uninstall":
 elif sys.argv[1] == "--reinstall":
     os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
 elif sys.argv[1] == "--version":
-    print("22.02.24")
+    print("24.02.24")
 elif sys.argv[1] == "--help":
     print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
     print("Usage: box64droid {argument}")
