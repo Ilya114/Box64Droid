@@ -156,7 +156,7 @@ def main_menu():
         exit()
     elif choice == "6":
         print("Checking for starting scripts updates...")
-        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && python3 checkupdates.py")
+        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin && python3 checkupdates.py")
         import checkupdates
         checkupdates.check()
     elif choice == "7":
