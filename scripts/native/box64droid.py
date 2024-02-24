@@ -55,8 +55,8 @@ def main_menu():
     print("2) Box64 (debug version)")
     print("3) Change Wine version")
     print("4) Recreate Wine prefix")
-    print("5) Update Box64")
-    print("6) Update starting scripts")
+    print("5) Update Box64Droid")
+    print("6) Update Box64")
     print("7) Winetricks")
     print("8) Exit")
     print("")
@@ -150,13 +150,13 @@ def main_menu():
         recreate_prefix()
         create_prefix()
     elif choice == "5":
+        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
+        os.system("python3 $PREFIX/bin/checkupdates.py")
+    elif choice == "6":
         os.system("clear")
         os.system("pkg install -y git; unset LD_PRELOAD; export GLIBC_PREFIX=/data/data/com.termux/files/usr/glibc; export PATH=$GLIBC_PREFIX/bin:$PATH; cd ~/; git clone https://github.com/ptitSeb/box64; cd ~/box64; sed -i 's/\/usr/\/data\/data\/com.termux\/files\/usr\/glibc/g' CMakeLists.txt; sed -i 's/\/etc/\/data\/data\/com.termux\/files\/usr\/glibc\/etc/g' CMakeLists.txt; mkdir build; cd build; cmake --install-prefix $PREFIX/glibc .. -DARM_DYNAREC=1 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DBAD_SIGNAL=ON -DSD845=ON; make -j8; make install; rm -rf ~/box64; cd ~/")
         os.system("python3 $PREFIX/bin/box64droid.py --start")
         exit()
-    elif choice == "6":
-        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
-        os.system("python3 $PREFIX/bin/checkupdates.py")
     elif choice == "7":
         os.system("clear")
         print("Starting Winetricks... To back to main menu press Ctrl+c exit from Winetricks in Termux-X11")
