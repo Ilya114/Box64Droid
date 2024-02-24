@@ -1,4 +1,5 @@
 import os, time, shutil, sys
+ver=220224
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -154,11 +155,10 @@ def main_menu():
         os.system("python3 $PREFIX/bin/box64droid.py --start")
         exit()
     elif choice == "6":
-        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
-        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64.py &>/dev/null")
-        os.system("mv box64droid.py start-box64.py $PREFIX/bin/")
-        os.system("python3 $PREFIX/bin/box64droid.py --start")
-        exit()
+        print("Checking for starting scripts updates...")
+        os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && python3 checkupdates.py")
+        import checkupdates
+        check.checkupdates()
     elif choice == "7":
         os.system("clear")
         print("Starting Winetricks... To back to main menu press Ctrl+c exit from Winetricks in Termux-X11")
