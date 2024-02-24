@@ -158,7 +158,7 @@ def main_menu():
         print("Checking for starting scripts updates...")
         os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && python3 checkupdates.py")
         import checkupdates
-        check.checkupdates()
+        checkupdates.check()
     elif choice == "7":
         os.system("clear")
         print("Starting Winetricks... To back to main menu press Ctrl+c exit from Winetricks in Termux-X11")
