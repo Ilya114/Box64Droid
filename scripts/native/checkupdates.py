@@ -9,5 +9,6 @@ def check():
     else:
         print("Updates not found")
     os.system("sleep 2")
+    os.system("rm checkupdates.py")
     os.system("python3 $PREFIX/bin/box64droid.py --start")
     exit()
