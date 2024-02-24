@@ -2,7 +2,7 @@ import os
 from box64droid import ver
 def check():
     print("Checking for starting scripts updates...")
-    ver2=240224
+    ver2=240225
     if ver != ver2:
         os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
         os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/start-box64.py &>/dev/null")
