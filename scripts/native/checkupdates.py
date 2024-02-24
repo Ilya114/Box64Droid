@@ -1,5 +1,5 @@
 import os
-#from box64droid import ver
+from box64droid import ver
 print("Checking for starting scripts updates...")
 ver2=240226
 if ver != ver2:
