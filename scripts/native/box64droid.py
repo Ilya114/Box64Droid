@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=240228
+ver=240229
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -55,7 +55,7 @@ def main_menu():
     print("2) Wine (debug version)")
     print("3) Change Wine version")
     print("4) Recreate Wine prefix")
-    print("5) Update Box64Droid")
+    print("5) Check for updates")
     print("6) Update Box64")
     print("7) Winetricks")
     print("8) Exit")
