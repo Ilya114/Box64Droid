@@ -1,4 +1,5 @@
 import os
+import ver from box64droid
 def check():
     ver2=220224
     if ver != ver2:
