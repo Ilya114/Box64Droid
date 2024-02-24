@@ -156,8 +156,7 @@ def main_menu():
         exit()
     elif choice == "6":
         os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
-        os.system("python3 checkupdates.py")
-        checkupdates.check()
+        os.system("python3 $PREFIX/bin/checkupdates.py")
     elif choice == "7":
         os.system("clear")
         print("Starting Winetricks... To back to main menu press Ctrl+c exit from Winetricks in Termux-X11")
