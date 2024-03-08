@@ -9,7 +9,8 @@ if ver != ver2:
     os.system("mv box64droid.py start-box64.py $PREFIX/bin/")
     print("Update done!")
     print("Changes:")
-    print("- Added updates system")
+    print("- Updated Turnip (64 bit, fixed Adreno 750)")
+    print("- Updated Wine 9.2-dev to Wine 9.3-dev")
 else:
     print("Updates not found")
 os.system("sleep 2")
