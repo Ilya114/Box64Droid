@@ -10,6 +10,7 @@ if ver != ver2:
     print("Update done!")
     print("Changes:")
     print("- Updated Turnip (64 bit, fixed Adreno 750)")
+    print("- Updated Box64")
 else:
     print("Updates not found")
 os.system("sleep 2")
