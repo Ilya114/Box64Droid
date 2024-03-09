@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=80324
+ver=90324
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -95,7 +95,7 @@ def main_menu():
             print("1) Wine Stable 8.0")
             print("2) Wine Staging-TKG 8.13")
             print("3) Wine 9.1 (WoW64)")
-            print("4) Wine 9.3 (beta, WoW64)")
+            print("4) Wine 9.2 (beta, WoW64)")
             print("5) Back to previous menu")
             print("")
             choice = input()
@@ -138,10 +138,10 @@ def main_menu():
                 elif choice == "4":
                     print("Downloading Wine 9.3 (beta, WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.3-dev-amd64-wow64.tar.xz")
+                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
                     print("")
-                    print("Unpacking Wine 9.3 (beta, WoW64)...")
-                    os.system("tar -xf wine-9.3-dev-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+                    print("Unpacking Wine 9.2 (beta, WoW64)...")
+                    os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 os.system("rm wine*")
                 print("Creating Wine prefix...")
                 create_prefix()
