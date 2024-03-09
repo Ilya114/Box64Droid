@@ -10,6 +10,7 @@ if ver != ver2:
     print("Updating glibc-prefix...")
     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/glibc-prefix.tar.xz")
     os.system("tar -xJf glibc-prefix.tar.xz -C $PREFIX/")
+    os.system("rm glibc-prefix.tar.xz")
     print("Update done!")
     print("Changes:")
     print("- Updated Turnip (64 bit, fixed Adreno 750)")
