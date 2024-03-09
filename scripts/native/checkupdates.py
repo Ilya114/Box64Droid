@@ -1,7 +1,7 @@
 import os
 from box64droid import ver
 print("Checking for Box64Droid updates...")
-ver2=80324
+ver2=90324
 if ver != ver2:
     print("New update available! Installing...")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
@@ -10,7 +10,6 @@ if ver != ver2:
     print("Update done!")
     print("Changes:")
     print("- Updated Turnip (64 bit, fixed Adreno 750)")
-    print("- Updated Wine 9.2-dev to Wine 9.3-dev")
 else:
     print("Updates not found")
 os.system("sleep 2")
