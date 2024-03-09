@@ -190,7 +190,7 @@ def start():
     elif sys.argv[1] == "--reinstall":
         os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
-        print("24.02.24")
+        print("09.03.24")
     elif sys.argv[1] == "--help":
         print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
         print("Usage: box64droid {argument}")
