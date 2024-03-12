@@ -14,7 +14,7 @@ if ver != ver2:
     print("Update done!")
     print("Changes:")
     print("- Added Wine 9.4 (WoW64)")
-    print("Added env var for vkd3d-proton")
+    print("- Added env var for vkd3d-proton")
 else:
     print("Updates not found")
 os.system("sleep 2")
