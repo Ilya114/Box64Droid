@@ -96,7 +96,8 @@ def main_menu():
             print("2) Wine Staging-TKG 8.13")
             print("3) Wine 9.1 (WoW64)")
             print("4) Wine 9.2 (beta, WoW64)")
-            print("5) Back to previous menu")
+            print("5) Wine 9.4 (Wow64)
+            print("6) Back to previous menu")
             print("")
             choice = input()
             if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
@@ -143,7 +144,7 @@ def main_menu():
                     print("Unpacking Wine 9.2 (beta, WoW64)...")
                     os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 elif choice == "5":
-                    print("Downloading Wine 9.4 (beta, WoW64)...")
+                    print("Downloading Wine 9.4 (WoW64)...")
                     print("")
                     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
                     print("")
