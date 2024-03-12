@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=1203246
+ver=1203247
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -36,7 +36,10 @@ def recreate_prefix():
     print("Creating Wine prefix...")
     create_prefix()
 def create_prefix():
-    os.system('WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null')
+    if wine8 == 1:
+        os.system('WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null')
+    else:
+        os.system('WINEDLLOVERRIDES="mscoree=" box64 wineboot &>/dev/null')
     os.system('cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"')
     os.system("rm $HOME/.wine/dosdevices/z: && rm $HOME/.wine/dosdevices/d: &>/dev/null")
     os.system("ln -s /sdcard/Download $HOME/.wine/dosdevices/d: &>/dev/null && ln -s /sdcard $HOME/.wine/dosdevices/e: &>/dev/null && ln -s /data/data/com.termux/files $HOME/.wine/dosdevices/z:")
@@ -121,6 +124,7 @@ def main_menu():
                     print("Unpacking Wine Stable 8.0...")
                     os.system("tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt")
                     os.system("mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine")
+                    wine8=1
                 elif choice == "2":
                     print("Downloading Wine Staging-TKG 8.13...")
                     print("")
@@ -129,6 +133,7 @@ def main_menu():
                     print("Unpacking Wine Staging-TKG 8.13...")
                     os.system("tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt")
                     os.system("mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine")
+                    wine8=1
                 elif choice == "3":
                     print("Downloading Wine 9.1 (WoW64)...")
                     print("")
