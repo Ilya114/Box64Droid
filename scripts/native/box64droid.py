@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=100324
+ver=120324
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -99,10 +99,10 @@ def main_menu():
             print("5) Back to previous menu")
             print("")
             choice = input()
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5":
+            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
                 print("Incorrect or empty option!")
                 change_wine_version()
-            elif choice == "5":
+            elif choice == "6":
                 main_menu()
             else:
                 os.system("clear")
@@ -136,12 +136,19 @@ def main_menu():
                     print("Unpacking Wine 9.1...")
                     os.system("tar -xf wine-9.1-esync.tar.xz -C $PREFIX/glibc/opt")
                 elif choice == "4":
-                    print("Downloading Wine 9.3 (beta, WoW64)...")
+                    print("Downloading Wine 9.2 (beta, WoW64)...")
                     print("")
                     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
                     print("")
                     print("Unpacking Wine 9.2 (beta, WoW64)...")
                     os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+                elif choice == "5":
+                    print("Downloading Wine 9.4 (beta, WoW64)...")
+                    print("")
+                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz)
+                    print("")
+                    print("Unpacking Wine 9.4 (beta, WoW64)...")
+                    os.system("tar -xf wine-9.4-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 os.system("rm wine*")
                 print("Creating Wine prefix...")
                 create_prefix()
