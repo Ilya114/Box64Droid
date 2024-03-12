@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=1203243
+ver=1203244
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -36,7 +36,7 @@ def recreate_prefix():
     print("Creating Wine prefix...")
     create_prefix()
 def create_prefix():
-    os.system('WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null')
+    os.system('WINEDLLOVERRIDES="mscoree=" box64 wineboot &>/dev/null')
     os.system('cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"')
     os.system("rm $HOME/.wine/dosdevices/z: && rm $HOME/.wine/dosdevices/d: &>/dev/null")
     os.system("ln -s /sdcard/Download $HOME/.wine/dosdevices/d: &>/dev/null && ln -s /sdcard $HOME/.wine/dosdevices/e: &>/dev/null && ln -s /data/data/com.termux/files $HOME/.wine/dosdevices/z:")
