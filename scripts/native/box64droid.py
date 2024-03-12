@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=120324
+ver=1203242
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -145,7 +145,7 @@ def main_menu():
                 elif choice == "5":
                     print("Downloading Wine 9.4 (beta, WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz)
+                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
                     print("")
                     print("Unpacking Wine 9.4 (beta, WoW64)...")
                     os.system("tar -xf wine-9.4-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
