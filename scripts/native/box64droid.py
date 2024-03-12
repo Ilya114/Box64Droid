@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=1203244
+ver=1203245
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -96,7 +96,7 @@ def main_menu():
             print("2) Wine Staging-TKG 8.13")
             print("3) Wine 9.1 (WoW64)")
             print("4) Wine 9.2 (beta, WoW64)")
-            print("5) Wine 9.4 (Wow64")
+            print("5) Wine 9.4 (Wow64)")
             print("6) Back to previous menu")
             print("")
             choice = input()
