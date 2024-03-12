@@ -96,7 +96,7 @@ def main_menu():
             print("2) Wine Staging-TKG 8.13")
             print("3) Wine 9.1 (WoW64)")
             print("4) Wine 9.2 (beta, WoW64)")
-            print("5) Wine 9.4 (Wow64)
+            print("5) Wine 9.4 (Wow64")
             print("6) Back to previous menu")
             print("")
             choice = input()
