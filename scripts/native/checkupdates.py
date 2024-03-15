@@ -14,7 +14,7 @@ if ver != ver2:
     print("Update done!")
     print("Changes:")
     print("- Replaced non-WoW Wine Stable 8.0 to non-WoW Wine 9.4")
-    print("- Removed Wine Staging-TKG)
+    print("- Removed Wine Staging-TKG")
 else:
     print("Updates not found")
 os.system("sleep 2")
