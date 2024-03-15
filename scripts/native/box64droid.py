@@ -120,9 +120,8 @@ def main_menu():
                     print("")
                     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64.tar.xz")
                     print("")
-                    print("Unpacking Wine Stable 8.0...")
+                    print("Unpacking Wine Stable 9.4...")
                     os.system("tar -xf wine-9.4-amd64.tar.xz -C $PREFIX/glibc/opt")
-                    os.system("mv $PREFIX/glibc/opt/wine $PREFIX/glibc/opt/")
                 elif choice == "2":
                     print("Downloading Wine 9.1 (WoW64)...")
                     print("")
