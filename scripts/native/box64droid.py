@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=1203248
+ver=150324
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -95,15 +95,14 @@ def main_menu():
         def change_wine_version():
             os.system("clear")
             print("Select Wine version to install:")
-            print("1) Wine Stable 8.0")
-            print("2) Wine Staging-TKG 8.13")
-            print("3) Wine 9.1 (WoW64)")
-            print("4) Wine 9.2 (beta, WoW64)")
-            print("5) Wine 9.4 (Wow64)")
-            print("6) Back to previous menu")
+            print("1) Wine 9.4")
+            print("2) Wine 9.1 (WoW64)")
+            print("3) Wine 9.2 (beta, WoW64)")
+            print("4) Wine 9.4 (Wow64)")
+            print("5) Back to previous menu")
             print("")
             choice = input()
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6":
+            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5":
                 print("Incorrect or empty option!")
                 change_wine_version()
             elif choice == "6":
@@ -117,36 +116,28 @@ def main_menu():
                 if os.path.exists("/data/data/com.termux/files/home/.wine"):
                     shutil.rmtree("/data/data/com.termux/files/home/.wine")
                 if choice == "1":
-                    print("Downloading Wine Stable 8.0...")
+                    print("Downloading Wine 9.4...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Pipetto-crypto/androBox/releases/download/wine-8.0/wine-8.0-amd64.tar.xz")
+                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64.tar.xz")
                     print("")
                     print("Unpacking Wine Stable 8.0...")
                     os.system("tar -xf wine-8.0-amd64.tar.xz -C $PREFIX/glibc/opt")
                     os.system("mv $PREFIX/glibc/opt/wine-8.0-amd64 $PREFIX/glibc/opt/wine")
                 elif choice == "2":
-                    print("Downloading Wine Staging-TKG 8.13...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-8.13-staging-tkg-amd64.tar.xz")
-                    print("")
-                    print("Unpacking Wine Staging-TKG 8.13...")
-                    os.system("tar -xf wine-8.13-staging-tkg-amd64.tar.xz -C $PREFIX/glibc/opt")
-                    os.system("mv $PREFIX/glibc/opt/wine-8.13-staging-tkg-amd64 $PREFIX/glibc/opt/wine")
-                elif choice == "3":
                     print("Downloading Wine 9.1 (WoW64)...")
                     print("")
                     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.1-esync.tar.xz")
                     print("")
                     print("Unpacking Wine 9.1...")
                     os.system("tar -xf wine-9.1-esync.tar.xz -C $PREFIX/glibc/opt")
-                elif choice == "4":
+                elif choice == "3":
                     print("Downloading Wine 9.2 (beta, WoW64)...")
                     print("")
                     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
                     print("")
                     print("Unpacking Wine 9.2 (beta, WoW64)...")
                     os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
-                elif choice == "5":
+                elif choice == "4":
                     print("Downloading Wine 9.4 (WoW64)...")
                     print("")
                     os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
