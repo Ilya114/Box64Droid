@@ -105,7 +105,7 @@ def main_menu():
             if choice != "1" and choice != "2" and choice != "3" and choice != "4":
                 print("Incorrect or empty option!")
                 change_wine_version()
-            elif choice == "6":
+            elif choice == "4":
                 main_menu()
             else:
                 os.system("clear")
