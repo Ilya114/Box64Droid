@@ -36,10 +36,7 @@ def recreate_prefix():
     print("Creating Wine prefix...")
     create_prefix()
 def create_prefix():
-    if not os.path.exists("/data/data/com.termux/files/usr/glibc/opt/wine/lib/wine/i386-unix"):
-        os.system('WINEDLLOVERRIDES="mscoree=" box64 wineboot &>/dev/null')
-    else:
-        os.system('WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null')
+    os.system('WINEDLLOVERRIDES="mscoree=" box64 wine64 wineboot &>/dev/null')
     os.system('cp -r $PREFIX/glibc/opt/Shortcuts/* "$HOME/.wine/drive_c/ProgramData/Microsoft/Windows/Start Menu"')
     os.system("rm $HOME/.wine/dosdevices/z: && rm $HOME/.wine/dosdevices/d: &>/dev/null")
     os.system("ln -s /sdcard/Download $HOME/.wine/dosdevices/d: &>/dev/null && ln -s /sdcard $HOME/.wine/dosdevices/e: &>/dev/null && ln -s /data/data/com.termux/files $HOME/.wine/dosdevices/z:")
@@ -191,7 +188,7 @@ def start():
     elif sys.argv[1] == "--reinstall":
         os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
-        print("12.03.24")
+        print("17.03.24")
     elif sys.argv[1] == "--help":
         print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
         print("Usage: box64droid {argument}")
