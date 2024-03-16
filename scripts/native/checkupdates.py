@@ -14,8 +14,7 @@ if ver != ver2:
     print("Update done!")
     print("Changes:")
     print("- Updated Box64")
-    print("- Replaced non-WoW Wine Stable 8.0 to non-WoW Wine 9.4")
-    print("- Removed Wine Staging-TKG")
+    print("- Removed all non-WoW64 Wines due a issues")
 else:
     print("Updates not found")
 os.system("sleep 2")
