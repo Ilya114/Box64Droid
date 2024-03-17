@@ -1,7 +1,7 @@
 import os, shutil, time
 def packages():
-    os.system("pkg install x11-repo -y &>/dev/null")
-    os.system("pkg install pulseaudio wget xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
+    os.system("pkg install x11-repo glibc-repo -y &>/dev/null")
+    os.system("pkg install pulseaudio wget glibc xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
 def check_prev_version():
     prefix = "/data/data/com.termux/files/home/.wine"
     glibc = "/data/data/com.termux/files/usr/glibc"
