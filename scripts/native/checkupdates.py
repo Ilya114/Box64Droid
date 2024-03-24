@@ -1,7 +1,7 @@
 import os
 from box64droid import ver
 print("Checking for Box64Droid updates...")
-ver2=180324
+ver2=250324
 if ver != ver2:
     print("New update available! Updating scripts...")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
@@ -13,7 +13,9 @@ if ver != ver2:
     os.system("rm glibc-prefix.tar.xz")
     print("Update done!")
     print("Changes:")
-    print("- Updated vkd3d-proton")
+    print("- Updated Turnip (64 bit)")
+    print("- Updated Box64")
+    print("- Added Wine 9.5")
 else:
     print("Updates not found")
 os.system("sleep 2")
