@@ -28,10 +28,11 @@ def clear_waste():
     os.system("rm box64droid-rootfs-chroot.tar.xz install root.py")
     os.system("clear")
 def storage():
-    os.system("termux-setup-storage")
-    time.sleep(2)
+    if not os.path.exists("/data/data/com.termux/files/home/storage"):
+        os.system("termux-setup-storage")
+        time.sleep(2)
 os.system("clear")
-print(" Starting Box64Droid (root version) installation... Please allow storage permission!")
+print(" Starting Box64Droid nstallation... Please allow storage permission!")
 storage()
 print("")
 print(" Installing packages...")
