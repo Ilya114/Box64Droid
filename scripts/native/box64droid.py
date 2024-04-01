@@ -5,7 +5,7 @@ def start_box64droid():
     if "LD_PRELOAD" in os.environ:
         if os.path.exists("/system/lib64/libskcodec.so"):
             os.environ["LD_PRELOAD"] = "/system/lib64/libskcodec.so"
-        else
+        else:
             del os.environ["LD_PRELOAD"]
     print("Starting Termux-X11...")
     os.system("termux-x11 :0 &>/dev/null &")
