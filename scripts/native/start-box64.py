@@ -1,6 +1,6 @@
 import os, time, subprocess
-exec(open('/sdcard/Box64Droid/Box64Droid.conf').read())
-exec(open('/sdcard/Box64Droid/DXVK_D8VK_HUD.conf').read())
+exec(open('/sdcard/Box64Droid (native)/Box64Droid.conf').read())
+exec(open('/sdcard/Box64Droid (native)/DXVK_D8VK_HUD.conf').read())
 os.system("clear")
 print("Select need resolution:")
 print("1) 800x600 (4:3)")
