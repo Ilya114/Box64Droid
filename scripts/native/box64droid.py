@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=250324
+ver=010424
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -9,7 +9,7 @@ def start_box64droid():
     print("Starting PulseAudio...")
     os.system('pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1 &>/dev/null')
 def check_config():
-    config_folder = "/sdcard/Box64Droid/"
+    config_folder = "/sdcard/Box64Droid (naitve)/"
     box64droid_config = config_folder + "Box64Droid.conf"
     dxvk_config = config_folder + "DXVK_D8VK.conf"
     dxvk_config_hud =  config_folder + "DXVK_D8VK_HUD.conf"
@@ -22,8 +22,8 @@ def check_config():
         shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/DXVK_D8VK.conf", dxvk_config)
     if not os.path.exists(dxvk_config_hud):
         shutil.copyfile("/data/data/com.termux/files/usr/glibc/opt/DXVK_D8VK_HUD.conf", dxvk_config_hud)
-    exec(open('/sdcard/Box64Droid/Box64Droid.conf').read())
-    exec(open('/sdcard/Box64Droid/DXVK_D8VK_HUD.conf').read())
+    exec(open('/sdcard/Box64Droid (native)/Box64Droid.conf').read())
+    exec(open('/sdcard/Box64Droid (native)/DXVK_D8VK_HUD.conf').read())
 def check_prefix():
     if not os.path.exists("/data/data/com.termux/files/home/.wine"):
         print("Wine prefix not found! Creating...")
