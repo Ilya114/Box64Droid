@@ -12,10 +12,10 @@ if ver != ver2:
     os.system("tar -xJf glibc-prefix.tar.xz -C $PREFIX/")
     os.system("rm glibc-prefix.tar.xz")
     print("Update done!")
-    print("Changes:")
-    print("- Updated Turnip (64 bit)")
+    print("Changes (01.04.24):")
     print("- Updated Box64")
-    print("- Added Wine 9.5")
+    print("- Updated Turnip (64 bit)")
+    print('- Now config folder named "Box64Droid (native)" (@Th_Fvck asked)')
 else:
     print("Updates not found")
 os.system("sleep 2")
