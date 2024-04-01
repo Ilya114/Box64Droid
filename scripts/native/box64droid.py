@@ -3,7 +3,7 @@ ver=104243
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
-        if os.path.exists(config_folder):
+        if os.path.exists("/system/lib64/libskcodec.so"):
             os.environ["LD_PRELOAD"] = "/system/lib64/libskcodec.so"
         else
             del os.environ["LD_PRELOAD"]
