@@ -1,9 +1,12 @@
 import os, time, shutil, sys
-ver=104242
+ver=104243
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
-        os.environ["LD_PRELOAD"] = "/system/lib64/libskcodec.so"
+        if os.path.exists(config_folder):
+            os.environ["LD_PRELOAD"] = "/system/lib64/libskcodec.so"
+        else
+            del os.environ["LD_PRELOAD"]
     print("Starting Termux-X11...")
     os.system("termux-x11 :0 &>/dev/null &")
     print("Starting PulseAudio...")
