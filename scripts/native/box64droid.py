@@ -109,9 +109,6 @@ def main_menu():
                 print("Removing previous Wine version...")
                 if os.path.exists("/data/data/com.termux/files/usr/glibc/opt/wine"):
                     shutil.rmtree("/data/data/com.termux/files/usr/glibc/opt/wine")
-                print("Removing previous Wine prefix...")
-                if os.path.exists("/data/data/com.termux/files/home/.wine"):
-                    shutil.rmtree("/data/data/com.termux/files/home/.wine")
                 if choice == "1":
                     print("Downloading Wine 9.1 (WoW64)...")
                     print("")
