@@ -138,8 +138,6 @@ def main_menu():
                     print("Unpacking Wine 9.5 (WoW64)...")
                     os.system("tar -xf wine-9.5-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 os.system("rm wine*")
-                #print("Creating Wine prefix...")
-                #create_prefix()
                 print("Done!")
                 main_menu()
         change_wine_version()
