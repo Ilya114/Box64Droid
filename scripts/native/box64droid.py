@@ -2,11 +2,7 @@ import os, time, shutil, sys
 ver=104243
 def start_box64droid():
     os.system("clear")
-    if "LD_PRELOAD" in os.environ:
-        if os.path.exists("/system/lib64/libskcodec.so"):
-            os.environ["LD_PRELOAD"] = "/system/lib64/libskcodec.so"
-        else:
-            del os.environ["LD_PRELOAD"]
+    del os.environ["LD_PRELOAD"]
     print("Starting Termux-X11...")
     os.system("termux-x11 :0 &>/dev/null &")
     print("Starting PulseAudio...")
@@ -144,8 +140,10 @@ def main_menu():
                     print("Unpacking Wine 9.5 (WoW64)...")
                     os.system("tar -xf wine-9.5-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 os.system("rm wine*")
-                print("Creating Wine prefix...")
-                create_prefix()
+                #print("Creating Wine prefix...")
+                #create_prefix()
+                print("Done!")
+                main_menu()
         change_wine_version()
     elif choice == "4":
         recreate_prefix()
