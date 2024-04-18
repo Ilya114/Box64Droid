@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=180424
+ver=190424
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -137,7 +137,7 @@ def main_menu():
                     print("")
                     print("Unpacking Wine 9.6 (WoW64)...")
                     os.system("tar -xf wine-9.6-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
-                    os.system("mv wine-git-8a3b0d7-exp-wow64-amd64 wine")
+                    os.system("mv $PREFIX/glibc/opt/wine-git-8a3b0d7-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
                 os.system("rm wine*")
                 print("Done!")
                 main_menu()
