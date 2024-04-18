@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=604243
+ver=180424
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -95,7 +95,7 @@ def main_menu():
             print("1) Wine 9.1 (WoW64)")
             print("2) Wine 9.2 (WoW64)")
             print("3) Wine 9.4 (Wow64)")
-            print("4) Wine 9.5 (Wow64)")
+            print("4) Wine 9.6 (Wow64)")
             print("5) Back to previous menu")
             print("")
             choice = input()
@@ -131,12 +131,13 @@ def main_menu():
                     print("Unpacking Wine 9.4 (WoW64)...")
                     os.system("tar -xf wine-9.4-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
                 elif choice == "4":
-                    print("Downloading Wine 9.5 (WoW64)...")
+                    print("Downloading Wine 9.6 (WoW64)...")
                     print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.5-amd64-wow64.tar.xz")
+                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.6-amd64-wow64.tar.xz")
                     print("")
-                    print("Unpacking Wine 9.5 (WoW64)...")
-                    os.system("tar -xf wine-9.5-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+                    print("Unpacking Wine 9.6 (WoW64)...")
+                    os.system("tar -xf wine-9.6-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+                    os.system("mv wine-git-8a3b0d7-exp-wow64-amd64 wine")
                 os.system("rm wine*")
                 print("Done!")
                 main_menu()
@@ -185,7 +186,7 @@ def start():
     elif sys.argv[1] == "--reinstall":
         os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
-        print("18.03.24")
+        print("18.04.24")
     elif sys.argv[1] == "--help":
         print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
         print("Usage: box64droid {argument}")
