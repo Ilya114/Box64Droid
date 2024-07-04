@@ -1,7 +1,7 @@
 import os
 from box64droid import ver
 print("Checking for Box64Droid updates...")
-ver2=240624
+ver2=050724
 if ver != ver2:
     print("New update available! Updating scripts...")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
@@ -12,8 +12,8 @@ if ver != ver2:
     #os.system("tar -xJf glibc-prefix.tar.xz -C $PREFIX/")
     #os.system("rm glibc-prefix.tar.xz")
     print("Update done!")
-    print("Changes (24.06.24):")
-    print("- Added Wine 9.11 (WoW64)")
+    print("Changes (05.07.24):")
+    print("- Updated Box64")
 else:
     print("Updates not found")
 os.system("sleep 2")
