@@ -7,10 +7,10 @@ apt-get -y --with-new-pkgs -o Dpkg::Options::="--force-confdef" upgrade &>/dev/n
 apt install python --no-install-recommends -y &>/dev/null
 clear
 echo "Select the needed Box64Droid version to install:"
-echo "1) Non-root version (Adreno 610-740, Android 12+)."
-echo "2) Root version (Adreno 610-740, Android 10+)."
+echo "1) Non-root version (Adreno 610-750, Android 12+)."
+echo "2) Root version (Adreno 610-750, Android 10+)."
 echo "3) VirGL version (For other GPUs, non-root phones, Android 12+)."
-echo "4) Native version (Adreno 610-740, testing version, thanks JeezDisReez for his hard works)."
+echo "4) Native version (Adreno 610-750, testing version, thanks JeezDisReez for his hard works)."
 echo "5) Cancel the Box64Droid installation."
 echo ""
 read version
