@@ -1,7 +1,7 @@
 import os
 from box64droid import ver
 print("Checking for Box64Droid updates...")
-ver2=2707243
+ver2=171024
 if ver != ver2:
     print("New update available! Updating scripts...")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
@@ -12,8 +12,9 @@ if ver != ver2:
     #os.system("tar -xJf glibc-prefix.tar.xz -C $PREFIX/")
     #os.system("rm glibc-prefix.tar.xz")
     print("Update done!")
-    print("Changes (27.07.24):")
-    print("- Replaced Wine 9.6 by 9.7 and added 9.13")
+    print("Changes (17.10.24):")
+    print("- Added latest version of DXVK and DXVK-GPLAsync (as DXVK-Async)")
+    print("- Updated Box64")
 else:
     print("Updates not found")
 os.system("sleep 2")
