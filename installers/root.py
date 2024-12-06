@@ -15,11 +15,9 @@ def check_prev_version():
         else:
             os.system("sudo rm -r ~/ubuntu")
 def install_rootfs():
-    os.system("sudo mkdir ~/ubuntu")
-    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-chroot.tar.xz")
+    os.system("sudo mkdir ~/ubuntu && wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/stable/box64droid-rootfs-chroot.tar.xz")
     os.system("sudo tar -xJf box64droid-rootfs-chroot.tar.xz -C ~/ubuntu &>/dev/null")
-    os.system("sudo mkdir ~/ubuntu/dev/shm")
-    os.system("sudo chmod 1777 ~/ubuntu/dev/shm")
+    os.system("sudo mkdir ~/ubuntu/dev/shm && sudo chmod 1777 ~/ubuntu/dev/shm")
 def scripts():
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/root/box64droid &>/dev/null")
     os.system("chmod +x box64droid")
