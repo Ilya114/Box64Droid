@@ -10,7 +10,7 @@ echo "Hello, this is a Box64Droid installer, please select need version to insta
 echo ""
 echo "Actual version:"
 echo "1) Native (Adreno 610-750, Android 10+)"
-echo "2) Hangover (All GPU's, WIP (not able to install now))
+echo "2) Hangover (All GPU's, WIP (not able to install now))"
 echo ""
 echo "Irrelevant versions:"
 echo "3) Non-root (Adreno 610-750, Android 12+)"
