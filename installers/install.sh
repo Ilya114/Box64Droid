@@ -30,6 +30,9 @@ then
     curl -o native.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/native.py && python3 native.py
 elif [ $version = 3 ]
 then
+    curl -o hangover.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/hangover.py && python3 hangover.py
+elif [ $version = 3 ]
+then
     curl -o non-root.py https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/non-root.py && python3 non-root.py
 elif [ $version = 4 ]
 then
