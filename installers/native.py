@@ -1,5 +1,6 @@
 import os, shutil, time
 def create_scripts_to_widget():
+    os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
     os.system("echo 'python3 $PREFIX/bin/box64droid.py --start' > '/data/data/com.termux/files/home/.shortcuts/Start Box64Droid'")
     os.system("echo 'wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py -q && mv checkupdates.py $PREFIX/bin && python3 $PREFIX/bin/checkupdates.py' > '/data/data/com.termux/files/home/.shortcuts/Update Box64Droid'")
 def packages():
@@ -30,7 +31,6 @@ def scripts():
     os.system("ln -s $PREFIX/glibc/opt/wine/bin/wineserver $PREFIX/glibc/bin/wineserver")
     os.system("ln -s $PREFIX/glibc/opt/wine/bin/wineboot $PREFIX/glibc/bin/wineboot")
     os.system("ln -s $PREFIX/glibc/opt/wine/bin/winecfg $PREFIX/glibc/bin/winecfg")
-    os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
 def clear_waste():
     os.system("rm glibc-prefix.tar.xz install native.py")
     os.system("clear")
