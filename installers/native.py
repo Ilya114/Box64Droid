@@ -1,4 +1,7 @@
 import os, shutil, time
+def create_scripts_to_widget():
+    os.system('echo 'python3 $PREFIX/bin/box64droid.py --start' > "/data/data/com.termux/files/home/.shortcuts/Start Box64Droid"')
+    os.system('echo "wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py -q && mv checkupdates.py $PREFIX/bin && python3 $PREFIX/bin/checkupdates.py" > "/data/data/com.termux/files/home/.shortcuts/Update Box64Droid"')
 def packages():
     os.system("pkg install x11-repo glibc-repo -y &>/dev/null")
     os.system("pkg install pulseaudio wget glibc xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
@@ -28,7 +31,6 @@ def scripts():
     os.system("ln -s $PREFIX/glibc/opt/wine/bin/wineboot $PREFIX/glibc/bin/wineboot")
     os.system("ln -s $PREFIX/glibc/opt/wine/bin/winecfg $PREFIX/glibc/bin/winecfg")
     os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
-    os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts/tasks && chmod 700 -R /data/data/com.termux/files/home/.shortcuts/tasks")
 def clear_waste():
     os.system("rm glibc-prefix.tar.xz install native.py")
     os.system("clear")
@@ -53,6 +55,8 @@ print("")
 print(" Downloading starting scripts...")
 print("")
 scripts()
+print("Creating scripts to launch via widget...")
+create_scripts_to_widget()
 print(" Removing the installation waste...")
 clear_waste()
 print(" Installation finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'")
