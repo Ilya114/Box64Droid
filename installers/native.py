@@ -35,7 +35,7 @@ def storage():
         os.system("termux-setup-storage")
         time.sleep(2)
 os.system("clear")
-print(" Starting Box64Droid nstallation... Please allow storage permission!")
+print(" Starting Box64Droid installation... Please allow storage permission!")
 storage()
 print("")
 print(" Installing packages (might be long)...")
