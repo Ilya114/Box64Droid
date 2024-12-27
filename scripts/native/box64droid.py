@@ -206,6 +206,7 @@ def start():
         os.system("rm $PREFIX/bin/box64droid")
         os.system("rm $PREFIX/bin/box64droid.py")
         os.system("rm $PREFIX/bin/start-box64.py")
+        os.system("rm -r $PREFIX/.shortcuts")
     elif sys.argv[1] == "--reinstall":
         os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
