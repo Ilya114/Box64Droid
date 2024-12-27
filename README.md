@@ -8,7 +8,7 @@ Box64Droid is a project with scripts that automate installing preconfigured root
 - The project site is available [here](https://ilya114.github.io).
 
 ## Installation instructions
-1. Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk) and [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/stable/app-arm64-v8a-debug.apk).
+1. Install [Termux](https://github.com/termux/termux-app/releases/download/v0.118.0/termux-app_v0.118.0+github-debug_arm64-v8a.apk), [Termux-x11](https://github.com/Ilya114/Box64Droid/releases/download/stable/app-arm64-v8a-debug.apk) and [Termux:Widget](https://github.com/termux/termux-widget/releases/download/v0.13.0/termux-widget_v0.13.0+github-debug.apk).
 2. In Termux, run the Box64Droid install command, select need version (i recommend native) and wait until it's installed: `curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install`
 3. After the installation is completed, run `box64droid --start`. The script will start Termux-X11 and show the start menu.
 4. To use Input Bridge, install 0.1.9 apk and then simply run the app on Android and in Wine from the start menu.
