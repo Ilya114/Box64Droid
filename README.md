@@ -13,6 +13,9 @@ Box64Droid is a project with scripts that automate installing preconfigured root
 3. After the installation is completed, run `box64droid --start`. The script will start Termux-X11 and show the start menu.
 4. To use Input Bridge, install 0.1.9 apk and then simply run the app on Android and in Wine from the start menu.
 
+## Launch via homescreen using Termux:Widget
+You can launch and update Box64Droid via start menu, just create Termux:Widget widget and you will see these options
+
 ## System requirements
 
 - Adreno 610+ (Other GPUs are supported by VirGL, but many games might not work)
