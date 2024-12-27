@@ -1,7 +1,7 @@
 import os, shutil, time
 def create_scripts_to_widget():
-    os.system('echo 'python3 $PREFIX/bin/box64droid.py --start' > "/data/data/com.termux/files/home/.shortcuts/Start Box64Droid"')
-    os.system('echo "wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py -q && mv checkupdates.py $PREFIX/bin && python3 $PREFIX/bin/checkupdates.py" > "/data/data/com.termux/files/home/.shortcuts/Update Box64Droid"')
+    os.system("echo 'python3 $PREFIX/bin/box64droid.py --start' > '/data/data/com.termux/files/home/.shortcuts/Start Box64Droid'")
+    os.system("echo 'wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py -q && mv checkupdates.py $PREFIX/bin && python3 $PREFIX/bin/checkupdates.py' > '/data/data/com.termux/files/home/.shortcuts/Update Box64Droid'")
 def packages():
     os.system("pkg install x11-repo glibc-repo -y &>/dev/null")
     os.system("pkg install pulseaudio wget glibc xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
