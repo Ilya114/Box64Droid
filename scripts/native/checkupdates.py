@@ -16,7 +16,7 @@ if ver != ver2:
     print("- Added latest version of DXVK and DXVK-GPLAsync (as DXVK-Async)")
     print("- Updated Box64")
 else:
-    print("Updates not found")
+    print("Updates not found, launching Box64Droid...")
 os.system("sleep 2")
 os.system("rm $PREFIX/bin/checkupdates.py")
 os.system("python3 $PREFIX/bin/box64droid.py --start")
