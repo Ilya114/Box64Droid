@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=281224
+ver=2812242
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -192,6 +192,11 @@ def start():
         check_config()
         check_prefix()
         main_menu()
+    elif sys.argv[1] == "--startwd":
+        start_box64droid()
+        check_config()
+        check_prefix()
+        os.system("python3 $PREFIX/bin/start-box64.py")
     elif sys.argv[1] == "--uninstall":
         print("Uninstalling Box64Droid...")
         glibc_path = "/data/data/com.termux/files/usr/glibc"
@@ -204,7 +209,7 @@ def start():
     elif sys.argv[1] == "--reinstall":
         os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
-        print("18.04.24")
+        print("28.12.24")
     elif sys.argv[1] == "--help":
         print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
         print("Usage: box64droid {argument}")
