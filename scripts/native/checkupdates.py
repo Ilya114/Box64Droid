@@ -23,6 +23,6 @@ os.system("sleep 2")
 os.system("rm $PREFIX/bin/checkupdates.py")
 if 'WD' in os.environ:
     os.system("python3 $PREFIX/bin/box64droid.py --startwd")
-else
+else:
     os.system("python3 $PREFIX/bin/box64droid.py --start")
 exit()
