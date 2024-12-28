@@ -48,9 +48,8 @@ def create_prefix():
     main_menu()
 def main_menu():
     os.system("clear")
-    print("Box64Droid by Ilya114, Glory to Ukraine!")
+    print("Welcome to Box64Droid! Select to start:")
     print("")
-    print("Select to start:")
     print("1) Wine")
     print("2) Wine (debug version)")
     print("3) Change Wine version")
