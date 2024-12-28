@@ -159,8 +159,8 @@ def main_menu():
                     os.system("mv $PREFIX/glibc/opt/wine-git-8d25995-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
                 os.system("rm wine*")
                 print("Done!")
-                main_menu()
         change_wine_version()
+        main_menu()
     elif choice == "4":
         recreate_prefix()
         create_prefix()
@@ -206,6 +206,9 @@ def start():
         os.system("sleep 2")
         os.system("am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null")
         os.system("box64 winetricks >/dev/null 2>&1")
+    elif sys.argv[1] == "--changewineverwd":
+        change_wine_version()
+        exit()
     elif sys.argv[1] == "--uninstall":
         print("Uninstalling Box64Droid...")
         glibc_path = "/data/data/com.termux/files/usr/glibc"
