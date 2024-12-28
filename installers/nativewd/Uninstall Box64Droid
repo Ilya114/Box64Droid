@@ -1,5 +1,9 @@
+echo "Uninstalling Box64Droid..."
 rm -r /data/data/com.termux/files/usr/glibc
 rm -r /data/data/com.termux/files/home/.wine
 rm $PREFIX/bin/box64droid && rm $PREFIX/bin/box64droid.py
 rm $PREFIX/bin/start-box64.py
 rm -r $PREFIX/.shortcuts
+echo "Done!"
+sleep 3
+
