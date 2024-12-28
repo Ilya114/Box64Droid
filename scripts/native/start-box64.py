@@ -2,7 +2,11 @@ import os, time, subprocess
 exec(open('/sdcard/Box64Droid (native)/Box64Droid.conf').read())
 exec(open('/sdcard/Box64Droid (native)/DXVK_D8VK_HUD.conf').read())
 os.system("clear")
-print("Select need resolution:")
+if 'WD' in os.environ:
+    print("Welcome to Box64Droid! Select need resolution:")
+    print("")
+else:
+    print("Select need resolution:")
 print("1) 800x600 (4:3)")
 print("2) 1024x768 (4:3)")
 print("3) 1280x720 (16:9)")
