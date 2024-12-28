@@ -5,5 +5,5 @@ rm $PREFIX/bin/box64droid && rm $PREFIX/bin/box64droid.py
 rm $PREFIX/bin/start-box64.py
 rm -r $PREFIX/.shortcuts
 echo "Done!"
-sleep 3
+sleep 2
 
