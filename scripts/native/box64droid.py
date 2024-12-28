@@ -55,19 +55,25 @@ def change_wine_version():
     print("4) Wine 9.7")
     print("5) Wine 9.11")
     print("6) Wine 9.13")
-    print("7) Back to previous menu")
+    if 'WD' in os.environ:
+        print("7) Exit")
+    else:
+        print("7) Back to previous menu")
     print("")
     choice = input()
     if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6" and choice != "7":
         print("Incorrect or empty option!")
         change_wine_version()
     elif choice == "7":
-        main_menu()
+        if 'WD' in os.environ:
+            exit()
+        else:
+            main_menu()
     else:
         os.system("clear")
         print("Removing previous Wine version...")
         if os.path.exists("/data/data/com.termux/files/usr/glibc/opt/wine"):
-        shutil.rmtree("/data/data/com.termux/files/usr/glibc/opt/wine")
+            shutil.rmtree("/data/data/com.termux/files/usr/glibc/opt/wine")
         if choice == "1":
             print("Downloading Wine 9.1 (WoW64)...")
             print("")
