@@ -1,2 +1,1 @@
-python3 $PREFIX/bin/box64droid.py --startwd
-box64 winetricks >/dev/null 2>&1
+python3 $PREFIX/bin/box64droid.py --startwinetrickswd
