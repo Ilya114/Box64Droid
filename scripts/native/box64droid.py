@@ -196,7 +196,7 @@ def start():
         start_box64droid()
         check_config()
         check_prefix()
-        os.system("python3 $PREFIX/bin/start-box64.py")
+        exit()
     elif sys.argv[1] == "--uninstall":
         print("Uninstalling Box64Droid...")
         glibc_path = "/data/data/com.termux/files/usr/glibc"
