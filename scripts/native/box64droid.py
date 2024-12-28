@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=2812242
+ver=281224
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -46,6 +46,75 @@ def create_prefix():
     os.system("cp $PREFIX/glibc/opt/Resources/vkd3d-proton/* $HOME/.wine/drive_c/windows/syswow64 && cp $PREFIX/glibc/opt/Resources64/vkd3d-proton/* $HOME/.wine/drive_c/windows/system32")
     print("Done!")
     main_menu()
+def change_wine_version():
+    os.system("clear")
+    print("Select Wine (WoW64) version to install:")
+    print("1) Wine 9.1")
+    print("2) Wine 9.2")
+    print("3) Wine 9.4")
+    print("4) Wine 9.7")
+    print("5) Wine 9.11")
+    print("6) Wine 9.13")
+    print("7) Back to previous menu")
+    print("")
+    choice = input()
+    if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6" and choice != "7":
+        print("Incorrect or empty option!")
+        change_wine_version()
+    elif choice == "7":
+        main_menu()
+    else:
+        os.system("clear")
+        print("Removing previous Wine version...")
+        if os.path.exists("/data/data/com.termux/files/usr/glibc/opt/wine"):
+        shutil.rmtree("/data/data/com.termux/files/usr/glibc/opt/wine")
+        if choice == "1":
+            print("Downloading Wine 9.1 (WoW64)...")
+            print("")
+            os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.1-esync.tar.xz")
+            print("")
+            print("Unpacking Wine 9.1...")
+            os.system("tar -xf wine-9.1-esync.tar.xz -C $PREFIX/glibc/opt")
+        elif choice == "2":
+            print("Downloading Wine 9.2 (WoW64)...")
+            print("")
+            os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
+            print("")
+            print("Unpacking Wine 9.2 (WoW64)...")
+            os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+        elif choice == "3":
+            print("Downloading Wine 9.4 (WoW64)...")
+            print("")
+            os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
+            print("")
+            print("Unpacking Wine 9.4 (WoW64)...")
+            os.system("tar -xf wine-9.4-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+        elif choice == "4":
+            print("Downloading Wine 9.7 (WoW64)...")
+            print("")
+            os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.7-glibc-wow64.tar.xz")
+            print("")
+            print("Unpacking Wine 9.7 (WoW64)...")
+            os.system("tar -xf wine-9.7-glibc-wow64.tar.xz -C $PREFIX/glibc/opt")
+            os.system("mv $PREFIX/glibc/opt/wine-git-166895a-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
+        elif choice == "5":
+            print("Downloading Wine 9.11 (WoW64)...")
+            print("")
+            os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.11-amd64-wow64.tar.xz")
+            print("")
+            print("Unpacking Wine 9.11 (WoW64)...")
+            os.system("tar -xf wine-9.11-glibc-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+            os.system("mv $PREFIX/glibc/opt/wine-git-63e25f9-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
+        elif choice == "6":
+            print("Downloading Wine 9.13 (WoW64)...")
+            print("")
+            os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.13-glibc-amd64-wow64.tar.xz")
+            print("")
+            print("Unpacking Wine 9.13 (WoW64)...")
+            os.system("tar -xf wine-9.13-glibc-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
+            os.system("mv $PREFIX/glibc/opt/wine-git-8d25995-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
+        os.system("rm wine*")
+        print("Done!")
 def main_menu():
     os.system("clear")
     print("Welcome to Box64Droid! Select to start:")
@@ -90,75 +159,6 @@ def main_menu():
             print("")
             exit()
     elif choice == "3":
-        def change_wine_version():
-            os.system("clear")
-            print("Select Wine (WoW64) version to install:")
-            print("1) Wine 9.1")
-            print("2) Wine 9.2")
-            print("3) Wine 9.4")
-            print("4) Wine 9.7")
-            print("5) Wine 9.11")
-            print("6) Wine 9.13")
-            print("7) Back to previous menu")
-            print("")
-            choice = input()
-            if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6" and choice != "7":
-                print("Incorrect or empty option!")
-                change_wine_version()
-            elif choice == "7":
-                main_menu()
-            else:
-                os.system("clear")
-                print("Removing previous Wine version...")
-                if os.path.exists("/data/data/com.termux/files/usr/glibc/opt/wine"):
-                    shutil.rmtree("/data/data/com.termux/files/usr/glibc/opt/wine")
-                if choice == "1":
-                    print("Downloading Wine 9.1 (WoW64)...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.1-esync.tar.xz")
-                    print("")
-                    print("Unpacking Wine 9.1...")
-                    os.system("tar -xf wine-9.1-esync.tar.xz -C $PREFIX/glibc/opt")
-                elif choice == "2":
-                    print("Downloading Wine 9.2 (WoW64)...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.2-amd64-wow64.tar.xz")
-                    print("")
-                    print("Unpacking Wine 9.2 (WoW64)...")
-                    os.system("tar -xf wine-9.2-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
-                elif choice == "3":
-                    print("Downloading Wine 9.4 (WoW64)...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.4-amd64-wow64.tar.xz")
-                    print("")
-                    print("Unpacking Wine 9.4 (WoW64)...")
-                    os.system("tar -xf wine-9.4-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
-                elif choice == "4":
-                    print("Downloading Wine 9.7 (WoW64)...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.7-glibc-wow64.tar.xz")
-                    print("")
-                    print("Unpacking Wine 9.7 (WoW64)...")
-                    os.system("tar -xf wine-9.7-glibc-wow64.tar.xz -C $PREFIX/glibc/opt")
-                    os.system("mv $PREFIX/glibc/opt/wine-git-166895a-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
-                elif choice == "5":
-                    print("Downloading Wine 9.11 (WoW64)...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.11-amd64-wow64.tar.xz")
-                    print("")
-                    print("Unpacking Wine 9.11 (WoW64)...")
-                    os.system("tar -xf wine-9.11-glibc-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
-                    os.system("mv $PREFIX/glibc/opt/wine-git-63e25f9-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
-                elif choice == "6":
-                    print("Downloading Wine 9.13 (WoW64)...")
-                    print("")
-                    os.system("wget -q --show-progress https://github.com/Ilya114/Box64Droid/releases/download/alpha/wine-9.13-glibc-amd64-wow64.tar.xz")
-                    print("")
-                    print("Unpacking Wine 9.13 (WoW64)...")
-                    os.system("tar -xf wine-9.13-glibc-amd64-wow64.tar.xz -C $PREFIX/glibc/opt")
-                    os.system("mv $PREFIX/glibc/opt/wine-git-8d25995-exp-wow64-amd64 $PREFIX/glibc/opt/wine")
-                os.system("rm wine*")
-                print("Done!")
         change_wine_version()
         main_menu()
     elif choice == "4":
