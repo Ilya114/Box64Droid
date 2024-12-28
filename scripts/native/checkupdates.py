@@ -21,5 +21,8 @@ else:
     print("Updates not found, launching Box64Droid...")
 os.system("sleep 2")
 os.system("rm $PREFIX/bin/checkupdates.py")
-os.system("python3 $PREFIX/bin/box64droid.py --start")
+if 'WD' in os.environ:
+    os.system("python3 $PREFIX/bin/box64droid.py --startwd")
+else
+    os.system("python3 $PREFIX/bin/box64droid.py --start")
 exit()
