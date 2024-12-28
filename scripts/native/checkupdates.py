@@ -1,7 +1,7 @@
 import os
 from box64droid import ver
 print("Checking for Box64Droid updates...")
-ver2=2812244
+ver2=2812245
 if ver != ver2:
     print("New update available! Updating scripts...")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/box64droid.py &>/dev/null")
@@ -23,6 +23,7 @@ os.system("sleep 2")
 os.system("rm $PREFIX/bin/checkupdates.py")
 if 'WD' in os.environ:
     os.system("python3 $PREFIX/bin/box64droid.py --startwd")
+    os.system("python3 $PREFIX/bin/startbox64.py")
 else:
     os.system("python3 $PREFIX/bin/box64droid.py --start")
 exit()
