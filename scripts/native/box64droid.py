@@ -60,6 +60,8 @@ def main_menu():
     print("7) Winetricks")
     print("8) Exit")
     print("")
+    print("Note: Console UI will be EOL on 1 June of 2025. ATM Box64Droid will use Termux:Widgets. To use it install and create Termux widget in homescreen") 
+    print("")
     choice = input()
     if choice != "1" and choice != "2" and choice != "3" and choice != "4" and choice != "5" and choice != "6" and choice != "7" and choice != "8":
         print("Incorrect or empty option!")
