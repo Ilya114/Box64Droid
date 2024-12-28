@@ -1,9 +1,9 @@
 import os, shutil, time
 def create_scripts_to_widget():
     os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/nativewd/Start%20Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/nativewd/Update%20Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/nativewd/Uninstall%20Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
+    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/Start%20Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
+    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/Update%20Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
+    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/Uninstall%20Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
 def packages():
     os.system("pkg install x11-repo glibc-repo -y &>/dev/null")
     os.system("pkg install pulseaudio wget glibc xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
