@@ -1,1 +1,2 @@
+export WD=1
 python3 $PREFIX/bin/box64droid.py --startwd
