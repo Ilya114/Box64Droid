@@ -1,5 +1,5 @@
 import os, time, shutil, sys
-ver=2812245
+ver=2812246
 def start_box64droid():
     os.system("clear")
     if "LD_PRELOAD" in os.environ:
@@ -197,6 +197,14 @@ def start():
         check_config()
         check_prefix()
         exit()
+    elif sys.argv[1] == "--startwinetrickswd":
+        start_box64droid()
+        check_config()
+        check_prefix()
+        print("Starting Winetricks...")
+        os.system("sleep 2")
+        os.system("am start -n com.termux.x11/com.termux.x11.MainActivity &>/dev/null")
+        os.system("box64 winetricks >/dev/null 2>&1")
     elif sys.argv[1] == "--uninstall":
         print("Uninstalling Box64Droid...")
         glibc_path = "/data/data/com.termux/files/usr/glibc"
