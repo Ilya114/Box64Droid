@@ -8,8 +8,10 @@ print("2) 1024x768 (4:3)")
 print("3) 1280x720 (16:9)")
 print("4) 1920x1080 (16:9)")
 print("5) Custom resolution")
-print("6) Back to main menu")
-print("7) Exit")
+if 'WD' in os.environ:
+    print("6) Exit")
+else:
+    print("6) Back to previous menu")
 print("")
 res = input()
 if res != "1" and res != "2" and res != "3" and res != "4" and res != "5" and res != "6" and res != "7":
@@ -27,10 +29,11 @@ elif res == "5":
     print("\033[0;33mTermux-X11 and Wine started. If you want exit from Box64Droid, type \033[0;36m'1'\033[0;33m (or any key) or \033[0;36m'2'\033[0;33m to back to main menu in the terminal then press enter.\033[0m")
     os.system("taskset -c 4-7 box64 wine explorer /desktop=shell," + res + " $PREFIX/glibc/opt/autostart.bat &>/dev/null &")
 elif res == "6":
-    os.system("python3 $PREFIX/bin/box64droid.py --start")
-    exit()
-elif res == "7":
-    exit()
+    if 'WD' in os.environ:
+        exit()
+    else:
+        os.system("python3 $PREFIX/bin/box64droid.py --start")
+        exit()
 else:
     os.system("clear")
     if res == "1":
