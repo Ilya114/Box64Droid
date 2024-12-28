@@ -1,3 +1,4 @@
+export WD=1
 wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py -q
 mv checkupdates.py $PREFIX/bin
 python3 $PREFIX/bin/checkupdates.py
