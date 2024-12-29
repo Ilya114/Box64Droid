@@ -55,7 +55,10 @@ stop = input()
 if stop == "2":
     print(" Stopping Wine...")
     os.system("box64 wineserver -k &>/dev/null")
-    os.system("python3 $PREFIX/bin/box64droid.py --start")
+    if 'WD' in os.environ:
+        os.system("python3 $PREFIX/bin/start-box64.py")
+    else:
+        os.system("python3 $PREFIX/bin/box64droid.py --start")
     exit()
 else:
     print(" Stopping Wine...")
