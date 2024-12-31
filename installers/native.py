@@ -1,5 +1,5 @@
 import os, shutil, time
-def create_scripts_to_widget():
+def download_widget_scripts():
     os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
     os.system(r"wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/1\)\ Start\ Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
     os.system(r"wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/2\)\ Change\ Wine\ version -q -P /data/data/com.termux/files/home/.shortcuts")
@@ -61,7 +61,7 @@ print(" Downloading starting scripts...")
 print("")
 scripts()
 print("Creating scripts to launch via widget...")
-create_scripts_to_widget()
+download_widget_scripts()
 print(" Removing the installation waste...")
 clear_waste()
 print(" Installation finished. To start Box64Droid run 'box64droid --start', to see more arguments run 'box64droid --help'")
