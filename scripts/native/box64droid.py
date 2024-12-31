@@ -215,6 +215,8 @@ def start():
         change_wine_version()
         exit()
     elif sys.argv[1] == "--recreateprefix":
+        start_box64droid()
+        check_config()
         recreate_prefix()
         exit()
     elif sys.argv[1] == "--uninstall":
