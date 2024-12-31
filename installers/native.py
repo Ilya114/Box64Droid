@@ -6,7 +6,8 @@ def create_scripts_to_widget():
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/3\)\ Update\ Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/4\)\ Update\ Box64 -q -P /data/data/com.termux/files/home/.shortcuts")
     os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/5\)\ Open\ Winetricks -q -P /data/data/com.termux/files/home/.shortcuts")
-    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/6\)\ Uninstall\ Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
+    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/6\)\ Recreate\ Wine\ prefix -q -P /data/data/com.termux/files/home/.shortcuts")
+    os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/7\)\ Uninstall\ Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
 def packages():
     os.system("pkg install x11-repo glibc-repo -y &>/dev/null")
     os.system("pkg install pulseaudio wget glibc git xkeyboard-config freetype fontconfig libpng xorg-xrandr termux-x11-nightly termux-am zenity which bash curl sed cabextract -y --no-install-recommends &>/dev/null")
