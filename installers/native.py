@@ -1,6 +1,6 @@
 import os, shutil, time
 def create_scripts_to_widget():
-    os.system(r"mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
+    os.system("mkdir -p /data/data/com.termux/files/home/.shortcuts && chmod 700 -R /data/data/com.termux/files/home/.shortcuts")
     os.system(r"wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/1\)\ Start\ Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
     os.system(r"wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/2\)\ Change\ Wine\ version -q -P /data/data/com.termux/files/home/.shortcuts")
     os.system(r"wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/nativewd/3\)\ Update\ Box64Droid -q -P /data/data/com.termux/files/home/.shortcuts")
