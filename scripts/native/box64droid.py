@@ -28,6 +28,7 @@ def check_prefix():
     if not os.path.exists("/data/data/com.termux/files/home/.wine"):
         print("Wine prefix not found! Creating...")
         create_prefix()
+        main_menu()
 def recreate_prefix():
     prefix_path="/data/data/com.termux/files/home/.wine"
     os.system("clear")
@@ -45,7 +46,6 @@ def create_prefix():
     os.system(r'box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12 /d native /f &>/dev/null && box64 wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v d3d12core /d native /f &>/dev/null')
     os.system("cp $PREFIX/glibc/opt/Resources/vkd3d-proton/* $HOME/.wine/drive_c/windows/syswow64 && cp $PREFIX/glibc/opt/Resources64/vkd3d-proton/* $HOME/.wine/drive_c/windows/system32")
     print("Done!")
-    main_menu()
 def change_wine_version():
     os.system("clear")
     print("Select Wine (WoW64) version to install:")
@@ -169,7 +169,7 @@ def main_menu():
         main_menu()
     elif choice == "4":
         recreate_prefix()
-        create_prefix()
+        main_menu()
     elif choice == "5":
         os.system("wget https://raw.githubusercontent.com/Ilya114/Box64Droid/main/scripts/native/checkupdates.py &>/dev/null && mv checkupdates.py $PREFIX/bin")
         os.system("python3 $PREFIX/bin/checkupdates.py")
@@ -215,6 +215,9 @@ def start():
     elif sys.argv[1] == "--changewineverwd":
         change_wine_version()
         exit()
+    elif sys.argv[1] == "--recreateprefix":
+        recreate_prefix()
+        exit()
     elif sys.argv[1] == "--uninstall":
         print("Uninstalling Box64Droid...")
         glibc_path = "/data/data/com.termux/files/usr/glibc"
@@ -228,7 +231,7 @@ def start():
     elif sys.argv[1] == "--reinstall":
         os.system("curl -o install https://raw.githubusercontent.com/Ilya114/Box64Droid/main/installers/install.sh && chmod +x install && ./install")
     elif sys.argv[1] == "--version":
-        print("28.12.24")
+        print("31.12.24")
     elif sys.argv[1] == "--help":
         print("Box64Droid (native version) - configured tools to launch Box64, Box86, Wine 8.0, DXVK with Adreno GPU drivers in Termux")
         print("Usage: box64droid {argument}")
